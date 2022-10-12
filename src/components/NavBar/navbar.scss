@@ -1,14 +1,14 @@
 
 .nav-bar {
-  // display:inline-flex;
-  background: #181818;
-  width: 100%;
-  height: 70px;
-  position: absolute;
-  top: 0;
-  z-index: 3;
-  min-height: 70px;
-  align-items: center;
+    // display:inline-flex;
+    background: #181818;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    min-height: 70px;
+    align-items: center;
 
   img {
     
@@ -19,7 +19,7 @@
     // height: auto;
 
     &.sub-logo {
-            padding: 0;
+      padding: 0;
       margin-left: 20px;
       margin-top: 19px;
       justify-content: center;
@@ -28,52 +28,50 @@
       height: 30px;
     }
   }
-
 }
 
 nav {
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    height: 210px;
 
-  justify-content: center;
-  display: flex;
-  text-align: center;
-  height: 210px;
-  
-  .home-link {
-  align-items: center;
+    .home-link {
+    align-items: center;
+    font-size: 32px;
+    color: #70a288;
+    position: absolute;
+    top: 20px;
+    margin-left: -90px;    
+  }
+
+  .about-link {
+    font-size: 32px;
+    color: #70a288;
+    position: absolute;
+    top: 20px;   
+    margin-left: -40px;  
+  }
+
+  .contact-link {
+  margin-right: -10px;
   font-size: 32px;
   color: #70a288;
   position: absolute;
   top: 20px;
-  margin-left: -90px;    
-}
+  margin-left: 10px;   
+  }
 
-.about-link {
-  font-size: 32px;
-  color: #70a288;
-  position: absolute;
-  top: 20px;   
-  margin-left: -40px;  
-}
-
-.contact-link {
-margin-right: -10px;
-font-size: 32px;
-color: #70a288;
-position: absolute;
-top: 20px;
-margin-left: 10px;   
-}
-
-a {
+  a {
     i {
-    transition: all 0.5s ease-out;
+    transition: all 1.5s ease-out;
     }
       &:hover {
         color: #ffd700;
   
-      svg {
-      opacity: 0;
-      }
+        svg {
+        opacity: 0;
+        }
 
      &:after {
       opacity: 1;
@@ -92,20 +90,8 @@ a {
         transition: all 0.3s ease-out;
       }
 
-      &:first-child {
-        &::after {
-          right: 100px;
-          content: 'HOME';
-        }
-      }
-      
-      a.about-link {
-        &:after {
-          content: 'ABOUT';
-        }
-      }
     
-}
+  }
 }
 
 

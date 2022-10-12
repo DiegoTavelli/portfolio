@@ -1,0 +1,186 @@
+
+.backVid {
+  position: absolute;
+  z-index: -10;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+    // mask: 
+    // url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24.394 24.394'%3E%3Ccircle cx='12.197' cy='12.197' r='12.197'/%3E%3C/svg%3E")
+    // center / 1180px no-repeat
+    // exclude,
+    //     url("../../assets/images/backPng.png") top / 1900px no-repeat;
+}
+
+.homeContainer {
+  
+}
+
+.cardHome {
+  position: absolute;
+  width: 560.91px;
+  height: 385.34px;
+  left: 847.67px;
+  top: 339.31px;
+}
+// .cardHome:hover {
+//   transform:skewY(1deg);
+//   transition: transform 0.7s ease-in-out;
+//   }
+
+  .ArrowPro {
+    z-index: 20;
+    position: absolute;
+width: 324px;
+height: 283px;
+left: 608px;
+top: 398px;
+transform: rotate(-2deg);
+  }
+
+  // .ArrowPro:hover {
+  //   transform:skewY(1deg);
+  //   transition: transform 0.7s ease-in-out;
+  //   }
+
+  .CardPro {
+    z-index: 10;
+    position: absolute;
+width: 357px;
+height: 247px;
+left: 384px;
+top: 269px;
+filter: drop-shadow(21px 28px 4px rgba(0, 0, 0, 0.25));
+
+  }
+
+  .CardPro:hover {
+    z-index: 20;
+    transform: scale(1.52) rotate(2deg);
+    transition: transform 0.4s ease-in-out;
+    transform: rotate3d(10, 0, 1, 3.142rad);
+     }
+  //    @keyframes in {
+  //     from: {transform: rotate(0deg)}
+  //     to: {transform: rotate(360deg)}
+  // }
+  
+  // @keyframes out {
+  //     from: {transform: rotate(360deg)}
+  //     to: {transform: rotate(0deg)}
+  // }
+
+
+      .Projects {
+    z-index: 100;
+    position: absolute;
+    width: 123px;
+    height: 54px;
+    left: 491px;
+    top: 408px;
+    margin-top: -190px;
+  }
+ 
+      
+
+  .platform {
+    position: absolute;
+width: 435.5px;
+height: 70.68px;
+left: 594.53px;
+top: 329.15px;
+transform: rotate(-2.78deg);
+  }
+
+  .aboutWorlds {
+    position: absolute;
+    width: 193.81px;
+    height: 272.85px;
+    left: 1128.08px;
+    top: 125px;
+    
+  }
+  .aboutWorlds:hover {
+    transform:skewY(1deg);
+    transition: transform 0.7s ease-in-out;
+    }
+
+  .Diego {
+    z-index: 30;
+    position: absolute;
+width: 121.4px;
+height: 41.5px;
+left: 942.6px;
+top: 560.52px;
+
+// box-shadow: inset 23px 2px 4px rgba(0, 0, 0, 0.25);
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+transform: rotate(-16.5deg);
+  }
+
+  .Tavelli {
+    z-index: 30;
+    position: absolute;
+    width: 133.72px;
+    height: 36.64px;
+    left: 1090.09px;
+    top: 509.74px;
+    
+    // box-shadow: inset 15px -10px 4px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    transform: rotate(-16.5deg);
+  }
+
+  .contactWorld {
+    position: absolute;
+width: 217.37px;
+height: 215.09px;
+left: 705.5px;
+top: 704.91px;
+filter: drop-shadow(11px 16px 4px rgba(0, 0, 0, 0.25));
+  }
+  .contactWorld:hover {
+    transform:skewY(1deg);
+    transition: transform 0.7s ease-in-out;
+    transform: rotate3d(10, 0, 0, 1.142rad);
+    }
+  
+
+  .Contact {
+    z-index: 90;
+    position: absolute;
+width: 91.2px;
+height: 32.68px;
+left: 769.82px;
+top: 868.85px;
+
+transform: rotate(-3deg);
+  }
+
+
+
+  .about {
+    position: absolute;
+width: 68.4px;
+height: 31.92px;
+left: 1187.36px;
+top: 237.49px;
+  }
+
+  .me {
+    position: absolute;
+width: 38px;
+height: 21.28px;
+left: 1202.56px;
+top: 365.17px;
+  }
+
+  .FullStackDev {
+    position: absolute;
+width: 196.67px;
+height: 22.85px;
+left: 1190.1px;
+top: 552.16px;
+
+transform: rotate(-19.72deg);
+  }
