@@ -6,6 +6,7 @@ import LogoSubtitle from '../../assets/images/logo_sub.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHomeLg, faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
+
 const NavBar = () => {
   return (
     <div className='nav-bar' >

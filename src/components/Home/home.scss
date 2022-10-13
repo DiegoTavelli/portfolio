@@ -1,19 +1,47 @@
 
 .backVid {
-  position: absolute;
+  position: fixed;
   z-index: -10;
   object-fit: cover;
   height: 100%;
   width: 100%;
-    // mask: 
-    // url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24.394 24.394'%3E%3Ccircle cx='12.197' cy='12.197' r='12.197'/%3E%3C/svg%3E")
-    // center / 1180px no-repeat
-    // exclude,
-    //     url("../../assets/images/backPng.png") top / 1900px no-repeat;
-}
+ }
+
 
 .homeContainer {
+    position: absolute;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.navContainer {
+  top: -35px;
+  position: absolute;
+  align-items: center;
+  // bottom: -10px;
+}
+@media only screen and (max-width: 1428px) {
   
+  .navContainer {
+      right: 100px;
+   
+  }
+}
+@media only screen and (max-width: 1298px) {
+  
+  .navContainer {
+      right: 200px;
+   
+  }
+}
+@media only screen and (max-width: 1159px) {
+  
+  .navContainer {
+      right: 220px;
+   max-width: 200px;
+  }
 }
 
 .cardHome {
@@ -42,42 +70,50 @@ transform: rotate(-2deg);
   //   transform:skewY(1deg);
   //   transition: transform 0.7s ease-in-out;
   //   }
-
+ * {
+  color: #34343400
+ }
   .CardPro {
     z-index: 10;
     position: absolute;
-width: 357px;
-height: 247px;
-left: 384px;
-top: 269px;
-filter: drop-shadow(21px 28px 4px rgba(0, 0, 0, 0.25));
-
+    width: 304px;
+    height: 210px;
+    left: 419px;
+    top: 270px;
+    filter: drop-shadow(21px 28px 4px rgba(0, 0, 0, 0.25));
   }
 
   .CardPro:hover {
     z-index: 20;
     transform: scale(1.52) rotate(2deg);
     transition: transform 0.4s ease-in-out;
-    transform: rotate3d(10, 0, 1, 3.142rad);
+    transform: rotate3d(0, 10, 1, 3.142rad);
+    transition-timing-function: ease;
+  }
+     @-webkit-keyframes CardPro {
+      from {
+        transform: scale(0) rotate(0deg);
+      }
+      to {
+        transform: scale(1.52) rotate(2deg);
+      }
      }
-  //    @keyframes in {
-  //     from: {transform: rotate(0deg)}
-  //     to: {transform: rotate(360deg)}
-  // }
-  
-  // @keyframes out {
-  //     from: {transform: rotate(360deg)}
-  //     to: {transform: rotate(0deg)}
-  // }
-
-
+     @keyframes CardPro {
+      from {
+        transform: scale(0) rotate(0deg);
+      }
+      to {
+        transform: scale(1.52) rotate(2deg);
+      }
+     }
+   
       .Projects {
     z-index: 100;
     position: absolute;
     width: 123px;
     height: 54px;
-    left: 491px;
-    top: 408px;
+    left: 510px;
+    top: 420px;
     margin-top: -190px;
   }
  
@@ -90,20 +126,81 @@ height: 70.68px;
 left: 594.53px;
 top: 329.15px;
 transform: rotate(-2.78deg);
+filter: drop-shadow(18px 10px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .aboutContainer {
+    background-color: transparent;
+    // position: absolute;
+width: 193.81px;
+height: 272.85px;
+left: 1087.38px;
+top: 85px;
   }
 
   .aboutWorlds {
     position: absolute;
-    width: 193.81px;
-    height: 272.85px;
-    left: 1128.08px;
-    top: 125px;
+width: 193.81px;
+height: 272.85px;
+left: 1087.38px;
+top: 85px;
+
+transform: rotate(65.04deg);
     
   }
-  .aboutWorlds:hover {
+  .aboutContainer:hover {
     transform:skewY(1deg);
     transition: transform 0.7s ease-in-out;
     }
+
+  .triangle {
+  display: none;
+  z-index: 90;
+  position: absolute;
+width: 61.77px;
+height: 47.76px;
+left: 782px;
+top: 737.12px;
+transform: rotate(-1.97deg);
+transition: all 10s ease-out;
+}
+
+.divCircle:hover .triangle {
+ display: block;
+}
+
+.Contact:hover .triangle {
+  display: block;
+  
+ }
+ 
+
+.contactWorld {
+  position: absolute;
+width: 217.37px;
+height: 215.09px;
+left: 705.5px;
+top: 704.91px;
+filter: drop-shadow(11px 16px 4px rgba(0, 0, 0, 0.25));
+}
+
+.divCircle:hover .contactWorld {
+  transform:skewY(1deg);
+  transition: transform 0.4s ease-in-out;
+  transform: rotate3d(10, 0, 0, 1.142rad);
+  }
+
+.Contact {
+  z-index: 90;
+  position: absolute;
+width: 91.2px;
+height: 32.68px;
+left: 769.82px;
+top: 868.85px;
+
+transform: rotate(-3deg);
+}
+
 
   .Diego {
     z-index: 30;
@@ -123,39 +220,15 @@ transform: rotate(-16.5deg);
     position: absolute;
     width: 133.72px;
     height: 36.64px;
-    left: 1090.09px;
-    top: 509.74px;
+    left: 1120px;
+    top: 500.74px;
     
     // box-shadow: inset 15px -10px 4px rgba(0, 0, 0, 0.25);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transform: rotate(-16.5deg);
   }
 
-  .contactWorld {
-    position: absolute;
-width: 217.37px;
-height: 215.09px;
-left: 705.5px;
-top: 704.91px;
-filter: drop-shadow(11px 16px 4px rgba(0, 0, 0, 0.25));
-  }
-  .contactWorld:hover {
-    transform:skewY(1deg);
-    transition: transform 0.7s ease-in-out;
-    transform: rotate3d(10, 0, 0, 1.142rad);
-    }
-  
 
-  .Contact {
-    z-index: 90;
-    position: absolute;
-width: 91.2px;
-height: 32.68px;
-left: 769.82px;
-top: 868.85px;
-
-transform: rotate(-3deg);
-  }
 
 
 
@@ -163,16 +236,16 @@ transform: rotate(-3deg);
     position: absolute;
 width: 68.4px;
 height: 31.92px;
-left: 1187.36px;
-top: 237.49px;
+left: 1100px;
+top: 170px;
   }
 
   .me {
     position: absolute;
 width: 38px;
 height: 21.28px;
-left: 1202.56px;
-top: 365.17px;
+left: 1120px;
+top: 293px;
   }
 
   .FullStackDev {
@@ -184,3 +257,224 @@ top: 552.16px;
 
 transform: rotate(-19.72deg);
   }
+
+  .starDust {
+    z-index: 100;
+    position: absolute;
+    width: 82.5px;
+    height: 87.72px;
+    left: 927.42px;
+    top: 269px;
+    filter: drop-shadow(-13px 4px 4px rgba(0, 0, 0, 0.225));
+    transform: rotate(0.93deg);
+  }
+
+  .monkeyGrass {
+    z-index: 50;
+    position: absolute;
+    width: 36.9px;
+    height: 36.9px;
+left: 1109px;
+top: 220px;
+
+transform: rotate(-10.57deg);
+  }
+
+  .laptop {
+    position: absolute;
+    width: 96px;
+    height: 57px;
+    left: 804.29px;
+    top: 300.29px;
+ 
+  }
+
+  .bikeMonkey {
+    z-index: 80;
+    position: absolute;
+width: 104.83px;
+height: 104.83px;
+left: 833px;
+top: 400px;
+transform: rotate(17deg);
+filter: blur(2px) drop-shadow(10px 4px 4px rgba(6, 11, 32, 0.611));
+  }
+
+  .bikeMonkey2 {
+    z-index: 80;
+    position: absolute;
+width: 104.83px;
+height: 104.83px;
+left: 830px;
+top: 398px;
+transform: rotate(17deg);
+  }
+
+ 
+
+//rotate starDust
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(.5deg);
+      -o-transform: rotate(.5deg);
+      transform: rotate(.5deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(.5deg);
+      -moz-transform: rotate(.5deg);
+      -webkit-transform: rotate(.5deg);
+      -o-transform: rotate(.5deg);
+      transform: rotate(.5deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 1s linear infinite;
+    -moz-animation: rotating 1s linear infinite;
+    -ms-animation: rotating 1s linear infinite;
+    -o-animation: rotating 1s linear infinite;
+    animation: rotating 1s linear infinite;
+  }
+
+  //rotate contactWorld
+.mandala {
+  z-index: 15;
+  position: absolute;
+width: 98px;
+height: 98px;
+left: 739px;
+top: 500px;
+}
+
+.treeColor {
+  position: absolute;
+width: 131.31px;
+height: 152.04px;
+left: 1011px;
+top: 442.84px;
+
+transform: rotate(-14.48deg);
+}
+
+.grass {
+  position: absolute;
+width: 41px;
+height: 15px;
+left: 815px;
+top: 350px;
+filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
+}
+.breakTriangle {
+  z-index: 30;
+  position: absolute;
+width: 65.53px;
+height: 55.94px;
+left: 767px;
+top: 562px;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+transform: rotate(-25.92deg);
+}
+@-webkit-keyframes mandala {
+  from {
+    transform:skewY(10deg);
+    transition: transform 0.7s ease-in-out;
+  }
+  to {
+    transform:skewY(0deg);
+    transition: transform 0.7s ease-in-out; 
+  }
+}
+
+@keyframes mandala {
+  from {
+    transform:skewY(10deg);
+    transition: transform 0.7s ease-in-out;
+  }
+  to {
+    transform:skewY(0deg);
+    transition: transform 0.7s ease-in-out; 
+  }
+}
+
+  .darkStar {
+  position: absolute;
+  width: 48px;
+  height: 45px;
+  left: 800px;
+  top: 583px;
+  
+  }
+
+
+  @-webkit-keyframes mandala /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes mandala {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .mandala:hover {
+    -webkit-animation: rotating 20s linear infinite;
+    -moz-animation: rotating 20s linear infinite;
+    -ms-animation: rotating 20s linear infinite;
+    -o-animation: rotating 20s linear infinite;
+    animation: rotating 20s linear infinite;
+  }
+
+
+  // .clip-animation {
+  //   left: -500px;
+  //   top: -180px;
+  //   height: 160%; 
+  //   width: 160%;
+  //   clip-path: polygon(100% 50%,84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%)}
+  
+  // .clip-animation { 
+  //   animation: clip 10s infinite
+  // }
+  
+  // @keyframes clip {
+  //   0% {
+  //     clip-path: polygon(100% 50%,84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%);
+  //   }
+  //   50% {
+  //     clip-path: polygon(84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%,100% 50%);
+  //   }
+  //    100% {
+  //     clip-path: polygon(91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%,100% 50%,84.70057014808336% 54.5684167277018%);
+  //   }
+  // }
