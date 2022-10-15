@@ -14,6 +14,7 @@
   align-items: center;
   align-content: center;
   align-items: center;
+  
 }
 
 .navContainer {
@@ -22,6 +23,59 @@
   align-items: center;
   // bottom: -10px;
 }
+.fullStackDiv {
+  animation: flipName 2s ease;
+}
+
+.firstContainer {
+  animation: firstFlipCont 4s ease;
+}
+
+.midContainer {
+  animation: flipCont 3s ease;
+}
+@keyframes flipName {
+   0% {
+    transition: transform 0.4s ease-in-out;
+    transform: rotate3d(0, 10, 1, 3.142rad);
+    transition-timing-function: ease;
+    filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
+  }
+  100% {
+    transition: transform 0.4s ease-in-out;
+    transform: rotate3d(0, 0, 0, 0rad);
+    transition-timing-function: ease;
+  }
+}
+
+@keyframes firstFlipCont {
+    0% {
+    transition: transform 0.4s ease-in-out;
+    transform: rotate3d(10, 0, 1, 3.142rad);
+    transition-timing-function: ease;
+    filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
+  }
+  100% {
+    transition: transform 0.4s ease-in-out;
+    transform: rotate3d(0, 0, 0, 0rad);
+    transition-timing-function: ease;
+  }
+}
+
+@keyframes flipCont {
+   0% {
+    transition: transform 0.4s ease-in-out;
+    transform: rotate3d(0, 10, 1, 3.142rad);
+    transition-timing-function: ease;
+    filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
+  }
+  100% {
+    transition: transform 0.4s ease-in-out;
+    transform: rotate3d(0, 0, 0, 0rad);
+    transition-timing-function: ease;
+  }
+}
+
 @media only screen and (max-width: 1428px) {
   
   .navContainer {
@@ -50,11 +104,10 @@
   height: 385.34px;
   left: 847.67px;
   top: 339.31px;
+  filter: drop-shadow(33px 22px 2px rgba(10, 10, 10, 0.671));
+  // animation: firstFlipCont 3s ease;
 }
-// .cardHome:hover {
-//   transform:skewY(1deg);
-//   transition: transform 0.7s ease-in-out;
-//   }
+
 
   .ArrowPro {
     z-index: 20;
@@ -63,16 +116,24 @@ width: 324px;
 height: 283px;
 left: 608px;
 top: 398px;
-transform: rotate(-2deg);
+transform: rotate(0deg);
+filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
   }
 
   // .ArrowPro:hover {
   //   transform:skewY(1deg);
   //   transition: transform 0.7s ease-in-out;
   //   }
- * {
-  color: #34343400
- }
+ 
+.CardProContainer:hover .CardPro {
+  // display: none;
+  filter: blur(15px);
+  animation: flipCardRev .7s ease;
+}
+.CardProContainer:hover .CardPro2 {
+  animation: flipCard 1s ease;
+}
+
   .CardPro {
     z-index: 10;
     position: absolute;
@@ -80,32 +141,71 @@ transform: rotate(-2deg);
     height: 210px;
     left: 419px;
     top: 270px;
-    filter: drop-shadow(21px 28px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 30px 40px rgba(0, 0, 0, 0.25));
+    // animation: flipCard 110s ease infinite;
+  }
+  
+   .CardPro2 {
+    z-index: 30;
+    position: absolute;
+width: 296px;
+height: 205px;
+left: 424px;
+top: 275px;
+
   }
 
-  .CardPro:hover {
-    z-index: 20;
-    transform: scale(1.52) rotate(2deg);
-    transition: transform 0.4s ease-in-out;
-    transform: rotate3d(0, 10, 1, 3.142rad);
-    transition-timing-function: ease;
+  .cardProBlur {
+    transform: scale(1);
   }
-     @-webkit-keyframes CardPro {
-      from {
-        transform: scale(0) rotate(0deg);
-      }
-      to {
-        transform: scale(1.52) rotate(2deg);
-      }
-     }
-     @keyframes CardPro {
-      from {
-        transform: scale(0) rotate(0deg);
-      }
-      to {
-        transform: scale(1.52) rotate(2deg);
-      }
-     }
+     
+  @keyframes flipCard {
+    0% {
+      transition: transform 0.4s ease-in-out;
+      transform: rotate3d(0, 0, 0, 0rad);
+      transition-timing-function: ease;
+    }
+    50% {
+      transition: transform 0.4s ease-in-out;
+      transform: rotate3d(0, 10, 1, 3.142rad);
+      transition-timing-function: ease;
+      filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
+    }
+    100% {
+      transition: transform 0.4s ease-in-out;
+      transform: rotate3d(0, 0, 0, 0rad);
+      transition-timing-function: ease;
+    }
+  }
+  @keyframes flipCardRev {
+    0% {
+      transition: transform 0.4s ease;
+      transform: rotate3d(0, 0, 0, 0rad);
+      transition-timing-function: ease;
+    }
+    25% {
+      transition: transform 0.4s ease;
+      transform: rotate3d(20, 0, 0, 3.142rad);
+      transition-timing-function: ease;
+      // filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
+    }
+    50% {
+    // transition: transform 0.4s ease-in-out;
+    transform: rotate3d(0, 0, 0, 0rad);
+    transition-timing-function: ease;
+    }
+    75% {
+      transition: transform 0.4s ease;
+      transform: rotate3d(20, 0, 0, 3.142rad);
+      transition-timing-function: ease;
+     
+    }
+    100% {
+      transition: transform 0.4s ease;
+      transform: rotate3d(0, 0, 0, 3.142rad);
+      transition-timing-function: ease;
+    }
+  }
    
       .Projects {
     z-index: 100;
@@ -113,7 +213,7 @@ transform: rotate(-2deg);
     width: 123px;
     height: 54px;
     left: 510px;
-    top: 420px;
+    top: 655px;
     margin-top: -190px;
   }
  
@@ -129,44 +229,55 @@ transform: rotate(-2.78deg);
 filter: drop-shadow(18px 10px 4px rgba(0, 0, 0, 0.25));
   }
 
+  
   .aboutContainer {
-    background-color: transparent;
-    // position: absolute;
-width: 193.81px;
-height: 272.85px;
-left: 1087.38px;
-top: 85px;
-  }
+    // background-color: red;
+    position: absolute;
+    }
 
   .aboutWorlds {
     position: absolute;
-width: 193.81px;
-height: 272.85px;
-left: 1087.38px;
-top: 85px;
-
-transform: rotate(65.04deg);
+    width: 127.2px;
+    height: 128.04px;
+    left: 1070px;
+    top: 199px;
+   
+    transform: rotate(65.04deg);
     
   }
-  .aboutContainer:hover {
-    transform:skewY(1deg);
-    transition: transform 0.7s ease-in-out;
+  
+    .about {
+      position: absolute;
+  width: 100px;
+  height: 46px;
+  left: 1086px;
+  top: 172px;
+    }
+  
+    .me {
+     
+  position: absolute;
+  width: 67px;
+  height: 41px;
+  left: 1100px;
+  top: 290px;
     }
 
   .triangle {
   display: none;
   z-index: 90;
   position: absolute;
-width: 61.77px;
-height: 47.76px;
-left: 782px;
-top: 737.12px;
-transform: rotate(-1.97deg);
-transition: all 10s ease-out;
+  width: 61.77px;
+  height: 47.76px;
+  left: 782px;
+  top: 737.12px;
+  transform: rotate(-1.97deg);
+  transition: all 10s ease-out;
 }
 
 .divCircle:hover .triangle {
  display: block;
+  
 }
 
 .Contact:hover .triangle {
@@ -177,85 +288,94 @@ transition: all 10s ease-out;
 
 .contactWorld {
   position: absolute;
-width: 217.37px;
-height: 215.09px;
-left: 705.5px;
-top: 704.91px;
-filter: drop-shadow(11px 16px 4px rgba(0, 0, 0, 0.25));
+  height: 215.09px;
+  width: 217.37px;
+  top: 704.91px;
+  filter: drop-shadow(11px 16px 40px rgba(0, 0, 0, 0.705));
+  left: 705.5px;
 }
 
 .divCircle:hover .contactWorld {
   transform:skewY(1deg);
-  transition: transform 0.4s ease-in-out;
-  transform: rotate3d(10, 0, 0, 1.142rad);
-  }
+        transition: transform 0.4s ease-in-out;
+    transform: rotate3d(10, 0, 0, 1.142rad);
+}
 
 .Contact {
   z-index: 90;
   position: absolute;
-width: 91.2px;
-height: 32.68px;
-left: 769.82px;
-top: 868.85px;
-
-transform: rotate(-3deg);
+  width: 138.19px;
+  height: 59.46px;
+  left: 745.22px;
+  top: 855px;
+    transform: rotate(2.14deg);
 }
 
 
   .Diego {
     z-index: 30;
     position: absolute;
-width: 121.4px;
-height: 41.5px;
-left: 942.6px;
-top: 560.52px;
+    width: 130.4px;
+    height: 50.5px;
+    left: 976px;
+    top: 560px;
 
 // box-shadow: inset 23px 2px 4px rgba(0, 0, 0, 0.25);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-transform: rotate(-16.5deg);
+transition: transform 0.4s ease-in-out;
+transform: rotate(-19.5deg);
+filter: drop-shadow(37px 1px 10px rgba(0, 0, 0, 0.25));
+  }
+  .Diego:hover {
+    transform: rotate(0deg);
   }
 
   .Tavelli {
     z-index: 30;
     position: absolute;
-    width: 133.72px;
-    height: 36.64px;
+    width: 140.72px;
+    height: 54.64px;
     left: 1120px;
-    top: 500.74px;
+    top: 505px;
     
     // box-shadow: inset 15px -10px 4px rgba(0, 0, 0, 0.25);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    transform: rotate(-16.5deg);
+    transform: rotate(-20.5deg);
   }
 
 
-
-
-
-  .about {
-    position: absolute;
-width: 68.4px;
-height: 31.92px;
-left: 1100px;
-top: 170px;
-  }
-
-  .me {
-    position: absolute;
-width: 38px;
-height: 21.28px;
-left: 1120px;
-top: 293px;
-  }
 
   .FullStackDev {
     position: absolute;
-width: 196.67px;
-height: 22.85px;
-left: 1190.1px;
-top: 552.16px;
+    width: 196.67px;
+    height: 22.85px;
+    left: 1190.1px;
+    top: 552.16px;
+    transform: rotate(-19.72deg);
+  }
 
-transform: rotate(-19.72deg);
+  .Full {
+    position: absolute;
+width: 194px;
+height: 113px;
+left: 355px;
+top: 153px;
+  }
+
+  .Stack{
+    position: absolute;
+    width: 252px;
+    height: 118px;
+    left: 535px;
+    top: 148px;
+  }
+
+  .Dev{
+    position: absolute;
+    width: 211.26px;
+    height: 134.44px;
+    left: 1200px;
+    top: 607.81px;
+    transform: rotate(-7.56deg);
   }
 
   .starDust {
@@ -270,14 +390,24 @@ transform: rotate(-19.72deg);
   }
 
   .monkeyGrass {
+    // background-color: red;
+    padding: 30px;
+    border-radius: 30%;
     z-index: 50;
     position: absolute;
     width: 36.9px;
     height: 36.9px;
-left: 1109px;
-top: 220px;
-
+    top: 205px;
+    left: 1082px;
 transform: rotate(-10.57deg);
+}
+
+  .circleSkills {
+    position: absolute;
+width: 93px;
+height: 93px;
+left: 790px;
+top: 520px;
   }
 
   .laptop {
@@ -292,22 +422,22 @@ transform: rotate(-10.57deg);
   .bikeMonkey {
     z-index: 80;
     position: absolute;
-width: 104.83px;
-height: 104.83px;
-left: 833px;
-top: 400px;
-transform: rotate(17deg);
-filter: blur(2px) drop-shadow(10px 4px 4px rgba(6, 11, 32, 0.611));
+    height: 104.83px;
+    width: 104.83px;
+    left: 833px;
+    top: 400px;
+    transform: rotate(17deg);
+    filter: blur(2px) drop-shadow(10px 4px 4px rgba(6, 11, 32, 0.611));
   }
 
   .bikeMonkey2 {
     z-index: 80;
     position: absolute;
-width: 104.83px;
-height: 104.83px;
-left: 830px;
-top: 398px;
-transform: rotate(17deg);
+    width: 104.83px;
+    height: 104.83px;
+    left: 830px;
+    top: 398px;
+    transform: rotate(17deg);
   }
 
  
@@ -320,72 +450,85 @@ transform: rotate(17deg);
       transform: rotate(0deg);
     }
     to {
-      -webkit-transform: rotate(.5deg);
-      -o-transform: rotate(.5deg);
-      transform: rotate(.5deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
     }
   }
   @keyframes rotating {
-    from {
+    0% {
       -ms-transform: rotate(0deg);
       -moz-transform: rotate(0deg);
       -webkit-transform: rotate(0deg);
       -o-transform: rotate(0deg);
       transform: rotate(0deg);
     }
-    to {
-      -ms-transform: rotate(.5deg);
-      -moz-transform: rotate(.5deg);
-      -webkit-transform: rotate(.5deg);
-      -o-transform: rotate(.5deg);
-      transform: rotate(.5deg);
+    100% {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
     }
   }
-  .rotating {
-    -webkit-animation: rotating 1s linear infinite;
-    -moz-animation: rotating 1s linear infinite;
-    -ms-animation: rotating 1s linear infinite;
-    -o-animation: rotating 1s linear infinite;
-    animation: rotating 1s linear infinite;
+  .aboutContainer:hover .rotating {
+    -webkit-animation: rotating 1s linear;
+    -moz-animation: rotating 1s linear;
+    -ms-animation: rotating 1s linear;
+    -o-animation: rotating 1s linear;
+    animation: rotating 1s linear;
+  }
+  .aboutContainer:hover .monkeyGrass {
+    animation: monkeySpin 1.4s ease;
+
+  }
+  @keyframes monkeySpin {
+    0% {
+      transform: rotate(300deg)
+      skewY(10deg);
+    }
+    100% {
+
+    }
   }
 
   //rotate contactWorld
 .mandala {
   z-index: 15;
   position: absolute;
-width: 98px;
-height: 98px;
-left: 739px;
-top: 500px;
+  width: 98px;
+  height: 98px;
+  left: 739px;
+  top: 500px;
 }
 
 .treeColor {
   position: absolute;
-width: 131.31px;
-height: 152.04px;
-left: 1011px;
-top: 442.84px;
-
-transform: rotate(-14.48deg);
+  width: 131.31px;
+  height: 152.04px;
+  left: 1045px;
+  top: 441px;
+transform: rotate(-20deg);
 }
 
 .grass {
-  position: absolute;
+  
+position: absolute;
 width: 41px;
 height: 15px;
-left: 815px;
-top: 350px;
-filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
+left: 805px;
+top: 614px;
+  filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 }
 .breakTriangle {
   z-index: 30;
   position: absolute;
-width: 65.53px;
-height: 55.94px;
-left: 767px;
-top: 562px;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-transform: rotate(-25.92deg);
+  width: 65.53px;
+  height: 55.94px;
+  left: 767px;
+  top: 562px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transform: rotate(-25.92deg);
 }
 @-webkit-keyframes mandala {
   from {
@@ -455,26 +598,3 @@ transform: rotate(-25.92deg);
     animation: rotating 20s linear infinite;
   }
 
-
-  // .clip-animation {
-  //   left: -500px;
-  //   top: -180px;
-  //   height: 160%; 
-  //   width: 160%;
-  //   clip-path: polygon(100% 50%,84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%)}
-  
-  // .clip-animation { 
-  //   animation: clip 10s infinite
-  // }
-  
-  // @keyframes clip {
-  //   0% {
-  //     clip-path: polygon(100% 50%,84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%);
-  //   }
-  //   50% {
-  //     clip-path: polygon(84.70057014808336% 54.5684167277018%,91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%,100% 50%);
-  //   }
-  //    100% {
-  //     clip-path: polygon(91.0518476172854% 60.99980941685713%,82.33578363789503% 63.39392013277814%,93.30127018922194% 75%,77.76736691019323% 71.30665001530522%,80.05203820042827% 80.05203820042827%,71.30665001530522% 77.76736691019323%,75% 93.30127018922192%,63.39392013277814% 82.33578363789503%,60.99980941685714% 91.0518476172854%,54.56841672770181% 84.70057014808336%,50% 100%,45.4315832722982% 84.70057014808336%,39.000190583142874% 91.0518476172854%,36.606079867221865% 82.33578363789505%,25.00000000000001% 93.30127018922194%,28.693349984694787% 77.76736691019323%,19.947961799571733% 80.05203820042827%,22.23263308980677% 71.30665001530522%,6.698729810778076% 75.00000000000001%,17.664216362104966% 63.39392013277815%,8.948152382714603% 60.99980941685715%,15.299429851916635% 54.568416727701816%,0% 50.00000000000001%,15.299429851916635% 45.431583272298205%,8.94815238271459% 39.00019058314288%,17.66421636210496% 36.60607986722188%,6.698729810778062% 25.000000000000014%,22.23263308980676% 28.693349984694787%,19.947961799571715% 19.947961799571747%,28.69334998469477% 22.232633089806775%,24.99999999999998% 6.698729810778083%,36.60607986722184% 17.664216362104973%,39.00019058314284% 8.948152382714603%,45.43158327229816% 15.299429851916642%,49.99999999999999% 0%,54.568416727701795% 15.299429851916635%,60.99980941685711% 8.94815238271459%,63.39392013277812% 17.66421636210496%,74.99999999999997% 6.6987298107780475%,71.3066500153052% 22.23263308980675%,80.05203820042826% 19.947961799571722%,77.76736691019323% 28.69334998469477%,93.30127018922192% 24.99999999999998%,82.33578363789502% 36.60607986722184%,91.0518476172854% 39.00019058314283%,84.70057014808336% 45.43158327229816%,100% 50%,84.70057014808336% 54.5684167277018%);
-  //   }
-  // }
