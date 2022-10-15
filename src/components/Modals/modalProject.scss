@@ -1,0 +1,44 @@
+.projectModal {
+  position: absolute;
+  width: 400px;
+  height: 476px;
+  left: 300px;
+  top: 506px;
+}
+.videoPokemon {
+  border-radius: 10px;
+  position: absolute;
+  width: 298px;
+  height: 167px;
+left: 349px;
+top: 553px;
+// transform: rotate(90deg);
+}
+
+.videoFlyMate {
+  border-radius: 10px;
+  position: absolute;
+  width: 298px;
+  height: 167px;
+  left: 349px;
+  top: 774px;
+// transform: rotate(90deg);
+}
+
+.pokemonLogo {
+  position: absolute;
+width: 171px;
+height: 56px;
+left: 243px;
+top: 610px;
+transform: rotate(-90deg);
+}
+
+.flyMateLogo {
+  position: absolute;
+width: 174px;
+height: 58px;
+left: 580.34px;
+top: 829px;
+transform: rotate(90deg);
+}

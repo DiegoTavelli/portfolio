@@ -24,24 +24,39 @@
   // bottom: -10px;
 }
 .fullStackDiv {
-  animation: flipName 2s ease;
+  animation: flipName .5s ease;
 }
 
 .firstContainer {
-  animation: firstFlipCont 4s ease;
+  animation: firstFlipCont 1s ease;
 }
 
 .midContainer {
-  animation: flipCont 3s ease;
+  animation: flipCont .5s ease;
 }
+// .containerMonkeyBike {
+//   animation: bikeComing 1.5s ease;
+// }
+
+@keyframes bikeComing {
+from {
+  transform: skewY(100deg) skewX(100deg);
+}
+to {
+  transform: skewY(0deg) skewX(0deg) ;
+}
+}
+
 @keyframes flipName {
    0% {
+    opacity: 0;
     transition: transform 0.4s ease-in-out;
     transform: rotate3d(0, 10, 1, 3.142rad);
     transition-timing-function: ease;
     filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
   }
   100% {
+    opacity: 1;
     transition: transform 0.4s ease-in-out;
     transform: rotate3d(0, 0, 0, 0rad);
     transition-timing-function: ease;
@@ -50,12 +65,14 @@
 
 @keyframes firstFlipCont {
     0% {
+      opacity: 0;
     transition: transform 0.4s ease-in-out;
     transform: rotate3d(10, 0, 1, 3.142rad);
     transition-timing-function: ease;
     filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
   }
   100% {
+    opacity: 1;
     transition: transform 0.4s ease-in-out;
     transform: rotate3d(0, 0, 0, 0rad);
     transition-timing-function: ease;
@@ -64,12 +81,14 @@
 
 @keyframes flipCont {
    0% {
+    opacity: 0;
     transition: transform 0.4s ease-in-out;
     transform: rotate3d(0, 10, 1, 3.142rad);
     transition-timing-function: ease;
     filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
   }
   100% {
+    opacity: 1;
     transition: transform 0.4s ease-in-out;
     transform: rotate3d(0, 0, 0, 0rad);
     transition-timing-function: ease;
@@ -125,12 +144,12 @@ filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
   //   transition: transform 0.7s ease-in-out;
   //   }
  
-.CardProContainer:hover .CardPro {
+.CardProContainer:active .CardPro {
   // display: none;
-  filter: blur(15px);
+  filter: blur(4px);
   animation: flipCardRev .7s ease;
 }
-.CardProContainer:hover .CardPro2 {
+.CardProContainer:active .CardPro2 {
   animation: flipCard 1s ease;
 }
 
@@ -167,9 +186,9 @@ top: 275px;
     }
     50% {
       transition: transform 0.4s ease-in-out;
-      transform: rotate3d(0, 10, 1, 3.142rad);
+      transform:  scale(1.2);
       transition-timing-function: ease;
-      filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
+      filter: drop-shadow(0px 50px 40px rgba(0, 0, 0, 0.873));
     }
     100% {
       transition: transform 0.4s ease-in-out;
@@ -216,6 +235,9 @@ top: 275px;
     top: 655px;
     margin-top: -190px;
   }
+  .ProjectsOpen {
+    left:440px;
+  }
  
       
 
@@ -227,8 +249,16 @@ left: 594.53px;
 top: 329.15px;
 transform: rotate(-2.78deg);
 filter: drop-shadow(18px 10px 4px rgba(0, 0, 0, 0.25));
+animation: platformMove 1 s ease;
   }
-
+@keyframes platformMove {
+  from {
+    transform: skewX(100deg);
+  }
+  to {
+    transform: skewX(0deg);
+  }
+}
   
   .aboutContainer {
     // background-color: red;
@@ -374,8 +404,8 @@ top: 153px;
     width: 211.26px;
     height: 134.44px;
     left: 1200px;
-    top: 607.81px;
-    transform: rotate(-7.56deg);
+    top: 547px;
+    transform: rotate(-21deg);
   }
 
   .starDust {
@@ -391,14 +421,14 @@ top: 153px;
 
   .monkeyGrass {
     // background-color: red;
-    padding: 30px;
+    padding: 40px;
     border-radius: 30%;
     z-index: 50;
     position: absolute;
     width: 36.9px;
     height: 36.9px;
-    top: 205px;
-    left: 1082px;
+    top: 196px;
+    left: 1070px;
 transform: rotate(-10.57deg);
 }
 
@@ -431,7 +461,7 @@ top: 520px;
   }
 
   .bikeMonkey2 {
-    z-index: 80;
+    z-index: 90;
     position: absolute;
     width: 104.83px;
     height: 104.83px;
@@ -439,38 +469,52 @@ top: 520px;
     top: 398px;
     transform: rotate(17deg);
   }
+  // .monkeysDiv {
+  //   animation: monkeyDivFrame 1.5s ease;
+  // }
 
+  @keyframes monkeyDivFrame {
+    from {
+      opacity: 0;
+      transform: translate(10000px, 10000px);
+    }
+    to {
+      opacity: 1;
+    transform: translate(0px, 0px);
+    }
+  }
  
 
 //rotate starDust
   @-webkit-keyframes rotating /* Safari and Chrome */ {
     from {
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
+      -webkit-transform: rotate(65.04deg);
+      -o-transform: rotate(65.04deg);
+      transform: rotate(65.04deg);
     }
     to {
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
+      -webkit-transform: rotate(425.04deg);
+      -o-transform: rotate(425.04deg);
+      transform: rotate(425.04deg);
     }
   }
   @keyframes rotating {
     0% {
-      -ms-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
+      -ms-transform: rotate(65.04deg);
+      -moz-transform: rotate(65.04deg);
+      -webkit-transform: rotate(65.04deg);
+      -o-transform: rotate(65.04deg);
+      transform: rotate(65.04deg);
     }
     100% {
-      -ms-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
+      -ms-transform: rotate(425.04deg);
+      -moz-transform: rotate(425.04deg);
+      -webkit-transform: rotate(425.04deg);
+      -o-transform: rotate(425.04deg);
+      transform: rotate(425.04deg);
     }
   }
+  
   .aboutContainer:hover .rotating {
     -webkit-animation: rotating 1s linear;
     -moz-animation: rotating 1s linear;
@@ -484,12 +528,10 @@ top: 520px;
   }
   @keyframes monkeySpin {
     0% {
-      transform: rotate(300deg)
+      transform: rotate(720deg)
       skewY(10deg);
     }
-    100% {
-
-    }
+    
   }
 
   //rotate contactWorld
@@ -559,42 +601,5 @@ top: 614px;
   left: 800px;
   top: 583px;
   
-  }
-
-
-  @-webkit-keyframes mandala /* Safari and Chrome */ {
-    from {
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes mandala {
-    from {
-      -ms-transform: rotate(0deg);
-      -moz-transform: rotate(0deg);
-      -webkit-transform: rotate(0deg);
-      -o-transform: rotate(0deg);
-      transform: rotate(0deg);
-    }
-    to {
-      -ms-transform: rotate(360deg);
-      -moz-transform: rotate(360deg);
-      -webkit-transform: rotate(360deg);
-      -o-transform: rotate(360deg);
-      transform: rotate(360deg);
-    }
-  }
-  .mandala:hover {
-    -webkit-animation: rotating 20s linear infinite;
-    -moz-animation: rotating 20s linear infinite;
-    -ms-animation: rotating 20s linear infinite;
-    -o-animation: rotating 20s linear infinite;
-    animation: rotating 20s linear infinite;
   }
 

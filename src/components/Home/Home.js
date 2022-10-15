@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './home.scss'
 import MovingTextComp from '../Home/MovingText';
-
+import ModalProject from '../Modals/ModalProject'
 
 import CardHome from '../../assets/figma/cardHome3d3.png'
 import ArrowPro from '../../assets/figma/cardProy4.png'
@@ -34,6 +34,9 @@ import Grass from '../../assets/figma/grass.png'
 
 const Home = () => {
 
+  const [project, setProject] = useState(false)
+
+
   return (
     <div className='homeContainer' >
       <video
@@ -43,6 +46,7 @@ const Home = () => {
         muted
         className='backVid clip-animation' >
       </video>
+
       <div className='navContainer' >
         <nav>
           <div className='fullStackDiv'>
@@ -53,38 +57,49 @@ const Home = () => {
           <div className='firstContainer'>
             <MovingTextComp />
             <img src={CardHome} className='cardHome' alt='' />
-            <img src={ArrowPro} className='ArrowPro' alt='' />
+            <div className='monkeysDiv' >
+              <img src={bikeMonkey} className='bikeMonkey2' alt='' />
+              <img src={bikeMonkey} className='bikeMonkey' alt='' />
+              <img src={Monkey} className='starDust' alt='' />
+            </div>
+
+            <div className='containerMonkeyBike' >
+              <img src={ArrowPro} className='ArrowPro' alt='' />
+              <img src={Mandala} className='mandala rotatingMandala' alt='' />
+              <img src={Grass} className='grass' alt='' />
+            </div>
             <img src={Platform} className='platform' alt='' />
             <img src={Diego} className='Diego' alt='' />
             <img src={Tavelli} className='Tavelli' alt='' />
             <img src={TreeColor} className='treeColor' alt='' />
-            <img src={Monkey} className='starDust' alt='' />
-            <img src={bikeMonkey} className='bikeMonkey' alt='' />
-            <img src={bikeMonkey} className='bikeMonkey2' alt='' />
-            <img src={Mandala} className='mandala rotatingMandala' alt='' />
-            <img src={Grass} className='grass' alt='' />
             <img src={Laptop} className='laptop' alt='' />
           </div>
           <div className='midContainer' >
             <NavLink
               to='/contact'
             >
+              {/* <HoverBass /> */}
               <div className='divCircle' >
                 <img src={triangleLight} className='triangle' alt='' />
                 <img src={Contact} className='Contact' alt='' />
                 <img src={ContactWorld} className='contactWorld rotatingContact' alt='' />
               </div>
             </NavLink>
-            <NavLink
-              to='/projects'
-            >
+            <>
               <div className='CardProContainer' >
-                <img src={CardPro} className='CardPro' alt='' />
+                <div onClick={() => setProject(project ? false : true)}  >
+                  <img src={CardPro} className='CardPro' alt='' />
+                  <img src={CardPro2} className='CardPro2' alt='' />
+                  <img src={Projects} className={project ? 'Projects ProjectsOpen' : 'Projects'} alt='' />
+                </div>
                 {/* <img src={CardPro} className='CardPro' alt='' /> */}
-                <img src={CardPro2} className='CardPro2' alt='' />
-                <img src={Projects} className='Projects' alt='' />
               </div>
-            </NavLink>
+              {
+                project
+                  ? <ModalProject />
+                  : null
+              }
+            </>
             <NavLink
               to='/about'
             >
@@ -92,7 +107,7 @@ const Home = () => {
                 <img src={AboutWorlds} className='aboutWorlds rotating' alt='' />
                 <img src={monkeyGrass} className='monkeyGrass' alt='' />
                 <img src={About} className='about' alt='' />
-                <img src={Me} className='me rotating' alt='' />
+                <img src={Me} className='me' alt='' />
               </div>
             </NavLink>
           </div>
