@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
 import './home.scss'
 import MovingTextComp from '../Home/MovingText';
 import ModalProject from '../Modals/ModalProject'
@@ -7,7 +6,7 @@ import ModalAbout from '../Modals/ModalAbout'
 import ModalContact from '../Modals/ModalContact'
 
 import CardHome from '../../assets/figma/cardHome3d3.png'
-import ArrowPro from '../../assets/figma/cardProy4.png'
+import ArrowPro from '../../assets/figma/cardProy6.png'
 import CardPro from '../../assets/figma/cardp2p1.png'
 import CardPro2 from '../../assets/figma/cardp2p2.png'
 import Platform from '../../assets/figma/platform.png'
@@ -23,6 +22,7 @@ import Me from '../../assets/figma/me2.png'
 import Full from '../../assets/figma/full.png'
 import Stack from '../../assets/figma/stack.png'
 import Dev from '../../assets/figma/dev.png'
+import Arrow from '../../assets/figma/arrow.png'
 import Monkey from '../../assets/figma/monkey.png'
 import bikeMonkey from '../../assets/figma/bikeMonkey.png'
 import triangleLight from '../../assets/figma/crystal.webp'
@@ -30,7 +30,11 @@ import Mandala from '../../assets/figma/mandalaGif.gif'
 import monkeyGrass from '../../assets/figma/monkeyGrass2.png'
 import Laptop from '../../assets/figma/laptop2.png'
 import TreeColor from '../../assets/figma/frames/tree2.png'
-import Grass from '../../assets/figma/grass.png'
+import GifMe from '../../assets/figma/gifMe.gif'
+import CircleLoading2 from '../../assets/figma/loading2.gif'
+import dialogBassMonkey from '../../assets/figma/dialogBassMonkey2.png'
+import GifBike from '../../assets/figma/gifBike.gif'
+import LoveIcon from '../../assets/figma/loveIcon.png'
 
 
 
@@ -39,6 +43,10 @@ const Home = () => {
   const [project, setProject] = useState(false)
   const [about, setAbout] = useState(false)
   const [contact, setContact] = useState(false)
+  const [showGifMe, setShowGifMe] = useState(false)
+  const [showBassMonkey, setShowBassMonkey] = useState(false)
+  const [showBikeMonkey, setShowBikeMonkey] = useState(false)
+
 
   return (
     <div className='homeContainer' >
@@ -49,13 +57,24 @@ const Home = () => {
         muted
         className='backVid clip-animation' >
       </video>
-
       <div className='navContainer' >
         <nav>
           <div className='fullStackDiv'>
             <img src={Full} className='Full' alt='' />
             <img src={Stack} className='Stack' alt='' />
             <img src={Dev} className='Dev' alt='' />
+            {!project ?
+              <img src={Arrow} className='arrow1' alt='' />
+              : null
+            }
+            {!contact ?
+              <img src={Arrow} className='arrow2' alt='' />
+              : null
+            }
+            {!about ?
+              <img src={Arrow} className='arrow3' alt='' />
+              : null
+            }
           </div>
           <div className='firstContainer'>
             <MovingTextComp />
@@ -63,13 +82,50 @@ const Home = () => {
             <div className='monkeysDiv' >
               <img src={bikeMonkey} className='bikeMonkey2' alt='' />
               <img src={Monkey} className='starDust' alt='' />
+              {showBassMonkey &&
+                <div>
+                  <img src={dialogBassMonkey} className='dialogBassMonkey' alt='' />
+                </div>
+              }
+              <div
+                className='monkeyBassButton'
+                onMouseEnter={() => setShowBassMonkey(true)}
+                onMouseLeave={() => setShowBassMonkey(false)}
+              >
+
+              </div>
             </div>
 
             <div className='containerMonkeyBike' >
               <img src={bikeMonkey} className='bikeMonkey' alt='' />
+              {showBikeMonkey &&
+                <div>
+                  <img src={GifBike} className='GifBike' alt='' />
+                  <img src={LoveIcon} className='LoveIcon' alt='' />
+                </div>
+              }
+              <div
+                className='monkeyBikeButton'
+                onMouseEnter={() => setShowBikeMonkey(true)}
+                onMouseLeave={() => setShowBikeMonkey(false)}
+              >
+              </div>
               <img src={ArrowPro} className='ArrowPro' alt='' />
-              <img src={Mandala} className='mandala rotatingMandala' alt='' />
-              <img src={Grass} className='grass' alt='' />
+              {!showGifMe &&
+                <img src={Mandala} className='mandala rotatingMandala' alt='' />
+              }
+              <div
+                className='buttonMandala'
+                onMouseEnter={() => setShowGifMe(true)}
+                onMouseLeave={() => setShowGifMe(false)}
+              />
+              <img src={CircleLoading2} className='ArrowLoading2' alt='' />
+              {showGifMe && GifMe && (
+                <div>
+                  <div className='divGifMe' ></div>
+                  <img src={GifMe} className='GifMe' alt='' />
+                </div>
+              )}
             </div>
             <img src={Platform} className='platform' alt='' />
             <img src={Diego} className='Diego' alt='' />

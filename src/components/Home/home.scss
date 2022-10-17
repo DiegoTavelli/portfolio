@@ -7,21 +7,18 @@
   width: 100%;
  }
 
-
 .homeContainer {
-    position: absolute;
+ position:absolute;
   justify-content: center;
   align-items: center;
   align-content: center;
-  align-items: center;
-  
-}
+   }
 
 .navContainer {
   top: -70px;
   position: absolute;
   align-items: center;
-  right: 0px;
+  justify-content: center;
 }
 .fullStackDiv {
   animation: flipName .8s ease;
@@ -99,8 +96,7 @@ to {
   
   .navContainer {
       right: 100px;
-   
-  }
+     }
 }
 @media only screen and (max-width: 1298px) {
   
@@ -112,7 +108,7 @@ to {
 @media only screen and (max-width: 1159px) {
   
   .navContainer {
-      right: 220px;
+  right: 220px;
    max-width: 200px;
   }
 }
@@ -126,24 +122,17 @@ to {
   filter: drop-shadow(33px 22px 2px rgba(10, 10, 10, 0.671));
   // animation: firstFlipCont 3s ease;
 }
-
-
-  .ArrowPro {
-    z-index: 20;
-    position: absolute;
-width: 324px;
-height: 283px;
-left: 608px;
-top: 398px;
-transform: rotate(0deg);
-filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
+.ArrowPro {
+  z-index: 20;
+  position: absolute;
+  width: 324px;
+  height: 283px;
+  left: 608px;
+  top: 398px;
+  transform: rotate(0deg);
+  filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
   }
 
-  // .ArrowPro:hover {
-  //   transform:skewY(1deg);
-  //   transition: transform 0.7s ease-in-out;
-  //   }
- 
 .CardProContainer:active .CardPro {
   // display: none;
   filter: blur(4px);
@@ -242,9 +231,7 @@ top: 275px;
   }
   .ProjectsOpen {
     left:440px;
-  }
- 
-      
+  }      
 
   .platform {
     position: absolute;
@@ -318,13 +305,30 @@ animation: platformMove 1 s ease;
   top: 737.12px;
   transform: rotate(-1.97deg);
   transition: all 10s ease-out;
-}
+  }
 
 .triangleFx {
  display: block;
-  
+animation: triangleOpac 0.5s ease-in-out;  
 }
 
+@keyframes triangleOpac {
+  0% {
+    height: 380px;
+    width: 700px;
+    opacity: 0;
+    transform: rotate(5deg);
+  }
+  50% {
+    opacity: 0.8;
+    
+    
+  }
+  100% {
+    opacity: 1;
+    
+  }
+}
 
 .contactWorld {
   position: absolute;
@@ -337,8 +341,12 @@ animation: platformMove 1 s ease;
 
 .contactWorldFx {
   transform:skewY(1deg);
-        transition: transform 0.4s ease-in-out;
-    transform: rotate3d(10, 0, 0, 1.142rad);
+  transition: transform .4s ease-in-out;
+  transform: rotate3d(10, 0, 0, 5.142rad);
+  filter: drop-shadow(0px 110px 70px rgba(13, 4, 45, 0.799))
+  brightness(80%)
+  ;
+  
 }
 
 .Contact {
@@ -350,7 +358,6 @@ animation: platformMove 1 s ease;
   top: 855px;
     transform: rotate(2.14deg);
 }
-
 
   .Diego {
     z-index: 30;
@@ -381,8 +388,6 @@ filter: drop-shadow(37px 1px 10px rgba(0, 0, 0, 0.25));
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transform: rotate(-20.5deg);
   }
-
-
 
   .FullStackDev {
     position: absolute;
@@ -417,6 +422,30 @@ top: 153px;
     top: 597px;
     transform: rotate(-12deg);
   }
+  .arrow1 {
+    position: absolute;
+    width: 64px;
+    height: 22px;
+    left: 337px;
+    top: 378px;
+    transform: rotate(-4.96deg);
+  } 
+  .arrow2 {
+    position: absolute;
+    width: 56.38px;
+    height: 19.16px;
+    left: 890px;
+    top: 923.69px;
+    transform: rotate(-129.96deg);
+  } 
+  .arrow3 {
+    position: absolute;
+    width: 49.99px;
+    height: 16.99px;
+    left: 1180px;
+    top: 179.59px;
+    transform: rotate(140deg);
+  } 
 
   .starDust {
     z-index: 100;
@@ -427,6 +456,39 @@ top: 153px;
     top: 269px;
     filter: drop-shadow(-13px 4px 4px rgba(0, 0, 0, 0.225));
     transform: rotate(0.93deg);
+  }
+  
+
+  @keyframes dialogBass {
+    0% {
+        opacity: 0;
+      }
+100% {
+    opacity: 1;
+    }
+  }
+
+  .monkeyBassButton {
+    z-index: 110;
+    position: absolute;
+    width: 82.5px;
+    height: 87.72px;
+    left: 927.42px;
+    top: 269px;
+    filter: drop-shadow(-13px 4px 4px rgba(0, 0, 0, 0.225));
+    transform: rotate(0.93deg);
+  }
+
+  .dialogBassMonkey {
+    z-index: 0;
+    position: absolute;
+    width: 200.82px;
+    height: 89.12px;
+    left: 810px;
+    top: 180px;
+    filter: drop-shadow(-6px -6px 0px rgba(0, 0, 0, 0.25));
+    // transform: matrix(-1, 0.06, 0.06, 1, 0, 0);
+    animation: monkeySpinDialog .2s ease-in;
   }
 
   .monkeyGrass {
@@ -479,22 +541,50 @@ top: 520px;
     top: 398px;
     transform: rotate(17deg);
   }
-  // .monkeysDiv {
-  //   animation: monkeyDivFrame 1.5s ease;
-  // }
+  
+  .monkeyBikeButton {
+    z-index: 90;
+    position: absolute;
+    height: 104.83px;
+    width: 104.83px;
+    left: 833px;
+    top: 400px;
+    transform: rotate(17deg);
+  }
 
-  @keyframes monkeyDivFrame {
-    from {
-      opacity: 0;
-      transform: translate(10000px, 10000px);
+  .GifBike {
+    z-index: 20;
+    position: absolute;
+    width: 76px;
+    height: 72px;
+    left: 750px;
+    top: 515px;
+    border-radius: 90px;
+  }
+
+.LoveIcon {
+  z-index: 30;
+  position: absolute;
+  width: 52px;
+  height: 52px;
+  left: 842px;
+  top: 374px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  animation: LoveIconAnim .2s ease-in-out;
+}
+
+
+
+  @keyframes LoveIconAnim {
+    0% {
+      top:350px;
+      transform: skewX(20deg);
     }
-    to {
-      opacity: 1;
-    transform: translate(0px, 0px);
+    100% {
+
     }
   }
  
-
 //rotate starDust
   @-webkit-keyframes rotating /* Safari and Chrome */ {
     from {
@@ -533,16 +623,46 @@ top: 520px;
     animation: rotating 1s linear;
   }
   .aboutContainer:active .monkeyGrass {
-    animation: monkeySpin 1.4s ease;
+    animation: monkeySpin 1s ease-in-out;
   }
-
 
   @keyframes monkeySpin {
     0% {
-      transform: rotate(720deg)
+      transform: rotate(0deg)
+    }
+    100% {
+      transform: rotate(3600deg)
+    }
+  }
+
+  @keyframes monkeySpinDialog {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg)
+      skewX(-40deg)
       skewY(10deg);
     }
-    
+    50% {
+      opacity: 0.3;
+      transform: rotate(0deg)
+      skewX(-40deg)
+      skewY(-2deg);
+    }
+    65% {
+      opacity: 0.8;
+      transform: rotate(0deg)
+      skewX(-40deg)
+      skewY(-2deg);
+    }
+    75% {
+      opacity: 0.9;
+      transform: rotate(0deg)
+      skewX(-10deg)
+      skewY(-1deg);
+    }
+    100% {
+      opacity: 1;
+      }
   }
 
   //rotate contactWorld
@@ -555,6 +675,56 @@ top: 520px;
   top: 500px;
 }
 
+.buttonMandala {
+  z-index: 30;
+  position: absolute;
+  width: 98px;
+  height: 98px;
+  left: 739px;
+  top: 500px;
+}
+
+.ArrowLoading {
+  z-index: 14;
+  position: absolute;
+width: 43px;
+height: 38px;
+left: 765px;
+top: 531px;
+}
+.ArrowLoading2 {
+  z-index: 80;
+  position: absolute;
+width: 43px;
+height: 38px;
+left: 802px;
+top: 586px;
+}
+
+.ArrowLoading2:hover {
+  transform: rotate(360deg);
+}
+
+.divGifMe {
+  background-color: #fdbdec95;
+  border-radius: 50%;
+  z-index: 14;
+  position: absolute;
+  width: 72.5px;
+  height: 71px;
+  left: 750px;
+  top: 515px;
+}
+
+.GifMe {
+  z-index: 15;
+  position: absolute;
+  width: 72.5px;
+  height: 66.3px;
+  left: 749.85px;
+  top: 510px;
+}
+
 .treeColor {
   position: absolute;
   width: 131.31px;
@@ -565,13 +735,13 @@ transform: rotate(-20deg);
 }
 
 .grass {
-  
+  z-index: 20;
 position: absolute;
-width: 41px;
-height: 15px;
-left: 805px;
-top: 614px;
-  filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
+width: 46px;
+height: 20px;
+left: 765px;
+top: 564px;
+filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 }
 .breakTriangle {
   z-index: 30;
@@ -605,12 +775,4 @@ top: 614px;
   }
 }
 
-  .darkStar {
-  position: absolute;
-  width: 48px;
-  height: 45px;
-  left: 800px;
-  top: 583px;
-  
-  }
 

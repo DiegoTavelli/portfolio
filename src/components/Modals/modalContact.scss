@@ -1,3 +1,7 @@
+.modalContactContainer {
+  // position: absolute;
+}
+
 .modalContact {
   z-index: -10;
   position: absolute;
@@ -9,6 +13,23 @@
   border-bottom-right-radius: 30%;
   filter: drop-shadow(18px 9px 4px rgba(0, 0, 0, 0.612));
 }
+
+.inputContact {
+  position: absolute;
+  width: 140px;
+  height: 36px;
+  left: 1161px;
+  top: 677.41px;
+  transform: rotate(-20deg)
+}
+
+.modalContactFx {
+  animation: contactIn 1s ease;
+ }
+ 
+ .modalContactNoFx {
+   animation: contactOut 5s ease;
+ }
 
 @keyframes contactIn {
   0% {
@@ -44,13 +65,5 @@
     left: 950px;
     opacity: 0.2;
   }
-}
-
-.modalContactFx {
- animation: contactIn 1s ease;
-}
-
-.modalContactNoFx {
-  animation: contactOut 5s ease;
 }
 

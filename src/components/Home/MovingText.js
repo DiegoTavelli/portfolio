@@ -12,20 +12,11 @@ const MovingTextComp = () => {
       {arr.map((el, index) => {
         let vari = 1000
         return (
-          <div className='movingTextHard'>
+          <div
+            key={index}
+            className='movingTextHard'>
             <MovingComponent
               type='fadeInFromTop'
-              dataText={[
-                ' Innovation',
-                'Communication',
-                'Creativity',
-                'Adaptability',
-                'Collaboration',
-                'Persuasion',
-                'Active listening',
-                'Work ethic',
-                'Teamwork'
-              ]}
               duration={vari + ((index + 2) * 1000) + 'ms'}
               delay='0s'
               direction='reverse'
@@ -39,22 +30,20 @@ const MovingTextComp = () => {
               Welcome!
             </MovingComponent>
           </div>
-
         )
       })}
       <div className='movingTextSoft' >
         <MovingText
           type='typewriter'
           dataText={[
-            ' Innovation',
-            'Communication',
-            'Creativity',
-            'Adaptability',
-            'Collaboration',
-            'Persuasion',
-            'Active listening',
-            'Work ethic',
-            'Teamwork'
+            '⚡ Innovation',
+            '🗣 Communication',
+            '🌟 Creativity',
+            '♻ Adaptability',
+            '💞 Collaboration',
+            '👂🏽 Active listening ',
+            '✅ Work ethic',
+            '❤ Teamwork'
           ]} />
       </div>
     </div>

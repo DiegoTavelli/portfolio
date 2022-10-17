@@ -1,6 +1,10 @@
+.modalProjectContainer {
+animation: appear .5s ease-in-out;
+}
+
 .projectModal {
   position: absolute;
-  width: 400px;
+  width: 402px;
   height: 476px;
   left: 300px;
   top: 506px;
@@ -39,18 +43,18 @@ top: 553px;
 
 .pokemonLogo {
   position: absolute;
-width: 171px;
-height: 56px;
-left: 243px;
+width: 140px;
+height: 40px;
+left: 259px;
 top: 610px;
 transform: rotate(-90deg);
 }
 
 .flyMateLogo {
   position: absolute;
-width: 174px;
-height: 58px;
-left: 583px;
+  width: 140px;
+  height: 40px;
+left: 597px;
 top: 829px;
 transform: rotate(90deg);
 }
@@ -61,5 +65,16 @@ transform: rotate(90deg);
   }
   100% {
     transform: scale(1.06)
+  }
+}
+
+@keyframes appear {
+  0% {
+    // transform: scale(.1);
+    opacity: 0;
+  }
+  100% {
+    // transform: scale(1);
+    opacity: 1;
   }
 }
