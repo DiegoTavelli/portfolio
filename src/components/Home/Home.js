@@ -3,6 +3,8 @@ import { NavLink } from 'react-router-dom';
 import './home.scss'
 import MovingTextComp from '../Home/MovingText';
 import ModalProject from '../Modals/ModalProject'
+import ModalAbout from '../Modals/ModalAbout'
+import ModalContact from '../Modals/ModalContact'
 
 import CardHome from '../../assets/figma/cardHome3d3.png'
 import ArrowPro from '../../assets/figma/cardProy4.png'
@@ -35,7 +37,8 @@ import Grass from '../../assets/figma/grass.png'
 const Home = () => {
 
   const [project, setProject] = useState(false)
-
+  const [about, setAbout] = useState(false)
+  const [contact, setContact] = useState(false)
 
   return (
     <div className='homeContainer' >
@@ -59,11 +62,11 @@ const Home = () => {
             <img src={CardHome} className='cardHome' alt='' />
             <div className='monkeysDiv' >
               <img src={bikeMonkey} className='bikeMonkey2' alt='' />
-              <img src={bikeMonkey} className='bikeMonkey' alt='' />
               <img src={Monkey} className='starDust' alt='' />
             </div>
 
             <div className='containerMonkeyBike' >
+              <img src={bikeMonkey} className='bikeMonkey' alt='' />
               <img src={ArrowPro} className='ArrowPro' alt='' />
               <img src={Mandala} className='mandala rotatingMandala' alt='' />
               <img src={Grass} className='grass' alt='' />
@@ -75,16 +78,15 @@ const Home = () => {
             <img src={Laptop} className='laptop' alt='' />
           </div>
           <div className='midContainer' >
-            <NavLink
-              to='/contact'
-            >
+            <>
               {/* <HoverBass /> */}
-              <div className='divCircle' >
-                <img src={triangleLight} className='triangle' alt='' />
+              <div onClick={() => setContact(contact ? false : true)} className='divCircle' >
+                <img src={triangleLight} className={contact ? 'triangle triangleFx' : 'triangle'} alt='' />
                 <img src={Contact} className='Contact' alt='' />
-                <img src={ContactWorld} className='contactWorld rotatingContact' alt='' />
+                <img src={ContactWorld} className={contact ? 'contactWorld rotatingContact contactWorldFx' : 'contactWorld rotatingContact'} alt='' />
               </div>
-            </NavLink>
+              <ModalContact contact={contact} />
+            </>
             <>
               <div className='CardProContainer' >
                 <div onClick={() => setProject(project ? false : true)}  >
@@ -100,16 +102,21 @@ const Home = () => {
                   : null
               }
             </>
-            <NavLink
-              to='/about'
-            >
-              <div className='aboutContainer' >
-                <img src={AboutWorlds} className='aboutWorlds rotating' alt='' />
-                <img src={monkeyGrass} className='monkeyGrass' alt='' />
-                <img src={About} className='about' alt='' />
-                <img src={Me} className='me' alt='' />
+            <>
+              <div
+                onClick={() => setAbout(about ? false : true)}
+                className='aboutContainer' >
+                <div className='aboutDivHover' >
+                  <img src={AboutWorlds} className='aboutWorlds rotating' alt='' />
+                  <img src={monkeyGrass} className='monkeyGrass' alt='' />
+                  <img src={About} className='about' alt='' />
+                  <img src={Me} className='me' alt='' />
+                </div>
               </div>
-            </NavLink>
+              {
+                <ModalAbout about={about} />
+              }
+            </>
           </div>
         </nav>
       </div>

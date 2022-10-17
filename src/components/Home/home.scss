@@ -18,13 +18,13 @@
 }
 
 .navContainer {
-  top: -35px;
+  top: -70px;
   position: absolute;
   align-items: center;
-  // bottom: -10px;
+  right: 0px;
 }
 .fullStackDiv {
-  animation: flipName .5s ease;
+  animation: flipName .8s ease;
 }
 
 .firstContainer {
@@ -32,11 +32,11 @@
 }
 
 .midContainer {
-  animation: flipCont .5s ease;
+  animation: flipCont .7s ease;
 }
-// .containerMonkeyBike {
-//   animation: bikeComing 1.5s ease;
-// }
+.containerMonkeyBike {
+  animation: bikeComing .8s ease;
+}
 
 @keyframes bikeComing {
 from {
@@ -152,6 +152,9 @@ filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25));
 .CardProContainer:active .CardPro2 {
   animation: flipCard 1s ease;
 }
+.CardProContainer:hover {
+  cursor: pointer;
+}
 
   .CardPro {
     z-index: 10;
@@ -171,7 +174,9 @@ width: 296px;
 height: 205px;
 left: 424px;
 top: 275px;
-
+  }
+  .CardPro2:hover {
+    transform: scale(1.02)
   }
 
   .cardProBlur {
@@ -264,6 +269,10 @@ animation: platformMove 1 s ease;
     // background-color: red;
     position: absolute;
     }
+.aboutContainer:hover {
+  cursor: pointer;
+  transform: skewX(.2deg);
+}
 
   .aboutWorlds {
     position: absolute;
@@ -271,11 +280,9 @@ animation: platformMove 1 s ease;
     height: 128.04px;
     left: 1070px;
     top: 199px;
-   
     transform: rotate(65.04deg);
-    
   }
-  
+   
     .about {
       position: absolute;
   width: 100px;
@@ -293,6 +300,14 @@ animation: platformMove 1 s ease;
   top: 290px;
     }
 
+  .divCircle {
+    cursor: pointer;
+       }
+
+  .divCircle:hover {
+    transform: skewy(-.05deg);
+  }
+
   .triangle {
   display: none;
   z-index: 90;
@@ -305,16 +320,11 @@ animation: platformMove 1 s ease;
   transition: all 10s ease-out;
 }
 
-.divCircle:hover .triangle {
+.triangleFx {
  display: block;
   
 }
 
-.Contact:hover .triangle {
-  display: block;
-  
- }
- 
 
 .contactWorld {
   position: absolute;
@@ -325,7 +335,7 @@ animation: platformMove 1 s ease;
   left: 705.5px;
 }
 
-.divCircle:hover .contactWorld {
+.contactWorldFx {
   transform:skewY(1deg);
         transition: transform 0.4s ease-in-out;
     transform: rotate3d(10, 0, 0, 1.142rad);
@@ -403,9 +413,9 @@ top: 153px;
     position: absolute;
     width: 211.26px;
     height: 134.44px;
-    left: 1200px;
-    top: 547px;
-    transform: rotate(-21deg);
+    left: 1380px;
+    top: 597px;
+    transform: rotate(-12deg);
   }
 
   .starDust {
@@ -515,17 +525,18 @@ top: 520px;
     }
   }
   
-  .aboutContainer:hover .rotating {
+  .aboutContainer:active .rotating {
     -webkit-animation: rotating 1s linear;
     -moz-animation: rotating 1s linear;
     -ms-animation: rotating 1s linear;
     -o-animation: rotating 1s linear;
     animation: rotating 1s linear;
   }
-  .aboutContainer:hover .monkeyGrass {
+  .aboutContainer:active .monkeyGrass {
     animation: monkeySpin 1.4s ease;
-
   }
+
+
   @keyframes monkeySpin {
     0% {
       transform: rotate(720deg)

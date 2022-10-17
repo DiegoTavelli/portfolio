@@ -1,0 +1,54 @@
+.aboutModalIn {
+  z-index: -10;
+  position: absolute;
+  width: 579.64px;
+  height: 544.36px;
+  left: 942px;
+  top: 153.25px;
+  transform: rotate(-0.63deg);
+  animation: aboutFramerIn 2s ease;
+}
+
+.aboutModalOut {
+  z-index: -10;
+  position: absolute;
+  width: 579.64px;
+  height: 544.36px;
+  left: 942px;
+  top: 153.25px;
+  transform: rotate(-0.63deg);
+  animation: aboutFramerOut 2s ease;
+}
+
+@keyframes aboutFramerIn {
+  0% {
+    transform: rotate(-208deg) scale(8%);
+      }
+  50% {
+    transform: rotate(-354.63deg);
+  }
+  100% {
+    transform: rotate(-360.63deg);
+  }
+ }
+
+@keyframes aboutFramerOut {
+ 0% {
+  transform: translateX(0);
+}
+100% {
+  transform: translateX(420px);
+  }
+ 
+ 
+  // 0% {
+  //   transform: rotate(-362.63deg) scale(90%);
+  // }
+  // 50% {
+  //   transform: rotate(-360.63deg) scale(20%);
+  // }
+  // 100% {
+  //   transform: rotate(-208deg)scale(0%);
+  //   display: none;
+  // }
+}

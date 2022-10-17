@@ -1,0 +1,56 @@
+.modalContact {
+  z-index: -10;
+  position: absolute;
+  width: 549px;
+  height: 326px;
+  left: 905px;
+  top: 560px;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 30%;
+  filter: drop-shadow(18px 9px 4px rgba(0, 0, 0, 0.612));
+}
+
+@keyframes contactIn {
+  0% {
+    width: 0px;
+    height: 0px;
+    left: 950px;
+  }
+  50% {
+    width: -260px;
+    height: 163px;
+  }
+
+  100% {
+    width: 549px;
+    height: 326px;
+  }
+}
+
+@keyframes contactOut {
+  0% {
+    width: 549px;
+    height: 326px;
+  }
+  50% {
+    width: -260px;
+    height: 163px;
+    opacity: 0.5;
+   }
+  
+  100% {
+    width: 0px;
+    height: 0px;
+    left: 950px;
+    opacity: 0.2;
+  }
+}
+
+.modalContactFx {
+ animation: contactIn 1s ease;
+}
+
+.modalContactNoFx {
+  animation: contactOut 5s ease;
+}
+

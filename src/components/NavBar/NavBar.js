@@ -3,8 +3,8 @@ import './navbar.scss'
 import { Link, NavLink } from 'react-router-dom';
 // import LogoS from '../../assets/images/logo-s.png'
 import LogoSubtitle from '../../assets/images/logo_sub2.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHomeLg, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faEnvelope, faHomeLg, faUserCircle } from '@fortawesome/free-solid-svg-icons'
 
 
 const NavBar = () => {
@@ -13,7 +13,7 @@ const NavBar = () => {
       <Link className='logo' to='/'>
         <img className='sub-logo' src={LogoSubtitle} alt='logo-sub' />
       </Link>
-      <nav>
+      {/* <nav>
         <NavLink
           to='/'
           exact='true'
@@ -47,7 +47,7 @@ const NavBar = () => {
             className='contact-link'
           />
         </NavLink>
-      </nav>
+      </nav> */}
     </div>
   )
 }

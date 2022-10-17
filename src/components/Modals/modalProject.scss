@@ -15,6 +15,12 @@ top: 553px;
 // transform: rotate(90deg);
 }
 
+.videoPokemon:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+ animation: zoom .1s ease-in-out;
+}
+
 .videoFlyMate {
   border-radius: 10px;
   position: absolute;
@@ -22,7 +28,13 @@ top: 553px;
   height: 167px;
   left: 349px;
   top: 774px;
-// transform: rotate(90deg);
+  // transform: rotate(90deg);
+}
+
+.videoFlyMate:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+ animation: zoom .1s ease-in-out;
 }
 
 .pokemonLogo {
@@ -38,7 +50,16 @@ transform: rotate(-90deg);
   position: absolute;
 width: 174px;
 height: 58px;
-left: 580.34px;
+left: 583px;
 top: 829px;
 transform: rotate(90deg);
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1)
+  }
+  100% {
+    transform: scale(1.06)
+  }
 }
