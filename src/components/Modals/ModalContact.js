@@ -8,7 +8,7 @@ const ModalContact = ({ contact }) => {
   return contact ?
     <div className='modalContactContainer'>
       <img src={ContactModal} alt='' className={contact ? 'modalContact modalContactFx' : 'modalContact modalContactNoFx'} />
-      <input className='inputContact' placeholder='hola' />
+      {/* <input className='inputContact' placeholder='hola' /> */}
     </div>
     : null
 }
