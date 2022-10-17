@@ -48,6 +48,16 @@ const Home = () => {
   const [showBikeMonkey, setShowBikeMonkey] = useState(false)
 
 
+  const onEnter = () => {
+    setShowBassMonkey(true);
+    setShowGifMe(true)
+  }
+  const onLeave = () => {
+    setShowBassMonkey(false);
+    setShowGifMe(false)
+  }
+
+
   return (
     <div className='homeContainer' >
       <video
@@ -85,12 +95,14 @@ const Home = () => {
               {showBassMonkey &&
                 <div>
                   <img src={dialogBassMonkey} className='dialogBassMonkey' alt='' />
+                  <div className='divGifMe' ></div>
+                  <img src={GifMe} className='GifMe' alt='' />
                 </div>
               }
               <div
                 className='monkeyBassButton'
-                onMouseEnter={() => setShowBassMonkey(true)}
-                onMouseLeave={() => setShowBassMonkey(false)}
+                onMouseEnter={() => onEnter()}
+                onMouseLeave={() => onLeave()}
               >
 
               </div>
@@ -114,11 +126,6 @@ const Home = () => {
               {!showGifMe &&
                 <img src={Mandala} className='mandala rotatingMandala' alt='' />
               }
-              <div
-                className='buttonMandala'
-                onMouseEnter={() => setShowGifMe(true)}
-                onMouseLeave={() => setShowGifMe(false)}
-              />
               <img src={CircleLoading2} className='ArrowLoading2' alt='' />
               {showGifMe && GifMe && (
                 <div>
