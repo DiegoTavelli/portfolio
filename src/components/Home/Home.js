@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './home.scss'
-import MovingTextComp from '../Home/MovingText';
+import MovingTextComp from '../MovingText/MovingText';
 import ModalProject from '../Modals/ModalProject'
 import ModalAbout from '../Modals/ModalAbout'
 import ModalContact from '../Modals/ModalContact'
+import MovingTextTech from '../MovingTextTech/MovingTextTech'
+import TechGif from '../MovingTextTech/TechGif';
+
 
 import CardHome from '../../assets/figma/cardHome3d3.png'
 import ArrowPro from '../../assets/figma/cardProy6.png'
@@ -35,7 +38,7 @@ import CircleLoading2 from '../../assets/figma/loading2.gif'
 import dialogBassMonkey from '../../assets/figma/dialogBassMonkey2.png'
 import GifBike from '../../assets/figma/gifBike.gif'
 import LoveIcon from '../../assets/figma/loveIcon.png'
-
+import DialogTech from '../../assets/videos/techSkillsGif.gif'
 
 
 const Home = () => {
@@ -46,17 +49,47 @@ const Home = () => {
   const [showGifMe, setShowGifMe] = useState(false)
   const [showBassMonkey, setShowBassMonkey] = useState(false)
   const [showBikeMonkey, setShowBikeMonkey] = useState(false)
+  const [showLaptop, setShowLaptop] = useState(false)
 
 
-  const onEnter = () => {
-    setShowBassMonkey(true);
+  let logo
+
+  useEffect(() => {
+    setReloadGif()
+  })
+
+  const setReloadGif = () => {
+    if (showLaptop) {
+      logo = DialogTech
+    }
+    if (!showLaptop) {
+      logo = ''
+    }
+  }
+
+  const onEnterBass = () => {
+    setShowBassMonkey(true)
     setShowGifMe(true)
   }
-  const onLeave = () => {
-    setShowBassMonkey(false);
+  const onLeaveBass = () => {
+    setShowBassMonkey(false)
     setShowGifMe(false)
   }
 
+  const onEnterLaptop = () => {
+    setShowLaptop(true)
+  }
+  const onLeaveLaptop = () => {
+    setShowLaptop(false)
+  }
+  const onEnterBike = () => {
+    setShowBikeMonkey(true)
+  }
+  const onLeaveBike = () => {
+    setShowBikeMonkey(false)
+  }
+
+  setReloadGif()
 
   return (
     <div className='homeContainer' >
@@ -101,10 +134,9 @@ const Home = () => {
               }
               <div
                 className='monkeyBassButton'
-                onMouseEnter={() => onEnter()}
-                onMouseLeave={() => onLeave()}
+                onMouseEnter={() => onEnterBass()}
+                onMouseLeave={() => onLeaveBass()}
               >
-
               </div>
             </div>
 
@@ -118,8 +150,8 @@ const Home = () => {
               }
               <div
                 className='monkeyBikeButton'
-                onMouseEnter={() => setShowBikeMonkey(true)}
-                onMouseLeave={() => setShowBikeMonkey(false)}
+                onMouseEnter={() => onEnterBike()}
+                onMouseLeave={() => onLeaveBike()}
               >
               </div>
               <img src={ArrowPro} className='ArrowPro' alt='' />
@@ -138,6 +170,19 @@ const Home = () => {
             <img src={Diego} className='Diego' alt='' />
             <img src={Tavelli} className='Tavelli' alt='' />
             <img src={TreeColor} className='treeColor' alt='' />
+            {showLaptop && (
+              <div>
+                <MovingTextTech />
+                <TechGif logo={logo} />
+              </div>
+            )
+            }
+            <div
+              className='dialogTechButton'
+              onMouseEnter={() => onEnterLaptop()}
+              onMouseLeave={() => onLeaveLaptop()}
+            >
+            </div>
             <img src={Laptop} className='laptop' alt='' />
           </div>
           <div className='midContainer' >

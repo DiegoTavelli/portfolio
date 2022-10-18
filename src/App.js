@@ -4,6 +4,7 @@ import NavBar from './components/NavBar/NavBar'
 import './App.scss';
 import { StrictMode } from 'react';
 
+
 const App = () => {
   return (
     <div className='App' >
