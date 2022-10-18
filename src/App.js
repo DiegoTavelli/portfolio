@@ -12,7 +12,7 @@ const App = () => {
         <NavBar />
         <StrictMode>
           <Routes>
-            <Route path='/' element={<Home />} />
+            <Route path='*' element={<Home />} />
           </Routes>
         </StrictMode>
       </BrowserRouter>

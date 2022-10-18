@@ -5,6 +5,8 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
+  mask: url('../../assets/figma/logoPrincipal2.png'); 
+  // mask-repeat: no-repeat;
  }
 
 .homeContainer {

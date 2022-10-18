@@ -38,8 +38,6 @@ import CircleLoading2 from '../../assets/figma/loading2.gif'
 import dialogBassMonkey from '../../assets/figma/dialogBassMonkey2.png'
 import GifBike from '../../assets/figma/gifBike.gif'
 import LoveIcon from '../../assets/figma/loveIcon.png'
-import DialogTech from '../../assets/videos/techSkillsGif.gif'
-
 
 const Home = () => {
 
@@ -80,7 +78,7 @@ const Home = () => {
         autoPlay
         loop
         muted
-        className='backVid clip-animation' >
+        className='backVid' >
       </video>
       <div className='navContainer' >
         <nav>
