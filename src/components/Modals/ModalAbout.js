@@ -6,15 +6,14 @@ import './modalProject.scss'
 
 const ModalAbout = ({ about }) => {
 
-  if (!about) {
-    return null
-  }
 
-  return (
+
+  return about ?
     <div className='modalAboutContainer'>
       <img src={aboutModal} alt='' className={about ? 'aboutModalIn' : 'aboutModalOut'} />
     </div>
-  )
+    : <div>loading</div>
+
 }
 
 export default ModalAbout

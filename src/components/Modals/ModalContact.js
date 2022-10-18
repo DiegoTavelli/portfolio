@@ -10,7 +10,7 @@ const ModalContact = ({ contact }) => {
       <img src={ContactModal} alt='' className={contact ? 'modalContact modalContactFx' : 'modalContact modalContactNoFx'} />
       {/* <input className='inputContact' placeholder='hola' /> */}
     </div>
-    : null
+    : <div>loading</div>
 }
 
 export default ModalContact

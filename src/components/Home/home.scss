@@ -6,7 +6,9 @@
   height: 100%;
   width: 100%;
   mask: url('../../assets/figma/logoPrincipal2.png'); 
-  mask-size: auto;
+  // mask-size: auto;
+  
+  
   // mask-mode:luminance;
   // mask-repeat: no-repeat;
  }
@@ -93,27 +95,6 @@ to {
     transition: transform 0.4s ease-in-out;
     transform: rotate3d(0, 0, 0, 0rad);
     transition-timing-function: ease;
-  }
-}
-
-@media only screen and (max-width: 1428px) {
-  
-  .navContainer {
-      right: 100px;
-     }
-}
-@media only screen and (max-width: 1298px) {
-  
-  .navContainer {
-      right: 200px;
-   
-  }
-}
-@media only screen and (max-width: 1159px) {
-  
-  .navContainer {
-  right: 220px;
-   max-width: 200px;
   }
 }
 
@@ -800,6 +781,34 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   to {
     transform:skewY(0deg);
     transition: transform 0.7s ease-in-out; 
+  }
+}
+
+
+@media only screen and (max-width: 1560px) {
+  
+  .navContainer {
+      right: 150px;
+     }
+}
+@media only screen and (max-width: 1428px) {
+  
+  .navContainer {
+      right: 200px;
+     }
+}
+@media only screen and (max-width: 1360px) {
+  
+  .navContainer {
+      right: 250px;
+   
+  }
+}
+@media only screen and (max-width: 1280px) {
+  
+  .navContainer {
+  right: 285px;
+   max-width: 200px;
   }
 }
 
