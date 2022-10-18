@@ -5,8 +5,9 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
-  mask: url('../../assets/figma/logoPrincipal2.png'); 
-  // mask-size: auto;
+  mask: url('../../assets/figma/logoPrincipal.png'); 
+  backdrop-filter: blur(60px);
+  mask-size: auto;
   
   
   // mask-mode:luminance;
