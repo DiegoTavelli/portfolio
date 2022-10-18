@@ -6,6 +6,8 @@
   height: 100%;
   width: 100%;
   mask: url('../../assets/figma/logoPrincipal2.png'); 
+  mask-size: auto;
+  // mask-mode:luminance;
   // mask-repeat: no-repeat;
  }
 
@@ -471,7 +473,7 @@ top: 153px;
   }
 
   .monkeyBassButton {
-    cursor: none;
+    
     z-index: 110;
     position: absolute;
     width: 82.5px;
@@ -546,7 +548,6 @@ top: 520px;
   }
   
   .monkeyBikeButton {
-    cursor: none;
     z-index: 90;
     position: absolute;
     height: 104.83px;
@@ -753,7 +754,6 @@ transform: rotate(-20deg);
 // }
 
 .dialogTechButton {
-  cursor: none;
   z-index: 110;
   position: absolute;
   width: 96px;

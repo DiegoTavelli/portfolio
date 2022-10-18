@@ -11,7 +11,7 @@ const MovingTextTech = () => {
         dataText={[
           'JavaScript',
           'HTML       ',
-          'C S S       ',
+          'CSS         ',
           'React       ',
           'Redux       ',
           'Sequelize',
