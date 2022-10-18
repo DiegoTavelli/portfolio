@@ -1,16 +1,26 @@
 import React, { useEffect } from 'react'
 import DialogTech from '../../assets/videos/techSkillsGif.gif'
+import TechSkillsVideo from '../../assets/videos/techSkillsVideo.mp4'
 import './techGif.scss'
 
-const TechGif = ({ logo }) => {
+const TechGif = () => {
 
 
   return (
     <div className='DialogTechContainer'>
       <img
-        src={logo}
+        src={DialogTech}
         className='DialogTech'
-        alt='' />
+        alt=''
+      />
+      <video
+        src={TechSkillsVideo}
+        className='DialogTechVideo'
+        autoPlay
+        loop
+        muted
+        waiting
+      />
     </div>
   )
 }

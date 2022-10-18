@@ -51,22 +51,6 @@ const Home = () => {
   const [showBikeMonkey, setShowBikeMonkey] = useState(false)
   const [showLaptop, setShowLaptop] = useState(false)
 
-
-  let logo
-
-  useEffect(() => {
-    setReloadGif()
-  })
-
-  const setReloadGif = () => {
-    if (showLaptop) {
-      logo = DialogTech
-    }
-    if (!showLaptop) {
-      logo = ''
-    }
-  }
-
   const onEnterBass = () => {
     setShowBassMonkey(true)
     setShowGifMe(true)
@@ -88,8 +72,6 @@ const Home = () => {
   const onLeaveBike = () => {
     setShowBikeMonkey(false)
   }
-
-  setReloadGif()
 
   return (
     <div className='homeContainer' >
@@ -173,7 +155,7 @@ const Home = () => {
             {showLaptop && (
               <div>
                 <MovingTextTech />
-                <TechGif logo={logo} />
+                <TechGif />
               </div>
             )
             }
