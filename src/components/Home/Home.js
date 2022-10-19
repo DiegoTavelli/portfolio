@@ -139,8 +139,10 @@ const Home = () => {
               {!showGifMe && !showLaptop && !showBikeMonkey &&
                 < img src={Mandala} className='mandala rotatingMandala' alt='' />
               }
-
-              <img src={FireGif} className='FireGif' alt='' />
+              {showBassMonkey || showBikeMonkey || showLaptop ?
+                <img src={FireGif} className='FireGif' alt='' />
+                : null
+              }
               {showGifMe && GifMe && (
                 <div>
                   <div className='divGifMe' ></div>
