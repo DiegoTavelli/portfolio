@@ -20,7 +20,6 @@ const TechGif = () => {
         autoPlay
         loop
         muted
-        waiting
       />
     </div>
   )

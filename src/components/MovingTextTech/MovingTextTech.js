@@ -7,6 +7,7 @@ const MovingTextTech = () => {
   return (
     <div className='movingTextTech' >
       <MovingText
+        className='MovingText'
         type='typewriter'
         dataText={[
           'JavaScript',

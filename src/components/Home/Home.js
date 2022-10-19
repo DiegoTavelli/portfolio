@@ -29,7 +29,7 @@ import Arrow from '../../assets/figma/arrow.png'
 import Monkey from '../../assets/figma/monkey.png'
 import bikeMonkey from '../../assets/figma/bikeMonkey.png'
 import triangleLight from '../../assets/figma/crystal.webp'
-import Mandala from '../../assets/figma/mandalaGif.gif'
+import Mandala from '../../assets/figma/palmGif.gif'
 import monkeyGrass from '../../assets/figma/monkeyGrass2.png'
 import Laptop from '../../assets/figma/laptop2.png'
 import TreeColor from '../../assets/figma/frames/tree2.png'
@@ -38,6 +38,8 @@ import CircleLoading2 from '../../assets/figma/loading2.gif'
 import dialogBassMonkey from '../../assets/figma/dialogBassMonkey2.png'
 import GifBike from '../../assets/figma/gifBike.gif'
 import LoveIcon from '../../assets/figma/loveIcon.png'
+import TechIcon from '../../assets/figma/gifTech.gif'
+
 
 const Home = () => {
 
@@ -135,10 +137,10 @@ const Home = () => {
               >
               </div>
               <img src={ArrowPro} className='ArrowPro' alt='' />
-              {!showGifMe &&
+              {!showGifMe && !showLaptop &&
                 <img src={Mandala} className='mandala rotatingMandala' alt='' />
               }
-              <img src={CircleLoading2} className='ArrowLoading2' alt='' />
+              {/* <img src={CircleLoading2} className='ArrowLoading2' alt='' /> */}
               {showGifMe && GifMe && (
                 <div>
                   <div className='divGifMe' ></div>
@@ -154,6 +156,7 @@ const Home = () => {
               <div>
                 <MovingTextTech />
                 <TechGif />
+                <img src={TechIcon} className='TechIcon' alt='' />
               </div>
             )
             }

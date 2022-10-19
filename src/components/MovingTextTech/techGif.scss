@@ -1,5 +1,4 @@
 
-
 .DialogTech {
   z-index: 0;
   position: absolute;
@@ -9,13 +8,30 @@ left: 740px;
 top: 201px;
 filter: drop-shadow(-7px -1px 1px rgba(0, 0, 0, 0.25));
 transform: rotate(0deg);
+animation: techFx .3s ease-in-out;
 }
 
 .DialogTechVideo {
+  border-color: transparent;
+  background-color: transparent;
   z-index: 10;
   position: absolute;
   width: 100px;
   height: 51.4px;
 left: 734px;
 top: 221.6px;
+animation: videoOpacity 1s ease-in-out;
+}
+
+@keyframes techFx {
+  0% {
+    left: 825px;
+width: 0px;
+  }
+}
+
+@keyframes videoOpacity {
+  0% {
+    opacity: 0;
+  }
 }

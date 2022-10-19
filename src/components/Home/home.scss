@@ -300,13 +300,13 @@ animation: triangleOpac 0.5s ease-in-out;
 
 @keyframes triangleOpac {
   0% {
-    height: 380px;
-    width: 700px;
+    // height: 380px;
+    // width: 700px;
     opacity: 0;
     transform: rotate(5deg);
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.1;
     
     
   }
@@ -660,10 +660,11 @@ top: 520px;
 .mandala {
   z-index: 15;
   position: absolute;
-  width: 98px;
-  height: 98px;
-  left: 739px;
-  top: 500px;
+  width: 85.5px;
+  height: 85.5px;
+  left: 744px;
+  top: 506.5px;
+  border-radius: 50%;
 }
 
 .buttonMandala {
@@ -714,6 +715,19 @@ top: 586px;
   height: 66.3px;
   left: 749.85px;
   top: 510px;
+}
+
+.TechIcon {
+  // background-color: black;
+  // background-image: radial-gradient(yellow, blue, transparent,transparent,transparent,transparent,transparent);
+  border-radius: 50%;
+  z-index: 15;
+  position: absolute;
+  width: 72.5px;
+  height: 72.5px;
+  left: 750px;
+  top: 514px;
+
 }
 
 .treeColor {
