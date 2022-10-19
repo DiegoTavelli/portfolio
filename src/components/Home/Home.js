@@ -9,7 +9,7 @@ import TechGif from '../MovingTextTech/TechGif';
 
 
 import CardHome from '../../assets/figma/cardHome3d3.png'
-import ArrowPro from '../../assets/figma/cardProy6.png'
+import ArrowPro from '../../assets/figma/cardProy4.png'
 import CardPro from '../../assets/figma/cardp2p1.png'
 import CardPro2 from '../../assets/figma/cardp2p2.png'
 import Platform from '../../assets/figma/platform.png'
@@ -28,18 +28,17 @@ import Dev from '../../assets/figma/dev.png'
 import Arrow from '../../assets/figma/arrow.png'
 import Monkey from '../../assets/figma/monkey.png'
 import bikeMonkey from '../../assets/figma/bikeMonkey.png'
-import triangleLight from '../../assets/figma/crystal.webp'
+import triangleLight from '../../assets/figma/crystal2.gif'
 import Mandala from '../../assets/figma/palmGif.gif'
 import monkeyGrass from '../../assets/figma/monkeyGrass2.png'
 import Laptop from '../../assets/figma/laptop2.png'
 import TreeColor from '../../assets/figma/frames/tree2.png'
 import GifMe from '../../assets/figma/gifMe.gif'
-import CircleLoading2 from '../../assets/figma/loading2.gif'
 import dialogBassMonkey from '../../assets/figma/dialogBassMonkey2.png'
 import GifBike from '../../assets/figma/gifBike.gif'
 import LoveIcon from '../../assets/figma/loveIcon.png'
 import TechIcon from '../../assets/figma/gifTech.gif'
-
+import FireGif from '../../assets/figma/fireGif.gif'
 
 const Home = () => {
 
@@ -137,10 +136,11 @@ const Home = () => {
               >
               </div>
               <img src={ArrowPro} className='ArrowPro' alt='' />
-              {!showGifMe && !showLaptop &&
-                <img src={Mandala} className='mandala rotatingMandala' alt='' />
+              {!showGifMe && !showLaptop && !showBikeMonkey &&
+                < img src={Mandala} className='mandala rotatingMandala' alt='' />
               }
-              {/* <img src={CircleLoading2} className='ArrowLoading2' alt='' /> */}
+
+              <img src={FireGif} className='FireGif' alt='' />
               {showGifMe && GifMe && (
                 <div>
                   <div className='divGifMe' ></div>

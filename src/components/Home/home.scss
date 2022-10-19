@@ -287,8 +287,8 @@ animation: platformMove 1 s ease;
   position: absolute;
   width: 61.77px;
   height: 47.76px;
-  left: 782px;
-  top: 737.12px;
+  left: 781px;
+  top: 734px;
   transform: rotate(-1.97deg);
   transition: all 10s ease-out;
   }
@@ -656,15 +656,22 @@ top: 520px;
       }
   }
 
-  //rotate contactWorld
+
 .mandala {
   z-index: 15;
   position: absolute;
   width: 85.5px;
-  height: 85.5px;
+  height: 83.5px;
   left: 744px;
-  top: 506.5px;
+  top: 505px;
   border-radius: 50%;
+  // z-index: 15;
+  // position: absolute;
+  // width: 65px;
+  // height: 65px;
+  // left: 754px;
+  // top: 517px;
+  // border-radius: 50%;
 }
 
 .buttonMandala {
@@ -685,12 +692,24 @@ left: 765px;
 top: 531px;
 }
 .ArrowLoading2 {
+  border-radius: 50%;
   z-index: 80;
   position: absolute;
-width: 43px;
-height: 38px;
-left: 802px;
-top: 586px;
+width: 30px;
+height: 30px;
+left: 810px;
+top: 587px;
+}
+
+.FireGif {
+border-radius: 50%;
+z-index: 0;
+position: absolute;
+width: 97px;
+height: 105.5px;
+left: 778px;
+top: 540px;
+// transform: rotate(200deg);
 }
 
 .ArrowLoading2:hover {
@@ -726,7 +745,7 @@ top: 586px;
   width: 72.5px;
   height: 72.5px;
   left: 750px;
-  top: 514px;
+  top: 515px;
 
 }
 
