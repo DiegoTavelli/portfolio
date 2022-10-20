@@ -88,7 +88,7 @@ const Home = () => {
       </video>
       <div className='navContainer' >
         <div className='ScrollCompContainer'>
-          <ScrollComponent />
+          {/* <ScrollComponent /> */}
         </div>
         <nav>
           <div className='fullStackDiv'>

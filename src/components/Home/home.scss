@@ -24,7 +24,7 @@
 
 .navContainer {
   top: -70px;
-  position: fixed;
+  // position: fixed;
   align-items: center;
   justify-content: center;
 }
@@ -962,7 +962,7 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
       right: 110vw;
      }
   .backVid{
-    width: 110%;
+    width: 120%;
   }
 }
 @media only screen and (max-width: 1428px) {
@@ -970,7 +970,8 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
     right: 111vw;
   }
   .backVid{
-  width: 115%;
+  width: 125%;
+ color: #ead837c2;
   }
 }
 @media only screen and (max-width: 1402px) {
@@ -982,25 +983,25 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   width: 120%;
   }
 }
-@media only screen and (max-width: 1360px) {
+@media only screen and (max-width: 1340px) {
   .homeContainer {
-    right: 120vw;
+    right: 118vw;
   }
   .backVid{
   width: 125%;
   }
 }
-@media only screen and (max-width: 1300px) {
+@media only screen and (max-width: 1319px) {
   .homeContainer {
-    right: 123.5vw;
+    right: 121.5vw;
   }
   .backVid{
   width: 130%;
   }
 }
-@media only screen and (max-width: 1260px) {
+@media only screen and (max-width: 1285px) {
   .homeContainer {
-    right: 123.5vw;
+    right: 122vw;
   }
   .backVid{
   width: 130%;
