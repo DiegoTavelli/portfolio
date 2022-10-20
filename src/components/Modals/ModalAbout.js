@@ -12,7 +12,7 @@ const ModalAbout = ({ about }) => {
     <div className='modalAboutContainer'>
       <img src={aboutModal} alt='' className={about ? 'aboutModalIn' : 'aboutModalOut'} />
     </div>
-    : <div>loading</div>
+    : null
 
 }
 

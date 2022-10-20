@@ -16,18 +16,25 @@
 
 .homeContainer {
   position:absolute;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-
-   }
+  // justify-content: center;
+  // align-items: center;
+  // align-content: center;
+}
 
 .navContainer {
-  top: -70px;
-  // position: fixed;
+  top: -60px;
+  position: absolute;
   align-items: center;
   justify-content: center;
+  
 }
+
+.ScrollComp {
+  // position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
 
 @keyframes firstFlipCont {
     0% {
@@ -424,7 +431,7 @@ animation: triangleOpac 0.5s ease-in-out;
 .contactWorldFx {
   transform:skewY(1deg);
   transition: transform .4s ease-in-out;
-  transform: rotate3d(20, 0, 0, 5.230rad);
+  transform: rotate3d(20, 0, 0, 5.147rad);
   filter: drop-shadow(0px 110px 40px rgba(13, 4, 45, 0.799))
   brightness(70%)
   ;
@@ -871,14 +878,13 @@ animation: fireAppear 1.3s ease-in-out;
 }
 
 .TechIcon {
-  border-radius: 50%;
+  border-radius: 100%;
   z-index: 15;
   position: absolute;
   width: 74px;
   height: 74px;
   left: 749px;
   top: 513.3px;
-
 }
 
 .treeColor {
@@ -950,47 +956,57 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
 }
 
-.ScrollCompContainer {
-  width: 100%;
-  height: 100%;
-}
-
 //media querys
 
 @media only screen and (max-width: 1560px) {
   .homeContainer {
       right: 110vw;
-     }
-  .backVid{
-    width: 120%;
+    }
+    .backVid{
+      width: 120%;
+  }
+  .ScrollCompContainer {
+    // display: none;
+    align-items: center;
+    justify-content: center;
+    
   }
 }
+
 @media only screen and (max-width: 1428px) {
   .homeContainer {
-    right: 111vw;
+    right: 120vw;
   }
   .backVid{
   width: 125%;
  color: #ead837c2;
+ color: #bc3a7f99;
   }
 }
+
 @media only screen and (max-width: 1402px) {
   .homeContainer {
-    right: 115vw;
+    right: 120vw;
     
   }
   .backVid{
   width: 120%;
   }
 }
+
 @media only screen and (max-width: 1340px) {
   .homeContainer {
-    right: 118vw;
+    right: 120vw;
+  }
+  
+  .navContainer {
+    // position: absolute;
   }
   .backVid{
   width: 125%;
   }
 }
+
 @media only screen and (max-width: 1319px) {
   .homeContainer {
     right: 121.5vw;
@@ -999,9 +1015,10 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   width: 130%;
   }
 }
+
 @media only screen and (max-width: 1285px) {
   .homeContainer {
-    right: 122vw;
+    right: 121vw;
   }
   .backVid{
   width: 130%;

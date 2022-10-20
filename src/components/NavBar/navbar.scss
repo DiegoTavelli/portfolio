@@ -1,13 +1,14 @@
 
 .navBar {
-display: flex;
+    display: flex;
     border-radius: 10px;
     background: #18181819;
     height: auto;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 3;
     min-height: 70px;
+    margin-bottom: -300px;
      width: 100%;
     img {
     
