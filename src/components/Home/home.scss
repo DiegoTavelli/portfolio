@@ -958,6 +958,21 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 
 //media querys
 
+@media only screen and (max-width: 1700px) {
+  .homeContainer {
+      right: 105vw;
+    }
+    .backVid{
+      width: 120%;
+  }
+  .ScrollCompContainer {
+    // display: none;
+    align-items: center;
+    justify-content: center;
+    
+  }
+}
+
 @media only screen and (max-width: 1560px) {
   .homeContainer {
       right: 110vw;
@@ -1048,9 +1063,9 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1225px) {
   .homeContainer {
-    right: 123.5vw;
+    right: 123vw;
   }
   .backVid{
   width: 130%;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import aboutModal from '../../assets/figma/aboutModal3.png'
+import aboutModal from '../../assets/figma/aboutModal4.png'
 import './modalAbout.scss'
 
 import './modalProject.scss'
