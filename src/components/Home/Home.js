@@ -125,8 +125,6 @@ const Home = () => {
                   <div className='dialogBassMonkeyDiv'>
                     <img src={dialogBassMonkey} className='dialogBassMonkey' alt='' />
                   </div>
-                  <div className='divGifMe' ></div>
-                  <img src={GifMe} className='GifMe' alt='' />
                 </div>
               }
               <div
@@ -152,12 +150,12 @@ const Home = () => {
               >
               </div>
               <img src={ArrowPro} className='ArrowPro' alt='' />
-              <img src={Mandala} className='mandala rotatingMandala' alt='' />
+              <img src={Mandala} className='mandala' alt='' />
               {showBassMonkey || showBikeMonkey || showLaptop ?
                 <img src={FireGif} className='FireGif' alt='' />
                 : null
               }
-              {showGifMe && GifMe && (
+              {showGifMe && (
                 <div>
                   <div className='divGifMe' ></div>
                   <img src={GifMe} className='GifMe' alt='' />

@@ -68,4 +68,38 @@
   }
 }
 
+.logoLinkedIn {
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  width: 83px;
+  height: 67px;
+  left: 1002px;
+  top: 782px;
+}
 
+.logoLinkedIn:hover {
+  opacity: 1;
+}
+
+.logoLinkedIn:active {
+  opacity: 0;
+}
+
+.logoGitHub {
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  width: 86px;
+  height: 68px;
+  left: 926px;
+  top: 778px;
+}
+
+.logoGitHub:hover {
+  opacity: 1;
+}
+
+.logoGitHub:active {
+  opacity: 0;
+}
