@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import projectModal from '../../assets/figma/projectModal3.png'
+import projectModal from '../../assets/figma/projectModal5.png'
 import videoPokemon from '../../assets/videos/VideoPokemon.mp4'
 import videoFlyMate from '../../assets/videos/VideoFlyMate.mp4'
 import pokemonLogo from '../../assets/videos/pokemon.png'
@@ -19,7 +19,8 @@ const ModalProject = () => {
   return (
     <div className='modalProjectContainer'>
       <img src={projectModal} alt='' className='projectModal' />
-      <div onClick={handleClickPokemon} >
+      <div className='handleClickPokemon' ></div>
+      <div onClick={handleClickPokemon}>
         <img src={pokemonLogo} alt='' className='pokemonLogo' />
         <video
           className='videoPokemon'
@@ -29,7 +30,7 @@ const ModalProject = () => {
           muted
         />
       </div>
-      <div onClick={handleClickFlyMate} >
+      <div onClick={handleClickFlyMate} className='handleClickFlyMate' >
         <img src={flymateLogo} alt='' className="flyMateLogo" />
         <video
           className='videoFlyMate'

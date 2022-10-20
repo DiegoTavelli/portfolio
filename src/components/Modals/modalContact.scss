@@ -79,10 +79,12 @@
 }
 
 .logoLinkedIn:hover {
+  cursor: none;
   opacity: 1;
 }
 
 .logoLinkedIn:active {
+  cursor: none;
   opacity: 0;
 }
 
@@ -97,9 +99,11 @@
 }
 
 .logoGitHub:hover {
+  cursor: none;
   opacity: 1;
 }
 
 .logoGitHub:active {
+  cursor: none;
   opacity: 0;
 }

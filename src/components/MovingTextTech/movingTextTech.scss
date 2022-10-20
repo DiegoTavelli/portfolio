@@ -9,11 +9,12 @@
   top: 242px;
   filter: drop-shadow(-7px -1px 1px rgba(0, 0, 0, 0.25));
   transform: rotate(2deg)skewX(5deg);
-  animation: techFx 0.5s ease-in-out;
+  animation: techFx .1s ease-in-out;
 }
 
 @keyframes techFx {
   0% {
+    opacity: 0;
     left: 740px;
   }
   100% {

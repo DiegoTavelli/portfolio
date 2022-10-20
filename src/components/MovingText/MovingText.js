@@ -27,7 +27,9 @@ const MovingTextComp = () => {
                       ? 'ease-in-out' : null}
               iteration='1'
               fillMode='forwards'>
-              Welcome!
+              🎈
+              Welcome
+
             </MovingComponent>
           </div>
         )

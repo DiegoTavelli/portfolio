@@ -83,7 +83,7 @@
 
 @keyframes cardHomeFx {
   0% {
-    filter: drop-shadow(33px 22px 1px rgba(0, 0, 0, 0.25))brightness(97%)contrast(100%);
+    filter: drop-shadow(33px 22px 100px rgba(0, 0, 0, 0.25))brightness(97%)contrast(100%);
   }
   25% {
     filter: drop-shadow(33px 22px 2px rgba(0, 0, 0, 0.25))brightness(98%)contrast(100%);
@@ -261,6 +261,8 @@
 .GifRainbow {
   border-bottom-left-radius: 50%;
   border-top-right-radius: 40%;
+  border-bottom-right-radius: 40%;
+  border-top-left-radius: 20%;
   opacity: 1;
   z-index: -10;
   position: absolute;
@@ -268,7 +270,7 @@
   height: 204px;
   left: 720px;
   top: 364px;
-  filter: blur(13px);
+  filter: blur(12.5px);
   transform: rotate(-4deg);
   animation: rainbowFx 24s infinite ease-in-out;
 }
@@ -641,6 +643,7 @@ top: 520px;
   }
 
   .GifBike {
+    background-color: transparent;
     z-index: 20;
     position: absolute;
     width: 76px;
@@ -823,25 +826,34 @@ top: 587px;
 }
 
 .FireGif {
-  border-radius: 50%;
+  border-bottom-left-radius: 20%;
+  border-top-left-radius: 20%;
+  border-bottom-right-radius: 39%;
+  border-top-right-radius: 20%;
   z-index: 0;
   position: absolute;
   width: 97px;
   height: 105.5px;
   left: 778px;
-  top: 539px;
-  transform: rotate(0deg);
+  top: 532px;
+  transform: rotate(-39deg);
   animation: fireAppear 1.3s ease-in-out;
 }
 
 @keyframes fireAppear {
   0% {
+    border-bottom-left-radius: 20%;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 39%;
+    border-top-right-radius: 20%;
     opacity: 0;
-    border-radius: 50%;
   }
   100% {
+    border-bottom-left-radius: 20%;
+    border-top-left-radius: 20%;
+    border-bottom-right-radius: 39%;
+    border-top-right-radius: 20%;
     opacity: 1;
-    border-radius: 50%;
   }
 }
 
@@ -871,6 +883,7 @@ top: 587px;
 }
 
 .TechIcon {
+  background-color: transparent;
   border-radius: 50%;
   z-index: 17;
   position: absolute;
@@ -900,8 +913,8 @@ transform: rotate(-20deg);
 // }
 
 .dialogTechButton {
-  background-color: transparent;
-  z-index: 110;
+  // background-color: red;
+  z-index: 10;
   position: absolute;
   width: 96px;
   height: 57px;

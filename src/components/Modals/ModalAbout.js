@@ -16,8 +16,10 @@ const ModalAbout = ({ about }) => {
     <div className='modalAboutContainer'>
       <img src={aboutModal} alt='' className={about ? 'aboutModalIn' : 'aboutModalOut'} />
       <div className='buttonCvHover'>
-        <img src={Arrow} className='ArrowAbout' alt='' />
         <img onClick={linKCv} src={CvButton} className='CvButton' alt='' />
+        <div className='arrowContainer'>
+          <img src={Arrow} className='ArrowAbout' alt='' />
+        </div>
       </div>
     </div>
     : null

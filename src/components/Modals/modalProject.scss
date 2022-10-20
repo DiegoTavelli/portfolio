@@ -9,30 +9,45 @@ animation: appear .5s ease-in-out;
   left: 300px;
   top: 506px;
 }
-.videoPokemon {
-  border-radius: 10px;
+
+.handleClickPokemon {
+  background-color: red;
+  z-index: -10;
+  background-color: transparent;
   position: absolute;
-  width: 298px;
-  height: 167px;
-left: 349px;
-top: 553px;
-// transform: rotate(90deg);
+  width: 302px;
+  height: 182px;
+  left: 167px;
+  top: 538px;
 }
 
-.videoPokemon:hover {
+.handleClickPokemon:hover {
   cursor: pointer;
-  transform: scale(1.05);
- animation: zoom .1s ease-in-out;
+  // transform: scale(.15);
+//  animation: zoom .1s ease-in-out;
 }
+
+.videoPokemon {
+  z-index: 20;
+  border-radius: 12px;
+  position: absolute;
+  width: 302px;
+  height: 182px;
+  left: 367px;
+  top: 538px;
+  transform: rotate(0.4deg);
+// transform: rotateY(-20deg)rotateX(0deg);
+}
+
 
 .videoFlyMate {
   border-radius: 10px;
   position: absolute;
-  width: 298px;
+  width: 302px;
   height: 167px;
-  left: 349px;
-  top: 774px;
-  // transform: rotate(90deg);
+  left: 366px;
+  top: 760px;
+  // transform: rotate(-0.2deg);
 }
 
 .videoFlyMate:hover {
