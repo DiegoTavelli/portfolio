@@ -950,9 +950,14 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
 }
 
+.ScrollCompContainer {
+  width: 100%;
+  height: 100%;
+}
+
+//media querys
 
 @media only screen and (max-width: 1560px) {
-  
   .homeContainer {
       right: 110vw;
      }
@@ -961,7 +966,6 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
 }
 @media only screen and (max-width: 1428px) {
-  
   .homeContainer {
     right: 111vw;
   }
@@ -970,7 +974,6 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
 }
 @media only screen and (max-width: 1402px) {
-  
   .homeContainer {
     right: 115vw;
     
@@ -995,9 +998,20 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   width: 130%;
   }
 }
-
-.ScrollCompContainer {
-  width: 100%;
-  height: 100%;
+@media only screen and (max-width: 1260px) {
+  .homeContainer {
+    right: 123.5vw;
+  }
+  .backVid{
+  width: 130%;
+  }
+  .Dev {
+    height: 120px;
+    width: 200px;
+    left: 760px;
+    top: 147px;
+    transform: rotate(-2deg);
+  }
 }
+
 

@@ -6,7 +6,7 @@ const ScrollComponent = () => {
   const [colorState, setColorState] = useState(
     {
       currentIndex: 0,
-      colors: ["#4151DC", "#BC3A80", "#EAD837", "#33B26D", "#D35932"],
+      colors: ["#4151DC", "#BC3A80", "#ead837c2", "#33B26D", "#1891b6"],
     }
   )
 
@@ -14,12 +14,12 @@ const ScrollComponent = () => {
   const nextIndex = () => {
     const { colors, currentIndex } = colorState;
     if (currentIndex === colors.length - 1) {
-      return setColorState({ currentIndex: 0, colors: ["#4151DC", "#BC3A80", "#EAD837", "#33B26D", "#D35932"] });
+      return setColorState({ currentIndex: 0, colors: ["#4151DC", "#BC3A80", "#ead837c2", "#33B26D", "#1891b6"] });
     }
 
     return setColorState({
       currentIndex: currentIndex + 1,
-      colors: ["#4151DC", "#BC3A80", "#EAD837", "#33B26D", "#D35932"]
+      colors: ["#4151DC", "#BC3A80", "#ead837c2", "#33B26D", "#1891b6"]
     });
   };
 
@@ -28,13 +28,13 @@ const ScrollComponent = () => {
     if (currentIndex === 0) {
       return setColorState({
         currentIndex: colors.length - 1,
-        colors: ["#4151DC", "#BC3A80", "#EAD837", "#33B26D", "#D35932"]
+        colors: ["#4151DC", "#BC3A80", "#ead837c2", "#33B26D", "#1891b6"]
       });
     }
 
     return setColorState({
       currentIndex: currentIndex - 1,
-      colors: ["#4151DC", "#BC3A80", "#EAD837", "#33B26D", "#D35932"]
+      colors: ["#4151DC", "#BC3A80", "#ead837c2", "#33B26D", "#1891b6"]
     });
   };
 
@@ -46,7 +46,7 @@ const ScrollComponent = () => {
       downHandler={nextIndex}
       style={{
         zIndex: 0,
-        opacity: .1,
+        opacity: .2,
         // width: '100vw',
         // height: '100vh',
         marginBottom: '-400px',
