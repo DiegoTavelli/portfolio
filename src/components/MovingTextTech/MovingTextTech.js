@@ -19,7 +19,6 @@ const MovingTextTech = () => {
           'MongoDB   '
         ]} />
     </div>
-
   )
 }
 

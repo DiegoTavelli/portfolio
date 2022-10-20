@@ -36,13 +36,13 @@ const MovingTextComp = () => {
         <MovingText
           type='typewriter'
           dataText={[
-            '⚡ Innovation',
-            '🗣 Communication',
-            '🌟 Creativity',
-            '♻ Adaptability',
-            '💞 Collaboration',
-            '👂🏽 Active listening ',
-            '✅ Work ethic',
+            'Innovation',
+            'Communication',
+            'Creativity',
+            'Adaptability',
+            'Collaboration',
+            'Active listening ',
+            'Work ethic',
             '❤ Teamwork'
           ]} />
       </div>

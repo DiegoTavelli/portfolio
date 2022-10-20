@@ -1,24 +1,23 @@
 .movingTextTech {
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(221, 219, 88);
   z-index: 10;
   position: absolute;
   width: 200px;
   height: 100px;
   left: 740px;
-  top: 241px;
+  top: 242px;
   filter: drop-shadow(-7px -1px 1px rgba(0, 0, 0, 0.25));
-  transform: rotate(1deg);
-  animation: techFx .5s ease-in-out;
+  transform: rotate(2deg)skewX(5deg);
+  animation: techFx 0.5s ease-in-out;
 }
-
 
 @keyframes techFx {
   0% {
-    opacity: 0;
     left: 740px;
   }
   100% {
     opacity: 1;
+    left: 1740px;
   }
 }

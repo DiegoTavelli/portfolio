@@ -14,18 +14,20 @@ top: 380px;
 }
 
 .movingTextSoft {
+  cursor: default;
   // background-color: red;
   min-width: 200px;
     z-index: 80;
-  color: #D9DC41;
+  color: #949627af;
   font-size: 18px;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: absolute;
   width: 87.46px;
   max-height: 40px;
   left: 1030px;
-top: 616px;
-  transform: rotate(-19.71deg);
+  top: 616px;
+// filter: drop-shadow(3px 2px 20px rgba(10, 10, 10, 0.671));
+  transform: rotate(-17.5deg);
 }
 
 .soft {

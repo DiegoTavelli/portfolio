@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import projectModal from '../../assets/figma/projectModal4.png'
+import projectModal from '../../assets/figma/projectModal3.png'
 import videoPokemon from '../../assets/videos/VideoPokemon.mp4'
 import videoFlyMate from '../../assets/videos/VideoFlyMate.mp4'
 import pokemonLogo from '../../assets/videos/pokemon.png'

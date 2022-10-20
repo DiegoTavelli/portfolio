@@ -7,7 +7,7 @@
   position: absolute;
   width: 549px;
   height: 326px;
-  left: 905px;
+  left: 909px;
   top: 560px;
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 30%;
@@ -24,7 +24,7 @@
 }
 
 .modalContactFx {
-  animation: contactIn .65s ease;
+  animation: contactIn .4s ease;
  }
  
  .modalContactNoFx {
@@ -35,11 +35,11 @@
   0% {
     width: 0px;
     height: 0px;
-    left: 950px;
+    // left: 950px;
   }
   50% {
     width: -260px;
-    height: 163px;
+    height: 13px;
   }
 
   100% {

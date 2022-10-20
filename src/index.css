@@ -7,13 +7,14 @@ body {
   margin: 0;
   font-family: 300 11px/1.4 'Helvetica Neue', 'sans-serif';
   /* color: #70a288; */
-  /* background: white; */
-  background: linear-gradient(
+  background: #21286f;
+  /* background: #292f6e; */
+  /* background: linear-gradient(
     #4151dc,
-    /* transparent, */ #bc3a7ff1,
+    #bc3a7ff1,
     rgba(0, 0, 0, 0.839),
     #4151dc
-  );
+  ); */
   min-height: 890px;
   /* overflow: hidden; */
   /* display: block; */

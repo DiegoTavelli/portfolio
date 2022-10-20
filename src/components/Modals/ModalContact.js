@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import ContactModal from '../../assets/figma/contactModal.png'
+import ContactModal from '../../assets/figma/contactModal2.png'
 import './modalContact.scss'
 
 
