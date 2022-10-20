@@ -3,14 +3,15 @@
 }
 
 .modalContact {
-  z-index: -10;
+  z-index: 0;
   position: absolute;
   width: 549px;
   height: 326px;
-  left: 909px;
+  left: 917px;
   top: 560px;
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 30%;
+  transform: rotate(3deg);
   filter: drop-shadow(18px 9px 4px rgba(0, 0, 0, 0.612));
 }
 
@@ -66,4 +67,5 @@
     opacity: 0.2;
   }
 }
+
 

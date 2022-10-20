@@ -16,9 +16,8 @@ const ModalProject = () => {
     window.open('https://www.youtube.com/watch?v=7dpE5Cr_vEc');
   }
 
-  return !projectModal
-    ? <div>loading</div>
-    : <div className='modalProjectContainer'>
+  return (
+    <div className='modalProjectContainer'>
       <img src={projectModal} alt='' className='projectModal' />
       <div onClick={handleClickPokemon} >
         <img src={pokemonLogo} alt='' className='pokemonLogo' />
@@ -28,7 +27,6 @@ const ModalProject = () => {
           autoPlay
           loop
           muted
-          waiting
         />
       </div>
       <div onClick={handleClickFlyMate} >
@@ -39,12 +37,10 @@ const ModalProject = () => {
           autoPlay
           loop
           muted
-          waiting
         />
       </div>
     </div>
-
-
+  )
 }
 
 export default ModalProject

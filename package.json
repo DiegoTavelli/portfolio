@@ -27,6 +27,7 @@
     "react-player": "^2.11.0",
     "react-router-dom": "^6.4.1",
     "react-scripts": "5.0.1",
+    "react-scroll-wheel-handler": "^2.2.0",
     "sass": "^1.55.0",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"

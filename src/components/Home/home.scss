@@ -1,7 +1,7 @@
 
 .backVid {
-  position: fixed;
-  z-index: -10;
+  position:fixed;
+  // z-index: -10;
   object-fit: cover;
   height: 100%;
   width: 100%;
@@ -24,7 +24,7 @@
 
 .navContainer {
   top: -70px;
-  position: absolute;
+  position: fixed;
   align-items: center;
   justify-content: center;
 }
@@ -62,6 +62,7 @@
 }
 
 .cardHome {
+  z-index: 10;
   position: absolute;
   width: 560.91px;
   height: 385.34px;
@@ -252,7 +253,7 @@
 
 .GifRainbow {
   border-bottom-left-radius: 50%;
-  border-top-right-radius: 10%;
+  border-top-right-radius: 40%;
   opacity: 1;
   z-index: -10;
   position: absolute;
@@ -260,8 +261,9 @@
   height: 204px;
   left: 720px;
   top: 364px;
+  filter: blur(13px);
   transform: rotate(-4deg);
-  animation: rainbowFx 16s infinite ease-in-out;
+  animation: rainbowFx 24s infinite ease-in-out;
 }
 
 @keyframes rainbowFx {
@@ -269,10 +271,10 @@
     opacity: 0;
   }
   50% {
-    opacity: 0.08;
+    opacity: 0.28;
   }
   80% {
-    opacity: 0.008;
+    opacity: 0.08;
   }
   100% {
     opacity: 0;
@@ -288,7 +290,7 @@
     top: 329.15px;
     transform: rotate(1deg);
     filter: drop-shadow(18px 10px 4px rgba(0, 0, 0, 0.25));
-    animation: platformMove 16s ease-in-out infinite ;
+    animation: platformMove 24s ease-in-out infinite ;
   }
 
 @keyframes platformMove {
@@ -310,12 +312,14 @@
 }
   
   .aboutContainer {
+    z-index: 20;
     // background-color: red;
-    position: absolute;
+    position:static;
     }
+
 .aboutContainer:hover {
   cursor: pointer;
-  transform: skewX(.2deg);
+  // transform: skewX(.2deg);
 }
 
   .aboutWorlds {
@@ -370,10 +374,6 @@
     cursor: pointer;
        }
 
-  .divCircle:hover {
-    transform: skewy(-.05deg);
-  }
-
   .triangle {
     border-radius: 50%;
   display: none;
@@ -424,12 +424,11 @@ animation: triangleOpac 0.5s ease-in-out;
 .contactWorldFx {
   transform:skewY(1deg);
   transition: transform .4s ease-in-out;
-  transform: rotate3d(10, 0, 0, 5.142rad);
-  filter: drop-shadow(0px 110px 70px rgba(13, 4, 45, 0.799))
-  brightness(80%)
+  transform: rotate3d(20, 0, 0, 5.230rad);
+  filter: drop-shadow(0px 110px 40px rgba(13, 4, 45, 0.799))
+  brightness(70%)
   ;
-  
-}
+ }
 
 .Contact {
   z-index: 90;
@@ -453,10 +452,7 @@ animation: triangleOpac 0.5s ease-in-out;
     filter: drop-shadow(37px 1px 10px rgba(0, 0, 0, 0.25));
     // animation: cardHomeFx 4s ease-in-out infinite;
   }
-  .Diego:hover {
-    transform: rotate(0deg);
-  }
-
+ 
   .Tavelli {
     z-index: 30;
     position: absolute;
@@ -484,7 +480,7 @@ width: 194px;
 height: 113px;
 left: 355px;
 top: 153px;
-animation: cardHomeFx 4s ease-in-out infinite;
+animation: LoveIconAnim 20s ease-in-out infinite;
 }
 
 .Stack{
@@ -493,7 +489,7 @@ animation: cardHomeFx 4s ease-in-out infinite;
   height: 118px;
   left: 535px;
   top: 148px;
-  animation: cardHomeFx 4s ease-in-out infinite;
+  animation: LoveIconAnim 20s ease-in-out infinite;
 }
 
 .Dev{
@@ -502,7 +498,7 @@ animation: cardHomeFx 4s ease-in-out infinite;
   height: 134.44px;
   left: 1380px;
   top: 597px;
-  transform: rotate(-12deg);
+  transform: rotate(5deg);
   animation: cardHomeFx 4s ease-in-out infinite;
   }
   .arrow1 {
@@ -611,18 +607,19 @@ top: 520px;
     height: 104.83px;
     width: 104.83px;
     left: 833px;
-    top: 400px;
+    top: 398px;
     transform: rotate(17deg);
     filter: blur(2px) drop-shadow(10px 4px 4px rgba(6, 11, 32, 0.611));
   }
 
   .bikeMonkey2 {
+    // display: none;
     z-index: 90;
     position: absolute;
     width: 104.83px;
     height: 104.83px;
     left: 830px;
-    top: 398px;
+    top: 397px;
     transform: rotate(17deg);
   }
   
@@ -651,27 +648,56 @@ top: 520px;
   position: absolute;
   width: 52px;
   height: 52px;
-  left: 842px;
+  left: 841px;
   top: 374px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   filter: drop-shadow(-4px 0px 0px rgba(0, 0, 0, 0.25));
-  animation: LoveIconAnim .11s ease-in-out;
+  animation: LoveIconAnim 2s ease-in-out infinite;
 }
-// transform: matrix(-1, 0, 0, 1, 0, 0);
 
 
 
 @keyframes LoveIconAnim {
   0% {
-    top:350px;
-    opacity: 0;
-    // transform: skewX(20deg);
+    transform: rotateY(0deg)rotateX(0deg);
+  }
+  10% {
+    transform: rotateX(-10deg)rotateX(1deg);
+  }
+  20% {
+    transform: rotateY(-20deg)rotateX(2deg);
+  }
+  25% {
+    transform: rotateY(-30deg)rotateX(3deg);
+  }
+  35% {
+    transform: rotateY(-20deg)rotateX(2deg);
+  }
+  45% {
+    transform: rotateY(-10deg)rotateX(1deg);
+  }
+  50% {
+    transform: rotateY(0deg)rotateX(0deg);
+  }
+  55% {
+    transform: rotateY(10deg)rotateX(1deg);
+  }
+  65% {
+    transform: rotateY(20deg)rotateX(2deg);
+  }
+  75% {
+    transform: rotateY(30deg)rotateX(3deg);
+  }
+  85% {
+    transform: rotateY(20deg)rotateX(2deg);
+  }
+  95% {
+    transform: rotateY(10deg)rotateX(1deg);
   }
   100% {
-      transform: matrix(-1, 0, 0, -1, -1, -1);
-    opacity: 1;
-    }
+    transform: rotateY(0deg)rotateX(0deg);
   }
+}
  
 //rotate starDust
   @-webkit-keyframes rotating /* Safari and Chrome */ {
@@ -927,29 +953,51 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 
 @media only screen and (max-width: 1560px) {
   
-  .navContainer {
-      right: 150px;
+  .homeContainer {
+      right: 110vw;
      }
+  .backVid{
+    width: 110%;
+  }
 }
 @media only screen and (max-width: 1428px) {
   
-  .navContainer {
-      right: 200px;
-     }
-}
-@media only screen and (max-width: 1360px) {
-  
-  .navContainer {
-      right: 250px;
-   
+  .homeContainer {
+    right: 111vw;
+  }
+  .backVid{
+  width: 115%;
   }
 }
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1402px) {
   
-  .navContainer {
-  right: 285px;
-   max-width: 200px;
+  .homeContainer {
+    right: 115vw;
+    
+  }
+  .backVid{
+  width: 120%;
+  }
+}
+@media only screen and (max-width: 1360px) {
+  .homeContainer {
+    right: 120vw;
+  }
+  .backVid{
+  width: 125%;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .homeContainer {
+    right: 123.5vw;
+  }
+  .backVid{
+  width: 130%;
   }
 }
 
+.ScrollCompContainer {
+  width: 100%;
+  height: 100%;
+}
 

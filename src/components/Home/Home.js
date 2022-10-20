@@ -6,7 +6,7 @@ import ModalAbout from '../Modals/ModalAbout'
 import ModalContact from '../Modals/ModalContact'
 import MovingTextTech from '../MovingTextTech/MovingTextTech'
 import TechGif from '../MovingTextTech/TechGif';
-
+import ScrollComponent from '../ScrollComponent/ScrollComponent'
 
 import CardHome from '../../assets/figma/cardHome3d5.png'
 import ArrowPro from '../../assets/figma/cardProy3.png'
@@ -28,7 +28,7 @@ import Stack from '../../assets/figma/stack.png'
 import Dev from '../../assets/figma/dev.png'
 import Arrow from '../../assets/figma/arrow.png'
 import Monkey from '../../assets/figma/monkey.png'
-import bikeMonkey from '../../assets/figma/bikeMonkey.png'
+import bikeMonkey from '../../assets/figma/bikeMonkey2.png'
 import triangleLight from '../../assets/figma/crystal2.gif'
 import Mandala from '../../assets/figma/palmGif.gif'
 import monkeyGrass from '../../assets/figma/monkeyGrass2.png'
@@ -83,9 +83,13 @@ const Home = () => {
         autoPlay
         loop
         muted
-        className='backVid' >
+        className='backVid'
+      >
       </video>
       <div className='navContainer' >
+        <div className='ScrollCompContainer'>
+          <ScrollComponent />
+        </div>
         <nav>
           <div className='fullStackDiv'>
             <img src={Full} className='Full' alt='' />
@@ -210,7 +214,7 @@ const Home = () => {
               <div
                 onClick={() => setAbout(!about)}
                 className='aboutContainer' >
-                <div className='aboutDivHover' >
+                <div>
                   <img src={AboutWorlds} className='aboutWorlds rotating' alt='' />
                   <img src={monkeyGrass} className='monkeyGrass' alt='' />
                   <img src={About} className='about' alt='' />
