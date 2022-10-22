@@ -7,13 +7,28 @@ import flymateLogo from '../../assets/videos/flymate.png'
 
 import './modalProject.scss'
 
-const ModalProject = () => {
+const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, setShowCardFlyMate }) => {
+
+
 
   const handleClickPokemon = () => {
     window.open('https://the-pokemon-app.vercel.app');
   }
   const handleClickFlyMate = () => {
     window.open('https://www.youtube.com/watch?v=7dpE5Cr_vEc');
+  }
+
+  const mouseEnterPokemon = () => {
+    setShowCardPokemon(true)
+  }
+  const mouseLeavePokemon = () => {
+    setShowCardPokemon(false)
+  }
+  const mouseEnterFlyMate = () => {
+    setShowCardFlyMate(true)
+  }
+  const mouseLeaveFlyMate = () => {
+    setShowCardFlyMate(false)
   }
 
   return (
@@ -24,25 +39,40 @@ const ModalProject = () => {
         <img src={flymateLogo} alt='' className="flyMateLogo" />
         <img src={pokemonLogo} alt='' className='pokemonLogo' />
       </div>
-      {/* <div onClick={handleClickPokemon}>
-        <video
-          className='videoPokemon'
-          src={videoPokemon}
-          autoPlay
-          loop
-          muted
-        />
-      </div> */}
-      {/*
-      <div onClick={handleClickFlyMate} className='handleClickFlyMate' >
-        <video
-          className='videoFlyMate'
-          src={videoFlyMate}
-          autoPlay
-          loop
-          muted
-        />
-      </div> */}
+      <div
+        className='divHoverPokemon'
+        onMouseEnter={mouseEnterPokemon}
+        onMouseLeave={mouseLeavePokemon}
+      ></div>
+      {showCardPokemon ?
+        <div onClick={handleClickPokemon}>
+          <div className='backBlack'></div>
+          <video
+            className='videoPokemon'
+            src={videoPokemon}
+            autoPlay
+            loop
+            muted
+          />
+        </div> : null
+      }
+      <div
+        className='divHoverFlyMate'
+        onMouseEnter={mouseEnterFlyMate}
+        onMouseLeave={mouseLeaveFlyMate}
+      ></div>
+      {showCardFlyMate ?
+        <div onClick={handleClickFlyMate} className='handleClickFlyMate' >
+          <div className='backBlack'></div>
+          <video
+            className='videoFlyMate'
+            src={videoFlyMate}
+            autoPlay
+            loop
+            muted
+          />
+        </div> : null
+      }
     </div>
   )
 }

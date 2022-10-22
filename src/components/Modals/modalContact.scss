@@ -70,43 +70,84 @@
   }
 }
 
-.logoLinkedIn {
+.buttonLinkedIn {
   opacity: 0;
   z-index: 100;
   position: absolute;
-  width: 83px;
-  height: 67px;
-  left: 1002px;
-  top: 782px;
-  transform: rotate(5deg);
+  width: 67px;
+  height: 65px;
+left: 1025px;
+top: 791px;
+  transform: rotate(3deg);
 }
 
-.logoLinkedIn:hover {
+.buttonLinkedIn:hover {
   cursor: pointer;
   opacity: 1;
 }
 
-.logoLinkedIn:active {
+.buttonLinkedIn:active {
   cursor: pointer;
   opacity: 0;
 }
 
-.logoGitHub {
+.buttonGitHub {
   opacity: 0;
   z-index: 100;
   position: absolute;
-  width: 86px;
-  height: 68px;
-  left: 926px;
-  top: 778px;
+width: 67px;
+height: 65px;
+left: 944px;
+top: 787px;
 }
 
-.logoGitHub:hover {
+.buttonGitHub:hover {
   cursor: pointer;
   opacity: 1;
 }
 
-.logoGitHub:active {
+.buttonGitHub:active {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.buttonWhatsApp {
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+width: 67px;
+height: 65px;
+left: 1179px;
+top: 764px;
+}
+
+.buttonWhatsApp:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.buttonWhatsApp:active {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.buttonMail {
+  opacity: 0;
+  z-index: 100;
+  position: absolute;
+  width: 67px;
+  height: 64px;
+left: 1104px;
+top: 736px;
+transform: rotate(3deg);
+}
+
+.buttonMail:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.buttonMail:active {
   cursor: pointer;
   opacity: 0;
 }

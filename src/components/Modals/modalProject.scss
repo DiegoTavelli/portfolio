@@ -12,12 +12,12 @@
   0% {
      height: 0px;
   }
-  40% {
-    height: 476px;
+  60% {
+    height: 436px;
   }
   100% {
-    height: 476px;
-    transform: rotate3d(10,0,0, 360deg);
+    height: 460px;
+    // transform: rotate3d(10,0,0, 360deg);
   
   }
 }
@@ -39,27 +39,66 @@
 //  animation: zoom .1s ease-in-out;
 }
 
+.backBlack {
+ background-color: black;
+ z-index: 30;
+ border-radius: 12px;
+ position: absolute;
+ width: 270px;
+ height: 190px;
+ left: 433px;
+ top: 280px;
+}
+
+.divHoverPokemon {
+  border-radius: 10px;
+  position: absolute;
+  height: 170px;
+  width: 290px;
+  top: 538px;
+  left: 368px;
+}
+
+.divHoverPokemon:hover {
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.477);
+}
+
 .videoPokemon {
-  z-index: 20;
+  z-index: 40;
   border-radius: 12px;
   position: absolute;
-  width: 302px;
-  height: 182px;
-  left: 367px;
-  top: 538px;
-  transform: rotate(0.4deg);
+  width: 290px;
+  height: 100%;
+  left: 425px;
+  top: 273px;
+  transform: rotate(-0.5deg);
 // transform: rotateY(-20deg)rotateX(0deg);
 }
 
+.divHoverFlyMate {
+  border-radius: 6px;
+  position: absolute;
+  height: 163px;
+  width: 285px;
+  top: 737px;
+  left: 370.5px;
+}
+
+.divHoverFlyMate:hover {
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.477);
+}
 
 .videoFlyMate {
-  border-radius: 10px;
+  z-index: 40;
+  border-radius: 12px;
   position: absolute;
-  width: 302px;
-  height: 167px;
-  left: 366px;
-  top: 760px;
-  // transform: rotate(-0.2deg);
+  width: 290px;
+  height: 100%;
+  left: 427px;
+  top: 273px;
+  transform: rotate(-0.5deg);
 }
 
 .videoFlyMate:hover {

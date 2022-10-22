@@ -168,7 +168,7 @@
 }
 
   .CardPro {
-    z-index: 0;
+    z-index: 100;
     position: absolute;
     width: 304px;
     height: 210px;
@@ -180,7 +180,7 @@
   
    .CardPro2 {
     border-radius: 50%;
-    z-index: 30;
+    z-index: 20;
     position: absolute;
     width: 296px;
     height: 198px;
@@ -253,7 +253,7 @@
     margin-top: -190px;
   }
   .ProjectsOpen {
-    left:440px;
+    left:450px;
   }      
 
 .GifRainbow {
@@ -621,17 +621,17 @@ animation: triangleOpac 0.5s ease-in-out;
   }
 
 .Dev{
-  z-index: 30;
+  z-index: 0;
   position: absolute;
   width: 211.26px;
   height: 134.44px;
   left: 1200px;
-  top: 555px;
+  top: 552px;
   transform: rotate(-19deg);
 }
 
   .DevMoved {
-    left: 1389px;
+    left: 1418px;
     top: 585px;
     transform: rotate(8deg);
     animation: movedDev 0.3s ease-in-out;
@@ -1236,10 +1236,7 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   .homeContainer {
     right: 120vw;
   }
-  
-  .navContainer {
-    // position: absolute;
-  }
+ 
   .backVid{
   width: 125%;
   }
@@ -1281,20 +1278,12 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 
 @media only screen and (max-width: 1225px) {
   .homeContainer {
-    right: 123vw;
+    right: 127vw;
   }
   .backVid{
   width: 130%;
   }
  }
 
-@media only screen and (max-width: 1145px) {
-  .homeContainer {
-    right: 126vw;
-  }
-  .backVid{
-  width: 130%;
-  }
- }
 
 

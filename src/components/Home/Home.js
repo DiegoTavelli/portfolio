@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import './home.scss'
 import MovingTextComp from '../MovingText/MovingText';
 import ModalProject from '../Modals/ModalProject'
@@ -7,6 +7,7 @@ import ModalContact from '../Modals/ModalContact'
 import MovingTextTech from '../MovingTextTech/MovingTextTech'
 import TechGif from '../MovingTextTech/TechGif';
 import ScrollComponent from '../ScrollComponent/ScrollComponent'
+
 
 import LogoSubtitle from '../../assets/figma/logo_sub3.png'
 import CardHome from '../../assets/figma/cardHome3d5.png'
@@ -54,6 +55,11 @@ const Home = () => {
   const [showBassMonkey, setShowBassMonkey] = useState(false)
   const [showBikeMonkey, setShowBikeMonkey] = useState(false)
   const [showLaptop, setShowLaptop] = useState(false)
+
+  //states to modal project
+  const [showCardPokemon, setShowCardPokemon] = useState(false)
+  const [showCardFlyMate, setShowCardFlyMate] = useState(false)
+
 
   const refreshPage = () => {
     window.location.reload();
@@ -107,7 +113,6 @@ const Home = () => {
             <img src={Stack} className='Stack stack2' alt='' />
             <div className='devContainer'>
               <img src={Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
-              {/* <img src={Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' /> */}
             </div>
             {!project ?
               <img src={Arrow} className='arrow1' alt='' />
@@ -204,14 +209,23 @@ const Home = () => {
               <div className='CardProContainer' >
                 <div onClick={() => setProject(!project)}  >
                   <img src={CardPro} className='CardPro' alt='' />
-                  <img src={CardPro2} className='CardPro2' alt='' />
+                  {!showCardPokemon && !showCardFlyMate ?
+                    <img src={CardPro2} className='CardPro2' alt='' />
+                    : null
+                  }
                   <img src={Projects} className={project ? 'Projects ProjectsOpen' : 'Projects'} alt='' />
                 </div>
               </div>
               {
                 project
-                  ? <ModalProject />
+                  ? <ModalProject
+                    showCardPokemon={showCardPokemon}
+                    setShowCardPokemon={setShowCardPokemon}
+                    showCardFlyMate={showCardFlyMate}
+                    setShowCardFlyMate={setShowCardFlyMate}
+                  />
                   : null
+
               }
             </>
             <>
