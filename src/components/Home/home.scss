@@ -22,11 +22,10 @@
 }
 
 .navContainer {
-  top: -60px;
+  top: -6vh;
   position: absolute;
   align-items: center;
   justify-content: center;
-  
 }
 
 .ScrollComp {
@@ -35,6 +34,15 @@
   height: 100%;
 }
 
+.subLogo {
+  position: absolute;
+  top: 130px;
+  left: 370px;  
+}
+
+.subLogo:hover {
+cursor: pointer;
+}
 
 @keyframes firstFlipCont {
     0% {

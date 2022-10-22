@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className='App' >
       <BrowserRouter>
-        <NavBar />
+        {/* <NavBar /> */}
         <StrictMode>
           <Routes>
             <Route path='/' element={<Home />} />

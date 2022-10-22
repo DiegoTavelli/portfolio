@@ -8,6 +8,7 @@ import MovingTextTech from '../MovingTextTech/MovingTextTech'
 import TechGif from '../MovingTextTech/TechGif';
 import ScrollComponent from '../ScrollComponent/ScrollComponent'
 
+import LogoSubtitle from '../../assets/figma/logo_sub2.png'
 import CardHome from '../../assets/figma/cardHome3d5.png'
 import ArrowPro from '../../assets/figma/cardProy3.png'
 import CardPro from '../../assets/figma/cardp2p3.png'
@@ -54,6 +55,9 @@ const Home = () => {
   const [showBikeMonkey, setShowBikeMonkey] = useState(false)
   const [showLaptop, setShowLaptop] = useState(false)
 
+  const refreshPage = () => {
+    window.location.reload();
+  }
 
   const onEnterBass = () => {
     setShowBassMonkey(true)
@@ -92,10 +96,12 @@ const Home = () => {
           <ScrollComponent className='ScrollComp' />
         </div>
         <nav>
+          <div onClick={() => refreshPage()} className='navBarButton'>
+            <img className='subLogo' src={LogoSubtitle} alt='logo-sub' />
+          </div>
           <div className='fullStackDiv'>
             <img src={Full} className='Full' alt='' />
             <img src={Stack} className='Stack' alt='' />
-
             <img src={Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
             {!project ?
               <img src={Arrow} className='arrow1' alt='' />
@@ -112,12 +118,6 @@ const Home = () => {
           </div>
           <div className='firstContainer'>
             <MovingTextComp />
-            {/* <video src={videoHome}
-              autoPlay
-              loop
-              muted
-              className='cardHome'
-            /> */}
             <img src={CardHome} className='cardHome' alt='' />
             <div className='monkeysDiv' >
               <img src={bikeMonkey} className='bikeMonkey2' alt='' />
@@ -136,7 +136,6 @@ const Home = () => {
               >
               </div>
             </div>
-
             <div className='containerMonkeyBike' >
               <img src={bikeMonkey} className='bikeMonkey' alt='' />
               {showBikeMonkey &&
@@ -187,7 +186,6 @@ const Home = () => {
           </div>
           <div className='midContainer' >
             <>
-              {/* <HoverBass /> */}
               <div onClick={() => setContact(!contact)} className='divCircle' >
                 <img src={triangleLight} className={contact ? 'triangle triangleFx' : 'triangle'} alt='' />
                 <img src={Contact} className={!contact ? 'Contact' : 'Contact ContactPressed'} alt='' />
@@ -203,7 +201,6 @@ const Home = () => {
                   <img src={CardPro2} className='CardPro2' alt='' />
                   <img src={Projects} className={project ? 'Projects ProjectsOpen' : 'Projects'} alt='' />
                 </div>
-                {/* <img src={CardPro} className='CardPro' alt='' /> */}
               </div>
               {
                 project

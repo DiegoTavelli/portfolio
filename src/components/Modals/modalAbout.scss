@@ -69,6 +69,9 @@ display: none;
 
 @keyframes cvButtonFx {
   0% {
+    opacity: 0;
+  }
+  10% {
     opacity: 1;
     width: 40px;
     height: 45px;
@@ -86,6 +89,9 @@ display: none;
 
 .arrowContainer {
   animation: arrowCont 2.2s ease-in-out;
+}
+.arrowContainer:hover {
+  display: none;
 }
 
 @keyframes arrowCont {
@@ -109,7 +115,7 @@ display: none;
   top: 451px;
   transform: rotate(178.07deg);
   filter: drop-shadow(0px -2px 2px rgb(210, 124, 11));
-  animation: arrow2Fx 4s ease-in-out infinite;
+  animation: arrow2Fx 2s ease-in-out infinite;
   color: #df871a7e;
 }
 
@@ -125,7 +131,7 @@ display: none;
     //   width: 38px;
     // }
     50% {
-      left: 1495px;
+      left: 1490px;
       opacity: 1;
       width: 46px;
       height: 17px;
