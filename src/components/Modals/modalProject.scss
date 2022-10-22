@@ -1,10 +1,10 @@
 
 .projectModal {
   position: absolute;
-  width: 402px;
-  height: 476px;
-  left: 300px;
-  top: 506px;
+  width: 395px;
+  height: 460px;
+  left: 305px;
+  top: 506px; 
   animation: appear .5s ease-in-out;
 }
 
@@ -72,32 +72,35 @@
   position: absolute;
 width: 140px;
 height: 40px;
-left: 259px;
+left: 288px;
 top: 610px;
-transform: rotate(-90deg);
+transform: rotate(-91deg);
 }
 
 .flyMateLogo {
   position: absolute;
 width: 140px;
 height: 40px;
-left: 261px;
-top: 829px;
-transform: rotate(-90deg);
+left: 290px;
+top: 790px;
+transform: rotate(-91deg);
 }
 
 .divImages {
-  animation: appearText .1s ease;
+  animation: appearText 0.7s ease;
 }
 
 @keyframes appearText {
   0% {
     opacity: 0;
-    transform: rotate3d(10,0,0,85deg);
+    // transform: rotate3d(10,0,0,85deg);
+  }
+  50% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: rotate3d(10,0,0,0deg);
+    // transform: rotate3d(10,0,0,0deg);
   }
 }
 

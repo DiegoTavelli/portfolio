@@ -8,7 +8,7 @@ import MovingTextTech from '../MovingTextTech/MovingTextTech'
 import TechGif from '../MovingTextTech/TechGif';
 import ScrollComponent from '../ScrollComponent/ScrollComponent'
 
-import LogoSubtitle from '../../assets/figma/logo_sub2.png'
+import LogoSubtitle from '../../assets/figma/logo_sub3.png'
 import CardHome from '../../assets/figma/cardHome3d5.png'
 import ArrowPro from '../../assets/figma/cardProy3.png'
 import CardPro from '../../assets/figma/cardp2p3.png'
@@ -97,12 +97,18 @@ const Home = () => {
         </div>
         <nav>
           <div onClick={() => refreshPage()} className='navBarButton'>
-            <img className='subLogo' src={LogoSubtitle} alt='logo-sub' />
+            <img className='DiegoTavelli' src={LogoSubtitle} alt='DiegoTavelli' />
+            <img className='DiegoTavelli DiegoTavelliShadow' src={LogoSubtitle} alt='DiegoTavelli' />
           </div>
           <div className='fullStackDiv'>
             <img src={Full} className='Full' alt='' />
+            <img src={Full} className='Full full2' alt='' />
             <img src={Stack} className='Stack' alt='' />
-            <img src={Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
+            <img src={Stack} className='Stack stack2' alt='' />
+            <div className='devContainer'>
+              <img src={Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
+              {/* <img src={Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' /> */}
+            </div>
             {!project ?
               <img src={Arrow} className='arrow1' alt='' />
               : null
@@ -213,7 +219,7 @@ const Home = () => {
                 onClick={() => setAbout(!about)}
                 className='aboutContainer' >
                 <div>
-                  <img src={AboutWorlds} className='aboutWorlds rotating' alt='' />
+                  <img src={AboutWorlds} className={!about ? 'aboutWorlds rotating' : 'aboutWorlds rotating'} alt='' />
                   <img src={monkeyGrass} className='monkeyGrass' alt='' />
                   <img src={About} className='about' alt='' />
                   <img src={Me} className='me' alt='' />

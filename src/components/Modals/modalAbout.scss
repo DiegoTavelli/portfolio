@@ -126,30 +126,18 @@ display: none;
     width: 40px;
     height: 23px;
   }
-  // 20% {
-    //   opacity: 0.6;
-    //   width: 38px;
-    // }
-    50% {
-      left: 1490px;
-      opacity: 1;
-      width: 46px;
-      height: 17px;
-    }
-  // 60% {
-    //   opacity: 1;
-    //   width: 42px;
-    // }
-    // 80% {
-      //   opacity: 0.5;
-      //   width: 46px;
-      // }
-      100% {
-        left: 1460px;
-        opacity: 0.8;
-        width: 40px;
-        // height: 19.16px;
-        height: 23px;
+  50% {
+   left: 1490px;
+   opacity: 1;
+   width: 46px;
+   height: 17px;
+  }
+  100% {
+  left: 1460px;
+  opacity: 0.8;
+  width: 40px;
+  // height: 19.16px;
+  height: 23px;
   }
 }
 

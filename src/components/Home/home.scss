@@ -22,7 +22,7 @@
 }
 
 .navContainer {
-  top: -6vh;
+  top: -7vh;
   position: absolute;
   align-items: center;
   justify-content: center;
@@ -32,16 +32,6 @@
   // position: absolute;
   width: 100%;
   height: 100%;
-}
-
-.subLogo {
-  position: absolute;
-  top: 130px;
-  left: 370px;  
-}
-
-.subLogo:hover {
-cursor: pointer;
 }
 
 @keyframes firstFlipCont {
@@ -189,13 +179,13 @@ cursor: pointer;
   }
   
    .CardPro2 {
+    border-radius: 50%;
     z-index: 30;
     position: absolute;
     width: 296px;
     height: 198px;
     left: 424px;
     top: 279px;
-    
   }
   .CardPro2:hover {
     transform: scale(1.02)
@@ -332,7 +322,7 @@ cursor: pointer;
     z-index: 20;
     // background-color: red;
     position:static;
-    }
+  }
 
 .aboutContainer:hover {
   cursor: pointer;
@@ -341,6 +331,7 @@ cursor: pointer;
 
   .aboutWorlds {
     position: absolute;
+    border-radius: 50%;
     width: 127.2px;
     height: 128.04px;
     left: 1070px;
@@ -349,24 +340,63 @@ cursor: pointer;
     animation: aboutWorldsFx 10s ease-in-out infinite;
   }
 
+  .aboutWorldsOff {
+    position: absolute;
+    border-radius: 50%;
+    width: 127.2px;
+    height: 128.04px;
+    left: 1070px;
+    top: 199px;
+    transform: rotate(65.04deg);
+  }
+
   @keyframes aboutWorldsFx {
 
     0% {
       filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+    box-shadow: 
+    0 0 0px #fff,
+    0px 0 0px #f0f,
+    0px 0 0px #0ff,
+    0px 0 0px #f0f,
+    0px 0 0px #0ff,;
       // transform: skewX(100deg);
     }
     25% {
       filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
+    box-shadow: 
+    0 0 20px #fff,
+    2px 0 30px #f0f,
+    -2px 0 30px #0ff,
+    2px 0 60px #f0f,
+    -2px 0 60px #0ff,;
     }
     50% {
       filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(120%);
+    box-shadow: 
+    0 0 22px #fff,
+    2px 0 33px #f0f,
+    -2px 0 33px #0ff,
+    2px 0 66px #f0f,
+    -2px 0 66px #0ff,;
     }
     80% {
       filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
+    box-shadow: 
+    0 0 5px #fff,
+    2px 0 8px #f0f,
+    -2px 0 8px #0ff,
+    2px 0 30px #f0f,
+    -2px 0 30px #0ff,;
     }
     100% {
       filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
-      // transform: skewX(0deg);
+    box-shadow: 
+    0 0 0px #fff,
+    0px 0 0px #f0f,
+    0px 0 0px #0ff,
+    0px 0 0px #f0f,
+    0px 0 0px #0ff,;
     }
 }
 
@@ -437,8 +467,8 @@ animation: triangleOpac 0.5s ease-in-out;
   position: absolute;
   width: 253px;
   height: 190px;
-  left: 690px;
-  top: 749px;
+  left: 686px;
+  top: 743px;
   animation: appearBase 1s ease-in-out;
 }
 
@@ -454,10 +484,22 @@ animation: triangleOpac 0.5s ease-in-out;
 .contactWorld {
   z-index: 30;
   position: absolute;
-  height: 215.09px;
-  width: 217.37px;
+  border-radius: 50%;
+  height: 205.09px;
+  width: 207.37px;
   top: 704.91px;
-  // transform: rotate(2deg);
+  filter: drop-shadow(11px 16px 40px rgba(0, 0, 0, 0.705));
+  left: 705.5px;
+  animation: aboutWorldsFx 10s ease-in-out infinite;
+}
+
+.contactWorld2 {
+  z-index: 30;
+  position: absolute;
+  border-radius: 50%;
+  height: 205.09px;
+  width: 207.37px;
+  top: 704.91px;
   filter: drop-shadow(11px 16px 40px rgba(0, 0, 0, 0.705));
   left: 705.5px;
 }
@@ -476,8 +518,8 @@ animation: triangleOpac 0.5s ease-in-out;
   position: absolute;
   width: 138.19px;
   height: 59.46px;
-  left: 745.22px;
-  top: 855px;
+  left: 736px;
+  top: 850px;
     transform: rotate(2.14deg);
 }
 
@@ -519,6 +561,27 @@ animation: triangleOpac 0.5s ease-in-out;
     // animation: cardHomeFx 4s ease-in-out infinite;
   }
 
+  .DiegoTavelli {
+    position: absolute;
+    width: 289px;
+    height: 57px;
+    left: 403px;
+    top: 149px;
+    animation: nameAnim2 20s ease-in-out infinite;  
+  }
+  
+  .DiegoTavelli:hover {
+  cursor: pointer;
+  opacity: 0.35;
+  // animation: LoveIconAnim .01s ease-in-out infinite; 
+  }
+
+  .DiegoTavelliShadow {
+    opacity: 0.7;
+    filter: blur(3px);
+    animation: nameAnim2 19.95s ease-in-out infinite;
+  }
+
   .FullStackDev {
     position: absolute;
     width: 196.67px;
@@ -529,22 +592,33 @@ animation: triangleOpac 0.5s ease-in-out;
   }
 
   .Full {
-    position: absolute;
-width: 194px;
-height: 113px;
-left: 355px;
-top: 153px;
-animation: LoveIconAnim 20s ease-in-out infinite;
+  position: absolute;
+  width: 78px;
+  height: 46px;
+  left: 461px;
+  top: 195px;
+  animation: nameAnim2 20s ease-in-out infinite;
 }
+
+.full2 {
+  opacity: 1;
+  filter: blur(3px);
+  animation: nameAnim 10s ease-in-out infinite;
+  }
 
 .Stack{
   position: absolute;
-  width: 252px;
-  height: 118px;
-  left: 535px;
-  top: 148px;
-  animation: LoveIconAnim 20s ease-in-out infinite;
+  width: 104px;
+  height: 49px;
+  left: 530px;
+  top: 193px;
+  animation: nameAnim 20s ease-in-out infinite;
 }
+.stack2 {
+  opacity: 1;
+  filter: blur(3px);
+  animation: nameAnim 10s ease-in-out infinite;
+  }
 
 .Dev{
   z-index: 30;
@@ -554,8 +628,7 @@ animation: LoveIconAnim 20s ease-in-out infinite;
   left: 1200px;
   top: 555px;
   transform: rotate(-19deg);
-  animation: cardHomeFx 4s ease-in-out infinite;
-  }
+}
 
   .DevMoved {
     left: 1389px;
@@ -566,6 +639,19 @@ animation: LoveIconAnim 20s ease-in-out infinite;
 
   .DevMovedBack {
     animation: movedDevBack 0.3s ease-in-out;
+  }
+
+  @keyframes movedDev {
+    0% {
+      left: 1200px;
+      top: 555px;
+      transform: rotate(-19deg);
+    }
+    100% {
+      left: 1389px;
+      top: 585px;
+      transform: rotate(8deg);
+    }
   }
 
   @keyframes movedDevBack {
@@ -589,19 +675,6 @@ animation: LoveIconAnim 20s ease-in-out infinite;
     }
   }
 
-  @keyframes movedDev {
-    0% {
-      left: 1200px;
-      top: 555px;
-      transform: rotate(-19deg);
-    }
-    100% {
-      left: 1389px;
-      top: 585px;
-      transform: rotate(8deg);
-    }
-  }
-
   .arrow1 {
     position: absolute;
     width: 64px;
@@ -609,6 +682,7 @@ animation: LoveIconAnim 20s ease-in-out infinite;
     left: 337px;
     top: 378px;
     transform: rotate(-4.96deg);
+    animation: arrowsFx 1s ease-in-out infinite;
   } 
   .arrow2 {
     position: absolute;
@@ -617,6 +691,7 @@ animation: LoveIconAnim 20s ease-in-out infinite;
     left: 890px;
     top: 923.69px;
     transform: rotate(-129.96deg);
+    animation: arrowsFx 1s ease-in-out infinite;
   } 
   .arrow3 {
     position: absolute;
@@ -625,6 +700,7 @@ animation: LoveIconAnim 20s ease-in-out infinite;
     left: 1180px;
     top: 179.59px;
     transform: rotate(140deg);
+    animation: arrowsFx 1s ease-in-out infinite;
   } 
 
   .starDust {
@@ -762,45 +838,90 @@ top: 520px;
 
 @keyframes LoveIconAnim {
   0% {
-    transform: rotateY(0deg)rotateX(0deg);
+    transform: 
+    rotateY(0deg)
+    rotateX(0deg);
   }
   10% {
-    transform: rotateX(-20deg)rotateX(1deg);
+    transform: 
+    rotateY(-20deg)
+    rotateX(1deg);
   }
   20% {
-    transform: rotateY(-30deg)rotateX(2deg);
+    transform: 
+    rotateY(-30deg)
+    rotateX(2deg);
   }
   25% {
-    transform: rotateY(-40deg)rotateX(1deg);
+    transform: 
+    rotateY(-40deg)
+    rotateX(1deg);
   }
   35% {
-    transform: rotateY(-30deg)rotateX(2deg);
+    transform: 
+    rotateY(-30deg)
+    rotateX(2deg);
   }
   45% {
-    transform: rotateY(-20deg)rotateX(1deg);
+    transform: 
+    rotateY(-20deg)
+    rotateX(1deg);
   }
   50% {
-    transform: rotateY(0deg)rotateX(0deg);
+    transform: 
+    rotateY(0deg)
+    rotateX(0deg);
   }
   55% {
-    transform: rotateY(10deg)rotateX(1deg);
+    transform: 
+    rotateY(10deg)
+    rotateX(1deg);
   }
   65% {
-    transform: rotateY(20deg)rotateX(2deg);
+    transform: 
+    rotateY(20deg)
+    rotateX(2deg);
   }
   75% {
-    transform: rotateY(30deg)rotateX(1deg);
+    transform: 
+    rotateY(30deg)
+    rotateX(1deg);
   }
   85% {
-    transform: rotateY(20deg)rotateX(2deg);
+    transform: 
+    rotateY(20deg)
+    rotateX(2deg);
   }
   95% {
-    transform: rotateY(10deg)rotateX(1deg);
+    transform: 
+    rotateY(10deg)
+    rotateX(1deg);
   }
   100% {
-    transform: rotateY(0deg)rotateX(0deg);
+    transform: 
+    rotateY(0deg)
+    rotateX(0deg);
   }
 }
+
+@keyframes nameAnim {
+  0% {transform: rotateY(0deg);}
+	20% {transform: rotateY(-25deg);}
+	40% {transform: rotateY(0deg);}
+	60% {transform: rotateY(25deg);}
+	80% {transform: rotateY(0deg);}
+	100% {transform: rotateY(0deg);}
+}
+
+@keyframes nameAnim2 {
+  0% {transform: rotateY(0deg);}
+	20% {transform: rotateY(25deg);}
+	40% {transform: rotateY(0deg);}
+	60% {transform: rotateY(-25deg);}
+	80% {transform: rotateY(0deg);}
+	100% {transform: rotateY(0deg);}
+}
+
  
 //rotate starDust
   @-webkit-keyframes rotating /* Safari and Chrome */ {
@@ -1141,10 +1262,10 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   width: 130%;
   }
   .Dev {
-    height: 120px;
-    width: 200px;
-    left: 760px;
-    top: 147px;
+    height: 54px;
+    width: 100px;
+    left:614px;
+    top: 190px;
     transform: rotate(-2deg);
   }
 }
@@ -1156,14 +1277,7 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   .backVid{
   width: 130%;
   }
-  .Dev {
-    height: 120px;
-    width: 200px;
-    left: 760px;
-    top: 147px;
-    transform: rotate(-2deg);
-  }
-}
+ }
 
 @media only screen and (max-width: 1225px) {
   .homeContainer {
@@ -1172,14 +1286,7 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   .backVid{
   width: 130%;
   }
-  .Dev {
-    height: 120px;
-    width: 200px;
-    left: 760px;
-    top: 147px;
-    transform: rotate(-2deg);
-  }
-}
+ }
 
 @media only screen and (max-width: 1145px) {
   .homeContainer {
@@ -1188,13 +1295,6 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   .backVid{
   width: 130%;
   }
-  .Dev {
-    height: 120px;
-    width: 200px;
-    left: 760px;
-    top: 147px;
-    transform: rotate(-2deg);
-  }
-}
+ }
 
 
