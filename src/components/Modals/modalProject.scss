@@ -39,14 +39,33 @@
 //  animation: zoom .1s ease-in-out;
 }
 
+.logoLoadingProject {
+  z-index: 25;
+  position: absolute;
+  border-radius: 50%;
+  height: 50px;
+  top: 70px;
+  left:110px;
+  animation: loadingLogo 2s ease-in-out;
+}
+
+@keyframes loadingLogo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .backBlack {
  background-color: black;
- z-index: 30;
+ z-index: 20;
  border-radius: 12px;
  position: absolute;
- width: 270px;
+ width: 275px;
  height: 190px;
- left: 433px;
+ left: 432px;
  top: 280px;
 }
 

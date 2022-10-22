@@ -210,7 +210,10 @@ const Home = () => {
                 <div onClick={() => setProject(!project)}  >
                   <img src={CardPro} className='CardPro' alt='' />
                   {!showCardPokemon && !showCardFlyMate ?
-                    <img src={CardPro2} className='CardPro2' alt='' />
+                    <div>
+                      <div className='contCardPro2Light'></div>
+                      <img src={CardPro2} className='CardPro2' alt='' />
+                    </div>
                     : null
                   }
                   <img src={Projects} className={project ? 'Projects ProjectsOpen' : 'Projects'} alt='' />

@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import projectModal from '../../assets/figma/projectModal6.png'
 import videoPokemon from '../../assets/videos/VideoPokemon.mp4'
 import videoFlyMate from '../../assets/videos/VideoFlyMate.mp4'
 import pokemonLogo from '../../assets/videos/pokemon.png'
 import flymateLogo from '../../assets/videos/flymate.png'
-
+import logoLoading from '../../assets/figma/loading.gif'
 import './modalProject.scss'
 
 const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, setShowCardFlyMate }) => {
-
 
 
   const handleClickPokemon = () => {
@@ -46,7 +45,9 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, se
       ></div>
       {showCardPokemon ?
         <div onClick={handleClickPokemon}>
-          <div className='backBlack'></div>
+          <div className='backBlack'>
+            <img src={logoLoading} className='logoLoadingProject' alt='' />
+          </div>
           <video
             className='videoPokemon'
             src={videoPokemon}
@@ -63,7 +64,9 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, se
       ></div>
       {showCardFlyMate ?
         <div onClick={handleClickFlyMate} className='handleClickFlyMate' >
-          <div className='backBlack'></div>
+          <div className='backBlack'>
+            <img src={logoLoading} className='logoLoadingProject' alt='' />
+          </div>
           <video
             className='videoFlyMate'
             src={videoFlyMate}
