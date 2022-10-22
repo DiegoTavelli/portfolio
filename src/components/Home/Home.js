@@ -33,14 +33,14 @@ import triangleLight from '../../assets/figma/crystal2.gif'
 import Mandala from '../../assets/figma/palmGif.gif'
 import monkeyGrass from '../../assets/figma/monkeyGrass2.png'
 import Laptop from '../../assets/figma/laptop2.png'
-// import TreeColor from '../../assets/figma/frames/tree2.png'
+import TreeColor from '../../assets/figma/tree2.png'
 import GifMe from '../../assets/figma/gifMe.gif'
 import dialogBassMonkey from '../../assets/figma/dialogBassMonkey3.png'
 import GifBike from '../../assets/figma/gifBike.gif'
 import LoveIcon from '../../assets/figma/loveIcon2.png'
 import TechIcon from '../../assets/figma/gifTech.gif'
 import FireGif from '../../assets/figma/fireGif.gif'
-
+import ContactBase from '../../assets/figma/contactWorldBase2.png'
 
 
 
@@ -53,6 +53,7 @@ const Home = () => {
   const [showBassMonkey, setShowBassMonkey] = useState(false)
   const [showBikeMonkey, setShowBikeMonkey] = useState(false)
   const [showLaptop, setShowLaptop] = useState(false)
+
 
   const onEnterBass = () => {
     setShowBassMonkey(true)
@@ -94,7 +95,8 @@ const Home = () => {
           <div className='fullStackDiv'>
             <img src={Full} className='Full' alt='' />
             <img src={Stack} className='Stack' alt='' />
-            <img src={Dev} className='Dev' alt='' />
+
+            <img src={Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
             {!project ?
               <img src={Arrow} className='arrow1' alt='' />
               : null
@@ -166,7 +168,7 @@ const Home = () => {
             <img src={GifRainbow} className='GifRainbow' alt='' />
             <img src={Diego} className='Diego' alt='' />
             <img src={Tavelli} className='Tavelli' alt='' />
-            {/* <img src={TreeColor} className='treeColor' alt='' /> */}
+            <img src={TreeColor} className='treeColor' alt='' />
             {showLaptop && (
               <div>
                 <MovingTextTech />
@@ -188,8 +190,9 @@ const Home = () => {
               {/* <HoverBass /> */}
               <div onClick={() => setContact(!contact)} className='divCircle' >
                 <img src={triangleLight} className={contact ? 'triangle triangleFx' : 'triangle'} alt='' />
-                <img src={Contact} className='Contact' alt='' />
+                <img src={Contact} className={!contact ? 'Contact' : 'Contact ContactPressed'} alt='' />
                 <img src={ContactWorld} className={contact ? 'contactWorld rotatingContact contactWorldFx' : 'contactWorld rotatingContact'} alt='' />
+                <img src={ContactBase} className={contact ? 'ContactBase' : 'ContactBaseNoShow'} alt='' />
               </div>
               <ModalContact contact={contact} />
             </>

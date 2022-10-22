@@ -5,7 +5,7 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
-  mask: url('../../assets/figma/logoPrincipal.png'); 
+  mask: url('../../assets/figma/logoPrincipal3.png'); 
   backdrop-filter: blur(60px);
   mask-size: auto;
   
@@ -69,7 +69,7 @@
 }
 
 .cardHome {
-  z-index: 10;
+  z-index: 30;
   position: absolute;
   width: 560.91px;
   height: 385.34px;
@@ -83,13 +83,13 @@
 
 @keyframes cardHomeFx {
   0% {
-    filter: drop-shadow(33px 22px 100px rgba(0, 0, 0, 0.25))brightness(97%)contrast(100%);
+    filter: drop-shadow(33px 22px 1px rgba(0, 0, 0, 0.25))brightness(97%)contrast(100%);
   }
   25% {
     filter: drop-shadow(33px 22px 2px rgba(0, 0, 0, 0.25))brightness(98%)contrast(100%);
   }
   50% {
-    filter: drop-shadow(33px 22px 3px rgba(0, 0, 0, 0.25))brightness(100%)contrast(90%);
+    filter: drop-shadow(33px 22px 2.5px rgba(0, 0, 0, 0.25))brightness(100%)contrast(90%);
   }
   75% {
     filter: drop-shadow(33px 22px 2px rgba(0, 0, 0, 0.25))brightness(98%)contrast(100%);
@@ -184,9 +184,9 @@
     z-index: 30;
     position: absolute;
     width: 296px;
-    height: 205px;
+    height: 198px;
     left: 424px;
-    top: 275px;
+    top: 279px;
     
   }
   .CardPro2:hover {
@@ -420,7 +420,31 @@ animation: triangleOpac 0.5s ease-in-out;
   }
 }
 
+.ContactBaseNoShow {
+  display: none;
+}
+
+.ContactBase {
+  z-index: 0;
+  position: absolute;
+  width: 253px;
+  height: 190px;
+  left: 690px;
+  top: 749px;
+  animation: appearBase 1s ease-in-out;
+}
+
+@keyframes appearBase {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .contactWorld {
+  z-index: 30;
   position: absolute;
   height: 215.09px;
   width: 217.37px;
@@ -434,9 +458,9 @@ animation: triangleOpac 0.5s ease-in-out;
   transform:skewY(1deg);
   transition: transform .4s ease-in-out;
   transform: rotate3d(20, 0, 0, 5.147rad);
-  filter: drop-shadow(0px 110px 40px rgba(13, 4, 45, 0.799))
-  brightness(70%)
-  ;
+  // filter: drop-shadow(0px 110px 40px rgba(13, 4, 45, 0.799))
+  // brightness(70%)
+  
  }
 
 .Contact {
@@ -447,6 +471,19 @@ animation: triangleOpac 0.5s ease-in-out;
   left: 745.22px;
   top: 855px;
     transform: rotate(2.14deg);
+}
+
+.ContactPressed {
+  display: none;
+}
+
+@keyframes textContactFx {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
   .Diego {
@@ -502,14 +539,61 @@ animation: LoveIconAnim 20s ease-in-out infinite;
 }
 
 .Dev{
+  z-index: 30;
   position: absolute;
   width: 211.26px;
   height: 134.44px;
-  left: 1380px;
-  top: 597px;
-  transform: rotate(5deg);
+  left: 1200px;
+  top: 555px;
+  transform: rotate(-19deg);
   animation: cardHomeFx 4s ease-in-out infinite;
   }
+
+  .DevMoved {
+    left: 1389px;
+    top: 585px;
+    transform: rotate(8deg);
+    animation: movedDev 0.3s ease-in-out;
+  }
+
+  .DevMovedBack {
+    animation: movedDevBack 0.3s ease-in-out;
+  }
+
+  @keyframes movedDevBack {
+    0% {
+      opacity: 0;
+      left: 1389px;
+      top: 585px;
+      transform: rotate(8deg);
+    }
+    50% {
+      opacity: 0.1;
+    }
+    75% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+      left: 1200px;
+      top: 555px;
+      transform: rotate(-19deg);
+    }
+  }
+
+  @keyframes movedDev {
+    0% {
+      left: 1200px;
+      top: 555px;
+      transform: rotate(-19deg);
+    }
+    100% {
+      left: 1389px;
+      top: 585px;
+      transform: rotate(8deg);
+    }
+  }
+
   .arrow1 {
     position: absolute;
     width: 64px;
@@ -601,6 +685,7 @@ top: 520px;
   }
 
   .laptop {
+    z-index: 0;
     position: absolute;
     width: 96px;
     height: 57px;
@@ -894,12 +979,14 @@ top: 587px;
 }
 
 .treeColor {
+  z-index: 30;
   position: absolute;
   width: 131.31px;
   height: 152.04px;
-  left: 1045px;
-  top: 441px;
-transform: rotate(-20deg);
+  left: 1032px;
+  top: 443px;
+transform: rotate(-17deg);
+filter: brightness(110%)
 }
 
 // .sliderTech {
@@ -914,7 +1001,7 @@ transform: rotate(-20deg);
 
 .dialogTechButton {
   // background-color: red;
-  z-index: 10;
+  z-index: 80;
   position: absolute;
   width: 96px;
   height: 57px;
@@ -1086,5 +1173,20 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
 }
 
+@media only screen and (max-width: 1145px) {
+  .homeContainer {
+    right: 126vw;
+  }
+  .backVid{
+  width: 130%;
+  }
+  .Dev {
+    height: 120px;
+    width: 200px;
+    left: 760px;
+    top: 147px;
+    transform: rotate(-2deg);
+  }
+}
 
 

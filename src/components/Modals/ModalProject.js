@@ -20,8 +20,11 @@ const ModalProject = () => {
     <div className='modalProjectContainer'>
       <img src={projectModal} alt='' className='projectModal' />
       <div className='handleClickPokemon' ></div>
-      <div onClick={handleClickPokemon}>
+      <div className='divImages'>
+        <img src={flymateLogo} alt='' className="flyMateLogo" />
         <img src={pokemonLogo} alt='' className='pokemonLogo' />
+      </div>
+      <div onClick={handleClickPokemon}>
         <video
           className='videoPokemon'
           src={videoPokemon}
@@ -31,7 +34,6 @@ const ModalProject = () => {
         />
       </div>
       <div onClick={handleClickFlyMate} className='handleClickFlyMate' >
-        <img src={flymateLogo} alt='' className="flyMateLogo" />
         <video
           className='videoFlyMate'
           src={videoFlyMate}

@@ -7,7 +7,7 @@ import './scrollComponent.scss'
 const ScrollComponent = () => {
 
   const [colorHash, setColorHash] = useState(
-    ["#4150dc21", "#bc3a7f99", "#df871a7e", "#33B26D", "#1891b6a3"]
+    ["#4150dc21", "#df871a7e ", "#33B26D", " #bc3a7f99", "#1891b6a3"]
   )
   const [colorState, setColorState] = useState({ currentIndex: 0 })
 

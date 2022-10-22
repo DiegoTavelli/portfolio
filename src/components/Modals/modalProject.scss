@@ -1,5 +1,5 @@
 .modalProjectContainer {
-animation: appear .5s ease-in-out;
+animation: appear 1s ease-in-out;
 }
 
 .projectModal {
@@ -60,18 +60,33 @@ animation: appear .5s ease-in-out;
   position: absolute;
 width: 140px;
 height: 40px;
-left: 253px;
+left: 278px;
 top: 610px;
 transform: rotate(-90deg);
 }
 
 .flyMateLogo {
   position: absolute;
-  width: 140px;
-  height: 40px;
-  left: 608px;
-  top: 829px;
-  transform: rotate(90deg);
+width: 140px;
+height: 40px;
+left: 278px;
+top: 829px;
+transform: rotate(-90deg);
+}
+
+.divImages {
+  animation: appearText .2s ease;
+}
+
+@keyframes appearText {
+  0% {
+    opacity: 0;
+    transform: rotate3d(10,0,0,85deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate3d(10,0,0,0deg);
+  }
 }
 
 @keyframes zoom {

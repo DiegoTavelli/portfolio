@@ -48,8 +48,8 @@
 .CvButton {
   // background-color: red;
   cursor: pointer;
-  padding: 3px;
-  z-index: 20;
+  padding: 0;
+  z-index: 30;
   opacity: 0;
   position: absolute;
   width: 53px;
@@ -116,33 +116,34 @@ display: none;
 @keyframes arrow2Fx {
   0% {
     left: 1460px;
-    opacity: 0.4;
+    opacity: 0.8;
     width: 40px;
-    // height: 19.16px;
-    // transform: skewX(1deg);
+    height: 23px;
   }
   // 20% {
-  //   opacity: 0.6;
-  //   width: 38px;
-  // }
-  50% {
-    left: 1495px;
-    opacity: 1;
-    width: 60px;
-  }
+    //   opacity: 0.6;
+    //   width: 38px;
+    // }
+    50% {
+      left: 1495px;
+      opacity: 1;
+      width: 46px;
+      height: 17px;
+    }
   // 60% {
-  //   opacity: 1;
-  //   width: 42px;
-  // }
-  // 80% {
-  //   opacity: 0.5;
-  //   width: 46px;
-  // }
-  100% {
-    left: 1460px;
-    opacity: 0.4;
-    width: 40px;
-    // height: 19.16px;
+    //   opacity: 1;
+    //   width: 42px;
+    // }
+    // 80% {
+      //   opacity: 0.5;
+      //   width: 46px;
+      // }
+      100% {
+        left: 1460px;
+        opacity: 0.8;
+        width: 40px;
+        // height: 19.16px;
+        height: 23px;
   }
 }
 

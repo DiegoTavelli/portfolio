@@ -1,9 +1,11 @@
 .modalContactContainer {
-  // position: absolute;
+  position: absolute;
+  left: 1px;
+  top: -10px;
 }
 
 .modalContact {
-  z-index: 0;
+  z-index: 20;
   position: absolute;
   width: 549px;
   height: 326px;
@@ -12,7 +14,7 @@
   border-bottom-left-radius: 15%;
   border-bottom-right-radius: 30%;
   transform: rotate(3deg);
-  filter: drop-shadow(18px 9px 4px rgba(0, 0, 0, 0.612));
+  filter: drop-shadow(18px 9px 1px rgba(0, 0, 0, 0.612));
 }
 
 .inputContact {
@@ -76,15 +78,16 @@
   height: 67px;
   left: 1002px;
   top: 782px;
+  transform: rotate(5deg);
 }
 
 .logoLinkedIn:hover {
-  cursor: none;
+  cursor: pointer;
   opacity: 1;
 }
 
 .logoLinkedIn:active {
-  cursor: none;
+  cursor: pointer;
   opacity: 0;
 }
 
@@ -99,11 +102,12 @@
 }
 
 .logoGitHub:hover {
-  cursor: none;
+  cursor: pointer;
   opacity: 1;
 }
 
 .logoGitHub:active {
-  cursor: none;
+  cursor: pointer;
   opacity: 0;
 }
+
