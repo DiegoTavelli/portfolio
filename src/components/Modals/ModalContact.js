@@ -22,16 +22,18 @@ const ModalContact = ({ contact }) => {
     window.open('https://wa.me/5491127745511')
   }
 
-  return contact ?
+  return contact &&
     <div className='modalContactContainer'>
       <img onClick={linkLinkedIn} src={buttonLinkedIn} alt='' className='buttonLinkedIn' />
       <img onClick={linkGitHub} src={buttonGitHub} alt='' className='buttonGitHub' />
       <img onClick={linkWhatsApp} src={buttonWhatsApp} alt='' className='buttonWhatsApp' />
       <img onClick={linkMail} src={buttonMail} alt='' className='buttonMail' />
-      <img src={ContactModal} alt='' className={contact ? 'modalContact modalContactFx' : 'modalContact modalContactNoFx'} />
-      {/* <input className='inputContact' placeholder='hola' /> */}
+      <img
+        src={ContactModal}
+        className={contact ? 'modalContact modalContactFx' : 'modalContact modalContactNoFx'}
+        alt=''
+      />
     </div>
-    : null
 }
 
 export default ModalContact

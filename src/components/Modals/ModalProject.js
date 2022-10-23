@@ -1,50 +1,76 @@
-import React from "react";
+import React, { useState } from 'react';
 import projectModal from '../../assets/figma/projectModal6.png'
 import VideoPokemon from '../../assets/videos/VideoPokemon.mp4'
 import VideoFlyMate from '../../assets/videos/VideoFlyMate.mp4'
 import pokemonLogo from '../../assets/videos/pokemon.png'
 import flymateLogo from '../../assets/videos/flymate.png'
 import logoLoading from '../../assets/figma/loading.gif'
+import buttonPokemonWeb from '../../assets/figma/buttonPokemonWeb.png'
+import buttonPokemonVideo from '../../assets/figma/buttonPokemonVideo.png'
+import buttonFlyMateWeb from '../../assets/figma/buttonFlyMateWeb.png'
+import buttonFlyMateVideo from '../../assets/figma/buttonFlyMateVideo.png'
 import './modalProject.scss'
 
-const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, setShowCardFlyMate }) => {
 
 
-  const handleClickPokemon = () => {
+const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, setShowCardFlyMate, leaveStream, setLeaveStream }) => {
+
+  const handleWebPokemon = () => {
     window.open('https://the-pokemon-app.vercel.app');
   }
-  const handleClickFlyMate = () => {
+  const handleVideoPokemon = () => {
+    window.open('https://www.youtube.com/watch?v=wrnuohwL07A&t=3s');
+  }
+  const handleWebFlyMate = () => {
+    window.open('https://drive.google.com/file/d/1Tnx7Q2vi81OCeYc8GLlNirqqdurNk-ki/view?usp=sharing');
+  }
+  const handleVideoFlyMate = () => {
     window.open('https://www.youtube.com/watch?v=7dpE5Cr_vEc');
   }
-
+  // Enter  
   const mouseEnterPokemon = () => {
     setShowCardPokemon(true)
   }
-  const mouseLeavePokemon = () => {
-    setShowCardPokemon(false)
-  }
+
   const mouseEnterFlyMate = () => {
     setShowCardFlyMate(true)
   }
+
+  // Leave
+  const mouseLeavePokemon = () => {
+    setShowCardPokemon(false)
+    setLeaveStream(true)
+  }
+
   const mouseLeaveFlyMate = () => {
     setShowCardFlyMate(false)
+    setLeaveStream(true)
   }
+
+  (function clearLeave() {
+    setTimeout(() => {
+      setLeaveStream(false)
+    }, 1000)
+  })()
 
   return (
     <div className='modalProjectContainer'>
       <img src={projectModal} alt='' className='projectModal' />
       <div className='handleClickPokemon' ></div>
       <div className='divImages'>
-        <img src={flymateLogo} alt='' className="flyMateLogo" />
+        <img src={flymateLogo} alt='' className='flyMateLogo' />
         <img src={pokemonLogo} alt='' className='pokemonLogo' />
       </div>
       <div
         className='divHoverPokemon'
         onMouseEnter={mouseEnterPokemon}
         onMouseLeave={mouseLeavePokemon}
-      ></div>
+      >
+        <img src={buttonPokemonWeb} onClick={handleWebPokemon} className='buttonPokemonWeb' alt='' />
+        <img src={buttonPokemonVideo} onClick={handleVideoPokemon} className='buttonPokemonVideo' alt='' />
+      </div>
       {showCardPokemon ?
-        <div onClick={handleClickPokemon}>
+        <div>
           <div className='backBlack'>
             <img src={logoLoading} className='logoLoadingProject' alt='' />
             <video
@@ -63,9 +89,12 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, se
         className='divHoverFlyMate'
         onMouseEnter={mouseEnterFlyMate}
         onMouseLeave={mouseLeaveFlyMate}
-      ></div>
+      >
+        <img src={buttonFlyMateWeb} onClick={handleWebFlyMate} className='buttonFlyMateWeb' alt='' />
+        <img src={buttonFlyMateVideo} onClick={handleVideoFlyMate} className='buttonFlyMateVideo' alt='' />
+      </div>
       {showCardFlyMate ?
-        <div onClick={handleClickFlyMate} className='handleClickFlyMate' >
+        <div className='handleClickFlyMate' >
           <div className='backBlack'>
             <img src={logoLoading} className='logoLoadingProject' alt='' />
             <video

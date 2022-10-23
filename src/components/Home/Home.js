@@ -60,7 +60,7 @@ const Home = () => {
   //states to modal project
   const [showCardPokemon, setShowCardPokemon] = useState(false)
   const [showCardFlyMate, setShowCardFlyMate] = useState(false)
-
+  const [leaveStream, setLeaveStream] = useState(false)
 
   const refreshPage = () => {
     window.location.reload();
@@ -87,6 +87,7 @@ const Home = () => {
   const onLeaveBike = () => {
     setShowBikeMonkey(false)
   }
+
 
   (function ScrollController() {
     setTimeout(() => {
@@ -119,7 +120,7 @@ const Home = () => {
         <nav>
           <div onClick={() => refreshPage()} className='navBarButton'>
             <img className='DiegoTavelli' src={LogoSubtitle} alt='DiegoTavelli' />
-            <img className='DiegoTavelli DiegoTavelliShadow' src={LogoSubtitle} alt='DiegoTavelli' />
+            <img className='DiegoTavelli DiegoTavelliShadow' src={LogoSubtitle} alt='' />
           </div>
           <ScrollComponent />
           <div className='fullStackDiv'>
@@ -148,7 +149,7 @@ const Home = () => {
             <img src={CardHome} className='cardHome' alt='' />
             <div className='monkeysDiv' >
               <img src={bikeMonkey} className='bikeMonkey2' alt='' />
-              <img src={Monkey} className='starDust' alt='' />
+              <img src={Monkey} className='Monkey' alt='' />
               {showBassMonkey &&
                 <div>
                   <div className='dialogBassMonkeyDiv'>
@@ -212,52 +213,111 @@ const Home = () => {
             <img src={Laptop} className='laptop' alt='' />
           </div>
           <div className='midContainer' >
+            {/* CONTACT */}
             <>
               <div onClick={() => setContact(!contact)} className='divCircle' >
-                <img src={triangleLight} className={contact ? 'triangle triangleFx' : 'triangle'} alt='' />
-                <img src={Contact} className={!contact ? 'Contact' : 'Contact ContactPressed'} alt='' />
-                <img src={ContactWorld} className={contact ? 'contactWorld rotatingContact contactWorldFx' : 'contactWorld rotatingContact'} alt='' />
-                <img src={ContactBase} className={contact ? 'ContactBase' : 'ContactBaseNoShow'} alt='' />
+                <img
+                  src={triangleLight}
+                  className={contact ? 'triangle triangleFx' : 'triangle'}
+                  alt=''
+                />
+                <img
+                  src={Contact}
+                  className={!contact ? 'Contact' : 'Contact ContactPressed'}
+                  alt=''
+                />
+                <img
+                  src={ContactWorld}
+                  className={
+                    contact ? 'contactWorld rotatingContact contactWorldFx'
+                      : 'contactWorld rotatingContact'}
+                  alt=''
+                />
+                <img
+                  src={ContactBase}
+                  className={contact ? 'ContactBase' : 'ContactBaseNoShow'}
+                  alt=''
+                />
               </div>
-              <ModalContact contact={contact} />
+              {contact &&
+                <ModalContact contact={contact} />
+              }
             </>
+            {/* PROJECT */}
             <>
               <div className='CardProContainer' >
-                <div onClick={() => setProject(!project)}  >
-                  <img src={CardPro} className='CardPro' alt='' />
+                <div onClick={() => setProject(!project)} >
+                  <div
+                    className={
+                      showCardPokemon || showCardFlyMate
+                        ? 'CardProBig' : leaveStream
+                          ? 'CardProBigLeave' : ''}
+                  >
+                    <div>
+                      {showCardPokemon || showCardFlyMate
+                        ? <div className='backBlackCardPro'></div>
+                        : null
+                      }
+                      <img src={CardPro} className='CardPro' alt='' />
+                    </div>
+                  </div>
                   {!showCardPokemon && !showCardFlyMate ?
                     <div>
-                      <div className='contCardPro2Light'></div>
-                      <img src={CardPro2} className='CardPro2' alt='' />
+                      <div className='contCardPro2Light'>
+                      </div>
+                      <div
+                        className={
+                          showCardPokemon || showCardFlyMate
+                            ? 'CardProBig2' : leaveStream
+                              ? 'CardProBig2Leave' : ''}
+                      >
+                        <img
+                          src={CardPro2}
+                          className={
+                            !showCardPokemon || !showCardFlyMate
+                              ? 'CardPro2' : 'CardPro2 CardProBig2'}
+                          alt=''
+                        />
+                      </div>
                     </div>
                     : null
                   }
-                  <img src={Projects} className={project ? 'Projects ProjectsOpen' : 'Projects'} alt='' />
+                  <img
+                    src={Projects}
+                    className={project ? 'Projects ProjectsOpen' : 'Projects'}
+                    alt=''
+                  />
                 </div>
               </div>
               {
-                project
-                  ? <ModalProject
-                    showCardPokemon={showCardPokemon}
-                    setShowCardPokemon={setShowCardPokemon}
-                    showCardFlyMate={showCardFlyMate}
-                    setShowCardFlyMate={setShowCardFlyMate}
-                  />
-                  : null
+                project &&
+                <ModalProject
+                  leaveStream={leaveStream}
+                  setLeaveStream={setLeaveStream}
+                  showCardPokemon={showCardPokemon}
+                  setShowCardPokemon={setShowCardPokemon}
+                  showCardFlyMate={showCardFlyMate}
+                  setShowCardFlyMate={setShowCardFlyMate}
+                />
               }
             </>
+            {/* ABOUT */}
             <>
               <div
                 onClick={() => setAbout(!about)}
                 className='aboutContainer' >
                 <div>
-                  <img src={AboutWorlds} className={!about ? 'aboutWorlds rotating' : 'aboutWorlds rotating'} alt='' />
+                  <img
+                    src={AboutWorlds}
+                    className={!about ? 'aboutWorlds rotating' : 'aboutWorlds rotating'}
+                    alt=''
+                  />
                   <img src={monkeyGrass} className='monkeyGrass' alt='' />
                   <img src={About} className='about' alt='' />
                   <img src={Me} className='me' alt='' />
                 </div>
               </div>
-              {
+              {about &&
                 <ModalAbout about={about} />
               }
             </>

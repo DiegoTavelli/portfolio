@@ -41,83 +41,112 @@
 
 .logoLoadingProject {
   z-index: 25;
-  position: absolute;
+  position: relative;
   border-radius: 50%;
-  height: 50px;
-  top: 70px;
-  left:110px;
-  animation: loadingLogo 2s ease-in-out;
+  height: 100px;
+  top: 110px;
+  left:180px;
+  animation: loadingLogo 22s ease-in-out;
 }
 
 @keyframes loadingLogo {
   0% {
     opacity: 0;
   }
-  100% {
+  50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
 .backBlack {
- background-color: black;
- z-index: 20;
- border-radius: 12px;
+//  background-color: black;
+ z-index: 40;
+ border-radius: 20px;
  position: absolute;
- width: 275px;
- height: 190px;
- left: 432px;
- top: 280px;
+ width: 457px;
+ height: 308px;
+ left: 591px;
+ top: 202px;
+ animation: backBlackFx .3s ease-in-out;
+}
+
+@keyframes backBlackFx {
+  0% {
+    width: 280px;
+    height: 180px;
+    left: 430px;
+    top: 285px;
+  }
+  100% {
+    width: 466px;
+    height: 316px;
+    left: 590px;
+    top: 198px;
+  }
 }
 
 .divHoverPokemon {
   z-index: 50;
   border-radius: 10px;
   position: absolute;
-  height: 170px;
-  width: 290px;
+  height: 205px;
+  width: 317px;
+  left: 342px;
   top: 538px;
-  left: 368px;
 }
 
-.divHoverPokemon:hover {
-  background-color: rgba(0, 0, 0, 0.658);
-}
+// .divHoverPokemon:hover {
+//   background-color: rgba(60, 60, 203, 0.658);
+// }
 
 .videoPokemon {
-  z-index: 60;
+  z-index: 50;
   border-radius: 40%;
   position: absolute;
-  width: 290px;
-  height: 200px;
-  right: -8px;
-  bottom: -7px;
+  width: 444px;
+  height: 314px;
+  left: 11px;
+  right: -100px;
   transform: rotate(-0.5deg);
-// transform: rotateY(-20deg)rotateX(0deg);
+  animation: videoFx 1s ease-in-out;
+}
+
+@keyframes videoFx {
+  0% {
+    opacity: 0;  
+  }
+  100% {
+    opacity: 1;  
+  }
 }
 
 .divHoverFlyMate {
   z-index: 50;
   border-radius: 6px;
   position: absolute;
-  height: 163px;
-  width: 285px;
+  height: 202px;
+  width: 317px;
+  left: 342px;
   top: 737px;
-  left: 370.5px;
  }
 
-.divHoverFlyMate:hover {
-  background-color: rgba(0, 0, 0, 0.658);
-}
+// .divHoverFlyMate:hover {
+//   background-color: rgba(211, 51, 51, 0.658);
+// }
 
 .videoFlyMate {
-  z-index: 60;
+  z-index: 50;
   border-radius: 40%;
   position: absolute;
-  width: 290px;
-  height: 200px;
-  right: -8px;
-  bottom: -5px;
+  width: 444px;
+  height: 314px;
+  left: 11px;
+  right: -100px;
   transform: rotate(-0.5deg);
+  animation: videoFx 1s ease-in-out;
 }
 
 .videoFlyMate:hover {
@@ -142,6 +171,62 @@ height: 35px;
 left: 300px;
 top: 795px;
 transform: rotate(-91deg);
+}
+
+.buttonPokemonWeb {
+  border-radius: 30%;
+  z-index: 10;
+  opacity: 0;
+  position: absolute;
+  width: 62px;
+  height: 60px;
+  left: 243px;
+  top: 116px;
+  transform: rotate(-.2deg);
+}
+.buttonPokemonVideo {
+  border-radius: 30%;
+  z-index: 10;
+  opacity: 0;
+  position: absolute;
+  width: 64px;
+  height: 61px;
+  left: 14px;
+  top: 122px;
+}
+.buttonFlyMateWeb {
+  z-index: 10;
+  opacity: 0;
+  position: absolute;
+  width: 64.5px;
+  height: 62px;
+  left: 241px;
+  top: 127.5px;
+}
+.buttonFlyMateVideo {
+  z-index: 10;
+  opacity: 0;
+  position: absolute;
+  width: 63px;
+  height: 61px;
+  left: 18px;
+  top: 131px;
+}
+.buttonPokemonWeb:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.buttonPokemonVideo:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.buttonFlyMateWeb:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+.buttonFlyMateVideo:hover {
+  cursor: pointer;
+  opacity: 1;
 }
 
 .divImages {

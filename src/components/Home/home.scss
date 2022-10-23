@@ -47,30 +47,24 @@
   }
 }
 
-.crystalScroll {
-  position: absolute;
-  z-index: 0;
-  height: 60px;
-  top: 171px;
-  left: 311px;
-  animation: scrollGifFx 20s ease-in-out;
-}
 
 .ScrollGif {
+  opacity: 0;
   position: absolute;
   z-index: 0;
   height: 60px;
   top: 170px;
-  left: 310px;
-  animation: scrollGifFx 20s ease-in-out;
+  left: 840px;
+  animation: scrollGifFx 11s ease-in-out;
 }
 .ScrollGif2 {
+  opacity: 0;
   position: absolute;
   z-index: 0;
   height: 60px;
   top: 171px;
-  left: 311px;
-  animation: scrollGifFx 20s ease-in-out;
+  left: 841px;
+  animation: scrollGifFx 11s ease-in-out;
   filter: 
   drop-shadow(2px 2px 1px rgb(49, 140, 186))
 }
@@ -289,6 +283,19 @@
   cursor: pointer;
 }
 
+  .backBlackCardPro {
+    background-color: rgb(4, 5, 22);
+    z-index: 30;
+    border-radius: 10%;
+    position: absolute;
+    width: 460px;
+    height: 310px;
+    left: 592px;
+    top: 199px;
+    // transform: rotate(1deg);
+    animation: CardProMoveBack .3s ease-in-out;
+  }
+
   .CardPro {
     z-index: 50;
     position: absolute;
@@ -322,6 +329,76 @@
     left: 449px;
     top: 294px;
     animation: aboutWorldsFx 5s ease-in-out infinite;
+  }
+
+  .CardProBig .CardPro {
+    position: absolute;
+    width: 487px;
+    height: 338px;
+    left: 580px;
+    top: 186px;
+    transform: rotate(1deg);
+    animation: CardProMove .3s ease-in-out;
+  }
+
+  @keyframes CardProMove {
+    0% {
+      width: 296px;
+      height: 198px;
+      left: 424px;
+      top: 279px;
+    }
+    100% {
+      width: 487px;
+      height: 338px;
+      left: 580px;
+      top: 186px;
+    }
+  }
+
+  @keyframes CardProMoveBack {
+    0% {
+      width: 270px;
+      height: 184px;
+      left: 435px;
+      top: 289px;
+    }
+    100% {
+      width: 450px;
+      height: 300px;
+      left: 592px;
+      top: 210px;
+    }
+  }
+
+  .CardProBig2 .CardPro2 {
+    position: absolute;
+    width: 439px;
+    height: 314px;
+    left: 600px;
+    top: 223px;
+  }
+
+  .CardProBigLeave .CardPro {
+    animation: CardProLeave .3s;
+  }
+  .CardProBig2Leave .CardPro2 {
+    animation: CardProLeave .3s;
+  }
+
+  @keyframes CardProLeave {
+    0% {
+      width: 487px;
+      height: 338px;
+      left: 580px;
+      top: 186px;
+          }
+    100% {
+      width: 296px;
+      height: 198px;
+      left: 424px;
+      top: 279px;
+    }
   }
 
   .cardProBlur {
@@ -502,9 +579,9 @@
   @keyframes aboutWorldsFx {
 
     0% {
-      filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+      filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))brightness(70%);
     box-shadow: 
-    0 0 0px #fff,
+    0 0 0px rgba(255, 255, 255, 0.003),
     0px 0 0px #f0f,
     0px 0 0px #0ff,
     0px 0 0px #f0f,
@@ -515,10 +592,10 @@
       filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
     box-shadow: 
     0 0 20px #fff,
-    2px 0 30px #f0f,
-    -2px 0 30px #0ff,
-    2px 0 60px #f0f,
-    -2px 0 60px #0ff,;
+    2px -2 30px #f0f,
+    -2px 2 30px #0ff,
+    2px -2 60px #f0f,
+    -2px 2 60px #0ff,;
     }
     50% {
       filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(120%);
@@ -533,10 +610,10 @@
       filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
     box-shadow: 
     0 0 5px #fff,
-    2px 0 8px #f0f,
-    -2px 0 8px #0ff,
-    2px 0 30px #f0f,
-    -2px 0 30px #0ff,;
+    2px -2 8px #f0f,
+    -2px 2 8px #0ff,
+    2px -2 30px #f0f,
+    -2px 2 30px #0ff,;
     }
     100% {
       filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
@@ -852,8 +929,8 @@ animation: triangleOpac 0.5s ease-in-out;
     animation: arrowsFx 1s ease-in-out infinite;
   } 
 
-  .starDust {
-    z-index: 100;
+  .Monkey {
+    z-index: 30;
     position: absolute;
     width: 82.5px;
     height: 87.72px;
@@ -928,7 +1005,7 @@ top: 520px;
   }
 
   .bikeMonkey {
-    z-index: 80;
+    z-index: 25;
     position: absolute;
     height: 104.83px;
     width: 104.83px;
@@ -940,7 +1017,7 @@ top: 520px;
 
   .bikeMonkey2 {
     // display: none;
-    z-index: 90;
+    z-index: 30;
     position: absolute;
     width: 104.83px;
     height: 104.83px;
@@ -1072,7 +1149,7 @@ top: 520px;
 }
 
  
-//rotate starDust
+//rotate Monkey
   @-webkit-keyframes rotating /* Safari and Chrome */ {
     from {
       -webkit-transform: rotate(65.04deg);
