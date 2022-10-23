@@ -19,6 +19,7 @@
     "loaders.css": "^0.1.2",
     "react": "^18.2.0",
     "react-animated-modal": "^1.1.1",
+    "react-device-detect": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-leaflet": "^4.1.0",
     "react-loaders": "^3.0.1",
@@ -26,11 +27,13 @@
     "react-moving-text": "^0.0.7",
     "react-player": "^2.11.0",
     "react-router-dom": "^6.4.1",
-    "react-scripts": "5.0.1",
     "react-scroll-wheel-handler": "^2.2.0",
     "sass": "^1.55.0",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

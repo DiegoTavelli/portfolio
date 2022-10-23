@@ -43,8 +43,8 @@ import LoveIcon from '../../assets/figma/loveIcon2.png'
 import TechIcon from '../../assets/figma/gifTech.gif'
 import FireGif from '../../assets/figma/fireGif.gif'
 import ContactBase from '../../assets/figma/contactWorldBase2.png'
-
-
+import ScrollGif from '../../assets/figma/scrollGif.gif'
+import ScrollDialog from '../../assets/figma/scrollGifTheme.gif'
 
 const Home = () => {
 
@@ -55,6 +55,7 @@ const Home = () => {
   const [showBassMonkey, setShowBassMonkey] = useState(false)
   const [showBikeMonkey, setShowBikeMonkey] = useState(false)
   const [showLaptop, setShowLaptop] = useState(false)
+  const [showScroll, setShowScroll] = useState(true)
 
   //states to modal project
   const [showCardPokemon, setShowCardPokemon] = useState(false)
@@ -87,6 +88,13 @@ const Home = () => {
     setShowBikeMonkey(false)
   }
 
+  (function ScrollController() {
+    setTimeout(() => {
+      setShowScroll(false)
+    }, 20000)
+  })()
+
+
   return (
     <div className='homeContainer' >
       <video
@@ -98,14 +106,22 @@ const Home = () => {
       >
       </video>
       <div className='navContainer' >
-        <div className='ScrollCompContainer'>
-          <ScrollComponent className='ScrollComp' />
-        </div>
+        {showScroll ?
+          <div className='ScrollCompContainer'>
+            <img src={ScrollGif} className='ScrollGif' alt='' />
+            <img src={ScrollGif} className='ScrollGif2' alt='' />
+            <div className='scrollDialogContainer'>
+              <img src={ScrollDialog} className='ScrollDialog' alt='' />
+              <img src={ScrollDialog} className='ScrollDialog2' alt='' />
+            </div>
+          </div> : null
+        }
         <nav>
           <div onClick={() => refreshPage()} className='navBarButton'>
             <img className='DiegoTavelli' src={LogoSubtitle} alt='DiegoTavelli' />
             <img className='DiegoTavelli DiegoTavelliShadow' src={LogoSubtitle} alt='DiegoTavelli' />
           </div>
+          <ScrollComponent />
           <div className='fullStackDiv'>
             <img src={Full} className='Full' alt='' />
             <img src={Full} className='Full full2' alt='' />
@@ -228,7 +244,6 @@ const Home = () => {
                     setShowCardFlyMate={setShowCardFlyMate}
                   />
                   : null
-
               }
             </>
             <>
