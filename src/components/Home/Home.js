@@ -95,237 +95,267 @@ const Home = () => {
     }, 20000)
   })()
 
+  const styleFullStack = (styleInput) => {
+    return !showCardPokemon && !showCardFlyMate
+      ? styleInput : styleInput + ' notDisplay'
+  }
 
-  return (
-    <div className='homeContainer' >
-      <video
-        src={backVid}
-        autoPlay
-        loop
-        muted
-        className='backVid'
-      >
-      </video>
-      <div className='navContainer' >
-        {showScroll ?
-          <div className='ScrollCompContainer'>
-            <img src={ScrollGif} className='ScrollGif' alt='' />
-            <img src={ScrollGif} className='ScrollGif2' alt='' />
-            <div className='scrollDialogContainer'>
-              <img src={ScrollDialog} className='ScrollDialog' alt='' />
-              <img src={ScrollDialog} className='ScrollDialog2' alt='' />
-            </div>
-          </div> : null
-        }
-        <nav>
-          <div onClick={() => refreshPage()} className='navBarButton'>
-            <img className='DiegoTavelli' src={LogoSubtitle} alt='DiegoTavelli' />
-            <img className='DiegoTavelli DiegoTavelliShadow' src={LogoSubtitle} alt='' />
-          </div>
-          <ScrollComponent />
-          <div className='fullStackDiv'>
-            <img src={Full} className='Full' alt='' />
-            <img src={Full} className='Full full2' alt='' />
-            <img src={Stack} className='Stack' alt='' />
-            <img src={Stack} className='Stack stack2' alt='' />
-            <div className='devContainer'>
-              <img src={Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
-            </div>
-            {!project ?
-              <img src={Arrow} className='arrow1' alt='' />
-              : null
-            }
-            {!contact ?
-              <img src={Arrow} className='arrow2' alt='' />
-              : null
-            }
-            {!about ?
-              <img src={Arrow} className='arrow3' alt='' />
-              : null
-            }
-          </div>
-          <div className='firstContainer'>
-            <MovingTextComp />
-            <img src={CardHome} className='cardHome' alt='' />
-            <div className='monkeysDiv' >
-              <img src={bikeMonkey} className='bikeMonkey2' alt='' />
-              <img src={Monkey} className='Monkey' alt='' />
-              {showBassMonkey &&
-                <div>
-                  <div className='dialogBassMonkeyDiv'>
-                    <img src={dialogBassMonkey} className='dialogBassMonkey' alt='' />
-                  </div>
-                </div>
-              }
-              <div
-                className='monkeyBassButton'
-                onMouseEnter={() => onEnterBass()}
-                onMouseLeave={() => onLeaveBass()}
-              >
+  if (!LogoSubtitle || !CardHome || !ArrowPro || !CardPro || !CardPro2 || !Platform || !GifRainbow ||
+    !AboutWorlds || !Diego || !Tavelli || !ContactWorld || !backVid || !Contact || !Projects || !About
+    || !Me || !Full || !Stack || !Dev || !Arrow || !ScrollDialog || !Monkey || !bikeMonkey || !triangleLight
+    || !Mandala || !monkeyGrass || !Laptop || !TreeColor || !GifMe || !dialogBassMonkey || !GifBike || !LoveIcon
+    || !TechIcon || !FireGif || !ContactBase || !ScrollGif)
+    return (
+      <div>hola</div>
+    )
+  else
+    return (
+      <div className='homeContainer' >
+        <video
+          src={backVid}
+          autoPlay
+          loop
+          muted
+          className='backVid'
+        >
+        </video>
+        <div className='navContainer' >
+          {showScroll ?
+            <div className='ScrollCompContainer'>
+              <img src={ScrollGif} className='ScrollGif' alt='' />
+              <img src={ScrollGif} className='ScrollGif2' alt='' />
+              <div className='scrollDialogContainer'>
+                <img src={ScrollDialog} className='ScrollDialog' alt='' />
+                <img src={ScrollDialog} className='ScrollDialog2' alt='' />
               </div>
-            </div>
-            <div className='containerMonkeyBike' >
-              <img src={bikeMonkey} className='bikeMonkey' alt='' />
-              {showBikeMonkey &&
-                <div>
-                  <img src={GifBike} className='GifBike' alt='' />
-                  <img src={LoveIcon} className='LoveIcon' alt='' />
-                </div>
+            </div> : null
+          }
+          <nav>
+            <div onClick={() => refreshPage()} className='navBarButton'>
+              <img className={
+                showCardPokemon || showCardFlyMate
+                  ? 'DiegoTavelli DiegoTavelliProjectOpen'
+                  : 'DiegoTavelli'
               }
-              <div
-                className='monkeyBikeButton'
-                onMouseEnter={() => onEnterBike()}
-                onMouseLeave={() => onLeaveBike()}
-              >
+                src={LogoSubtitle}
+                alt='DiegoTavelli'
+              />
+              <img className={
+                showCardPokemon || showCardFlyMate
+                  ? 'DiegoTavelli DiegoTavelliShadow DiegoTavelliProjectOpen'
+                  : 'DiegoTavelli DiegoTavelliShadow'
+              }
+                src={LogoSubtitle}
+                alt=''
+              />
+            </div>
+            <ScrollComponent />
+            <div className='fullStackDiv'>
+              <img src={Full} className={styleFullStack('Full')} alt='' />
+              <img src={Full} className={styleFullStack('Full full2')} alt='' />
+              <img src={Stack} className={styleFullStack('Stack')} alt='' />
+              <img src={Stack} className={styleFullStack('Stack stack2')} alt='' />
+              <div className='devContainer'>
+                <img src={Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
               </div>
-              <img src={ArrowPro} className='ArrowPro' alt='' />
-              <img src={Mandala} className='mandala' alt='' />
-              {showBassMonkey || showBikeMonkey || showLaptop ?
-                <img src={FireGif} className='FireGif' alt='' />
+              {!project ?
+                <img src={Arrow} className='arrow1' alt='' />
                 : null
               }
-              {showGifMe && (
-                <div>
-                  <div className='divGifMe' ></div>
-                  <img src={GifMe} className='GifMe' alt='' />
-                </div>
-              )}
-            </div>
-            <img src={Platform} className='platform' alt='' />
-            <img src={GifRainbow} className='GifRainbow' alt='' />
-            <img src={Diego} className='Diego' alt='' />
-            <img src={Tavelli} className='Tavelli' alt='' />
-            <img src={TreeColor} className='treeColor' alt='' />
-            {showLaptop && (
-              <div>
-                <MovingTextTech />
-                <TechGif />
-                <img src={TechIcon} className='TechIcon' alt='' />
-              </div>
-            )
-            }
-            <div
-              className='dialogTechButton'
-              onMouseEnter={() => onEnterLaptop()}
-              onMouseLeave={() => onLeaveLaptop()}
-            >
-            </div>
-            <img src={Laptop} className='laptop' alt='' />
-          </div>
-          <div className='midContainer' >
-            {/* CONTACT */}
-            <>
-              <div onClick={() => setContact(!contact)} className='divCircle' >
-                <img
-                  src={triangleLight}
-                  className={contact ? 'triangle triangleFx' : 'triangle'}
-                  alt=''
-                />
-                <img
-                  src={Contact}
-                  className={!contact ? 'Contact' : 'Contact ContactPressed'}
-                  alt=''
-                />
-                <img
-                  src={ContactWorld}
-                  className={
-                    contact ? 'contactWorld rotatingContact contactWorldFx'
-                      : 'contactWorld rotatingContact'}
-                  alt=''
-                />
-                <img
-                  src={ContactBase}
-                  className={contact ? 'ContactBase' : 'ContactBaseNoShow'}
-                  alt=''
-                />
-              </div>
-              {contact &&
-                <ModalContact contact={contact} />
+              {!contact ?
+                <img src={Arrow} className='arrow2' alt='' />
+                : null
               }
-            </>
-            {/* PROJECT */}
-            <>
-              <div className='CardProContainer' >
-                <div onClick={() => setProject(!project)} >
-                  <div
-                    className={
-                      showCardPokemon || showCardFlyMate
-                        ? 'CardProBig' : leaveStream
-                          ? 'CardProBigLeave' : ''}
-                  >
-                    <div>
-                      {showCardPokemon || showCardFlyMate
-                        ? <div className='backBlackCardPro'></div>
-                        : null
-                      }
-                      <img src={CardPro} className='CardPro' alt='' />
+              {!about ?
+                <img src={Arrow} className='arrow3' alt='' />
+                : null
+              }
+            </div>
+            <div className='firstContainer'>
+              <MovingTextComp />
+              <img src={CardHome} className='cardHome' alt='' />
+              <div className='monkeysDiv' >
+                <img src={bikeMonkey} className='bikeMonkey2' alt='' />
+                <img src={Monkey} className='Monkey' alt='' />
+                {showBassMonkey &&
+                  <div>
+                    <div className='dialogBassMonkeyDiv'>
+                      <img src={dialogBassMonkey} className='dialogBassMonkey' alt='' />
                     </div>
                   </div>
-                  {!showCardPokemon && !showCardFlyMate ?
-                    <div>
-                      <div className='contCardPro2Light'>
-                      </div>
-                      <div
-                        className={
-                          showCardPokemon || showCardFlyMate
-                            ? 'CardProBig2' : leaveStream
-                              ? 'CardProBig2Leave' : ''}
-                      >
-                        <img
-                          src={CardPro2}
-                          className={
-                            !showCardPokemon || !showCardFlyMate
-                              ? 'CardPro2' : 'CardPro2 CardProBig2'}
-                          alt=''
-                        />
+                }
+                <div
+                  className='monkeyBassButton'
+                  onMouseEnter={() => onEnterBass()}
+                  onMouseLeave={() => onLeaveBass()}
+                >
+                </div>
+              </div>
+              <div className='containerMonkeyBike' >
+                <img src={bikeMonkey} className='bikeMonkey' alt='' />
+                {showBikeMonkey &&
+                  <div>
+                    <img src={GifBike} className='GifBike' alt='' />
+                    <img src={LoveIcon} className='LoveIcon' alt='' />
+                  </div>
+                }
+                <div
+                  className='monkeyBikeButton'
+                  onMouseEnter={() => onEnterBike()}
+                  onMouseLeave={() => onLeaveBike()}
+                >
+                </div>
+                <img src={ArrowPro} className='ArrowPro' alt='' />
+                <img src={Mandala} className='mandala' alt='' />
+                {showBassMonkey || showBikeMonkey || showLaptop ?
+                  <img src={FireGif} className='FireGif' alt='' />
+                  : null
+                }
+                {showGifMe && (
+                  <div>
+                    <div className='divGifMe' ></div>
+                    <img src={GifMe} className='GifMe' alt='' />
+                  </div>
+                )}
+              </div>
+              <img src={Platform} className='platform' alt='' />
+              <img src={GifRainbow} className='GifRainbow' alt='' />
+              <img src={Diego} className='Diego' alt='' />
+              <img src={Tavelli} className='Tavelli' alt='' />
+              <img src={TreeColor} className='treeColor' alt='' />
+              {showLaptop && (
+                <div>
+                  <MovingTextTech />
+                  <TechGif />
+                  <img src={TechIcon} className='TechIcon' alt='' />
+                </div>
+              )
+              }
+              <div
+                className='dialogTechButton'
+                onMouseEnter={() => onEnterLaptop()}
+                onMouseLeave={() => onLeaveLaptop()}
+              >
+              </div>
+              <img src={Laptop} className='laptop' alt='' />
+            </div>
+            <div className='midContainer' >
+              {/* CONTACT */}
+              <>
+                <div onClick={() => setContact(!contact)} className='divCircle' >
+                  <img
+                    src={triangleLight}
+                    className={contact ? 'triangle triangleFx' : 'triangle'}
+                    alt=''
+                  />
+                  <img
+                    src={Contact}
+                    className={!contact ? 'Contact' : 'Contact ContactPressed'}
+                    alt=''
+                  />
+                  <img
+                    src={ContactWorld}
+                    className={
+                      contact ? 'contactWorld rotatingContact contactWorldFx'
+                        : 'contactWorld rotatingContact'}
+                    alt=''
+                  />
+                  <img
+                    src={ContactBase}
+                    className={contact ? 'ContactBase' : 'ContactBaseNoShow'}
+                    alt=''
+                  />
+                </div>
+                {contact &&
+                  <ModalContact contact={contact} />
+                }
+              </>
+              {/* PROJECT */}
+              <>
+                <div className='CardProContainer' >
+                  <div onClick={() => setProject(!project)} >
+                    <div
+                      className={
+                        showCardPokemon || showCardFlyMate
+                          ? 'CardProBig' : leaveStream
+                            ? 'CardProBigLeave' : ''}
+                    >
+                      <div>
+                        {showCardPokemon || showCardFlyMate
+                          ? <div className='backBlackCardPro'></div>
+                          : null
+                        }
+                        <img src={CardPro} className='CardPro' alt='' />
                       </div>
                     </div>
-                    : null
-                  }
-                  <img
-                    src={Projects}
-                    className={project ? 'Projects ProjectsOpen' : 'Projects'}
-                    alt=''
-                  />
+                    {!showCardPokemon && !showCardFlyMate ?
+                      <div>
+                        <div className='contCardPro2Light'>
+                        </div>
+                        <div
+                          className={
+                            showCardPokemon || showCardFlyMate
+                              ? 'CardProBig2' : leaveStream
+                                ? 'CardProBig2Leave' : ''}
+                        >
+                          <img
+                            src={CardPro2}
+                            className={
+                              !showCardPokemon || !showCardFlyMate
+                                ? 'CardPro2' : 'CardPro2 CardProBig2'}
+                            alt=''
+                          />
+                        </div>
+                      </div>
+                      : null
+                    }
+                    {
+                      !showCardPokemon || !showCardFlyMate ?
+                        <img
+                          src={Projects}
+                          className={project ? 'Projects ProjectsOpen' : 'Projects'}
+                          alt=''
+                        /> : null
+                    }
+                  </div>
                 </div>
-              </div>
-              {
-                project &&
-                <ModalProject
-                  leaveStream={leaveStream}
-                  setLeaveStream={setLeaveStream}
-                  showCardPokemon={showCardPokemon}
-                  setShowCardPokemon={setShowCardPokemon}
-                  showCardFlyMate={showCardFlyMate}
-                  setShowCardFlyMate={setShowCardFlyMate}
-                />
-              }
-            </>
-            {/* ABOUT */}
-            <>
-              <div
-                onClick={() => setAbout(!about)}
-                className='aboutContainer' >
-                <div>
-                  <img
-                    src={AboutWorlds}
-                    className={!about ? 'aboutWorlds rotating' : 'aboutWorlds rotating'}
-                    alt=''
+                {
+                  project &&
+                  <ModalProject
+                    leaveStream={leaveStream}
+                    setLeaveStream={setLeaveStream}
+                    showCardPokemon={showCardPokemon}
+                    setShowCardPokemon={setShowCardPokemon}
+                    showCardFlyMate={showCardFlyMate}
+                    setShowCardFlyMate={setShowCardFlyMate}
                   />
-                  <img src={monkeyGrass} className='monkeyGrass' alt='' />
-                  <img src={About} className='about' alt='' />
-                  <img src={Me} className='me' alt='' />
+                }
+              </>
+              {/* ABOUT */}
+              <>
+                <div
+                  onClick={() => setAbout(!about)}
+                  className='aboutContainer' >
+                  <div>
+                    <img
+                      src={AboutWorlds}
+                      className={!about ? 'aboutWorlds rotating' : 'aboutWorlds rotating'}
+                      alt=''
+                    />
+                    <img src={monkeyGrass} className='monkeyGrass' alt='' />
+                    <img src={About} className='about' alt='' />
+                    <img src={Me} className='me' alt='' />
+                  </div>
                 </div>
-              </div>
-              {about &&
-                <ModalAbout about={about} />
-              }
-            </>
-          </div>
-        </nav>
+                {about &&
+                  <ModalAbout about={about} />
+                }
+              </>
+            </div>
+          </nav>
+        </div>
       </div>
-    </div>
-  )
+    )
 }
 
 export default Home;

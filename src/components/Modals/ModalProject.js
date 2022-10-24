@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './modalProject.scss'
 import projectModal from '../../assets/figma/projectModal6.png'
 import VideoPokemon from '../../assets/videos/VideoPokemon.mp4'
 import VideoFlyMate from '../../assets/videos/VideoFlyMate.mp4'
@@ -9,9 +10,8 @@ import buttonPokemonWeb from '../../assets/figma/buttonPokemonWeb.png'
 import buttonPokemonVideo from '../../assets/figma/buttonPokemonVideo.png'
 import buttonFlyMateWeb from '../../assets/figma/buttonFlyMateWeb.png'
 import buttonFlyMateVideo from '../../assets/figma/buttonFlyMateVideo.png'
-import './modalProject.scss'
-
-
+import detailsPokemon from '../../assets/figma/detailsPokemon.png'
+import detailsFlyMate from '../../assets/figma/detailsFlyMate.png'
 
 const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, setShowCardFlyMate, leaveStream, setLeaveStream }) => {
 
@@ -61,6 +61,18 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, se
         <img src={flymateLogo} alt='' className='flyMateLogo' />
         <img src={pokemonLogo} alt='' className='pokemonLogo' />
       </div>
+      <div className='divMiddleHover'>
+        <div
+          className='divTop'
+          onMouseEnter={mouseEnterPokemon}
+          onMouseLeave={mouseLeavePokemon}
+        ></div>
+        <div
+          className='divBottom'
+          onMouseEnter={mouseEnterFlyMate}
+          onMouseLeave={mouseLeaveFlyMate}
+        ></div>
+      </div>
       <div
         className='divHoverPokemon'
         onMouseEnter={mouseEnterPokemon}
@@ -108,6 +120,17 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, se
             </video>
           </div>
         </div> : null
+      }
+      {
+        showCardPokemon ?
+          <div>
+            <img src={detailsPokemon} className='detailsPokemon' alt='' />
+          </div>
+          : showCardFlyMate ?
+            <div>
+              <img src={detailsFlyMate} className='detailsFlyMate' alt='' />
+            </div>
+            : null
       }
     </div>
   )

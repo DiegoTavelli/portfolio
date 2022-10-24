@@ -1,4 +1,9 @@
 
+.modalProjectContainer {
+  position: relative;
+  bottom: 10px;
+}
+
 .projectModal {
   position: absolute;
   width: 395px;
@@ -88,29 +93,14 @@
   }
 }
 
-.divHoverPokemon {
-  z-index: 50;
-  border-radius: 10px;
-  position: absolute;
-  height: 205px;
-  width: 317px;
-  left: 342px;
-  top: 538px;
-}
-
-// .divHoverPokemon:hover {
-//   background-color: rgba(60, 60, 203, 0.658);
-// }
-
 .videoPokemon {
   z-index: 50;
   border-radius: 40%;
   position: absolute;
   width: 444px;
-  height: 314px;
+  height: 394px;
   left: 11px;
-  right: -100px;
-  transform: rotate(-0.5deg);
+  top: -30px;
   animation: videoFx 1s ease-in-out;
 }
 
@@ -123,29 +113,74 @@
   }
 }
 
+.divHoverPokemon {
+  z-index: 50;
+  border-radius: 10px;
+  position: absolute;
+  height: 178px;
+  width: 317px;
+  left: 342px;
+  top: 546px;
+}
 .divHoverFlyMate {
   z-index: 50;
   border-radius: 6px;
   position: absolute;
-  height: 202px;
+  height: 179px;
   width: 317px;
   left: 342px;
-  top: 737px;
+  top: 759.1px;
  }
 
-// .divHoverFlyMate:hover {
-//   background-color: rgba(211, 51, 51, 0.658);
-// }
+.divMiddleHover {
+  // background-color: red;
+  border-radius: 6px;
+  position: absolute;
+  height: 34px;
+  width: 317px;
+  left: 342px;
+  top: 724.5px;
+}
+
+.divTop {
+  z-index: 10;
+  // background-color: blue;
+  border-radius: 6px;
+  position: absolute;
+  height: 17px;
+  width: 317px;
+  left: 0px;
+  top: 0px;
+}
+
+.divBottom {
+  z-index: 10;
+  // background-color: yellow;
+  border-radius: 6px;
+  position: absolute;
+  height: 17px;
+  width: 317px;
+  left: 0px;
+  top: 17px;
+}
+
+.divHoverFlyMate:hover {
+  background-color: rgba(60, 60, 203, 0.206);
+animation: glowHover 3s ease-in-out infinite;
+}
+.divHoverPokemon:hover {
+  background-color: rgba(60, 60, 203, 0.206);
+animation: glowHover 3s ease-in-out infinite;
+}
 
 .videoFlyMate {
   z-index: 50;
   border-radius: 40%;
   position: absolute;
-  width: 444px;
-  height: 314px;
-  left: 11px;
-  right: -100px;
-  transform: rotate(-0.5deg);
+  width: 464px;
+  height: 394px;
+  left: 0px;
+  top: -30px;
   animation: videoFx 1s ease-in-out;
 }
 
@@ -159,7 +194,7 @@
   position: absolute;
 width: 120px;
 height: 35px;
-left: 298px;
+left: 271px;
 top: 610px;
 transform: rotate(-91deg);
 }
@@ -168,31 +203,31 @@ transform: rotate(-91deg);
   position: absolute;
 width: 120px;
 height: 35px;
-left: 300px;
-top: 795px;
+left: 271px;
+top: 824px;
 transform: rotate(-91deg);
 }
 
 .buttonPokemonWeb {
-  border-radius: 30%;
+  border-radius: 10%;
   z-index: 10;
   opacity: 0;
   position: absolute;
   width: 62px;
   height: 60px;
   left: 243px;
-  top: 116px;
-  transform: rotate(-.2deg);
+  top: 108px;
+  transform: rotate(-.9deg);
 }
 .buttonPokemonVideo {
   border-radius: 30%;
   z-index: 10;
   opacity: 0;
   position: absolute;
-  width: 64px;
+  width: 62px;
   height: 61px;
-  left: 14px;
-  top: 122px;
+  left: 15.9px;
+  top: 114.7px;
 }
 .buttonFlyMateWeb {
   z-index: 10;
@@ -201,7 +236,7 @@ transform: rotate(-91deg);
   width: 64.5px;
   height: 62px;
   left: 241px;
-  top: 127.5px;
+  top: 105px;
 }
 .buttonFlyMateVideo {
   z-index: 10;
@@ -210,7 +245,7 @@ transform: rotate(-91deg);
   width: 63px;
   height: 61px;
   left: 18px;
-  top: 131px;
+  top: 108.5px;
 }
 .buttonPokemonWeb:hover {
   cursor: pointer;
@@ -256,3 +291,72 @@ transform: rotate(-91deg);
   }
 }
 
+.detailsPokemon {
+  z-index: 10;
+  position: absolute;
+  width: 290px;
+  height: 280px;
+  left: 296px;
+  top: 210px;
+  transform: rotate(0deg);
+}
+
+.detailsFlyMate {
+  z-index: 10;
+  position: absolute;
+  width: 290px;
+  height: 280px;
+  left: 296px;
+  top: 210px;
+  transform: rotate(0deg);
+}
+
+@keyframes glowHover {
+
+  0% {
+  //   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))brightness(70%);
+  // box-shadow: 
+  // 0 0 0px rgba(255, 255, 255, 0.003),
+  // 0px 0 0px #f0f,
+  // 0px 0 0px #0ff,
+  // 0px 0 0px #f0f,
+  // 0px 0 0px #0ff,;
+  //   // transform: skewX(100deg);
+  }
+  25% {
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25))brightness(80%);
+  box-shadow: 
+  0 0 20px #fff,
+  1px -1 5px #f0f,
+  -1px 1 5px #0ff,
+  1px -1 10px #f0f,
+  -1px 1 10px #0ff,;
+  }
+  50% {
+    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.25))brightness(120%);
+  box-shadow: 
+  0 0 6px #fff,
+  2px 0 6px #f0f,
+  -2px 0 6px #0ff,
+  2px 0 12px #f0f,
+  -2px 0 12px #0ff,;
+  }
+  80% {
+    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
+  box-shadow: 
+  0 0 2px #fff,
+  1px -1 4px #f0f,
+  -1px 1 4px #0ff,
+  1px -1 8px #f0f,
+  -1px 1 8px #0ff,;
+  }
+  100% {
+  //   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25))brightness(70%);
+  // box-shadow: 
+  // 0 0 0px #fff,
+  // 0px 0 0px #f0f,
+  // 0px 0 0px #0ff,
+  // 0px 0 0px #f0f,
+  // 0px 0 0px #0ff,;
+  }
+}

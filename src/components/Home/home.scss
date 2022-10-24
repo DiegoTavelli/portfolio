@@ -284,7 +284,7 @@
 }
 
   .backBlackCardPro {
-    background-color: rgb(4, 5, 22);
+    background-color: rgb(0, 0, 0);
     z-index: 30;
     border-radius: 10%;
     position: absolute;
@@ -303,6 +303,7 @@
     height: 210px;
     left: 419px;
     top: 270px;
+    transform: rotate(1.1deg);
     filter: drop-shadow(0px 30px 40px rgba(0, 0, 0, 0.25));
     animation: CardProFx 4s ease-in-out infinite;
   }
@@ -337,7 +338,7 @@
     height: 338px;
     left: 580px;
     top: 186px;
-    transform: rotate(1deg);
+    // transform: rotate(1deg);
     animation: CardProMove .3s ease-in-out;
   }
 
@@ -577,52 +578,51 @@
   }
 
   @keyframes aboutWorldsFx {
-
     0% {
-      filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))brightness(70%);
-    box-shadow: 
-    0 0 0px rgba(255, 255, 255, 0.003),
-    0px 0 0px #f0f,
-    0px 0 0px #0ff,
-    0px 0 0px #f0f,
-    0px 0 0px #0ff,;
-      // transform: skewX(100deg);
+      // filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))brightness(70%);
+      // box-shadow: 
+      // 0 0 0px rgba(255, 255, 255, 0.003),
+      // 0px 0 0px #f0f,
+      // 0px 0 0px #0ff,
+      // 0px 0 0px #f0f,
+      // 0px 0 0px #0ff,;
+      //   // transform: skewX(100deg);
     }
     25% {
       filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
-    box-shadow: 
-    0 0 20px #fff,
-    2px -2 30px #f0f,
-    -2px 2 30px #0ff,
-    2px -2 60px #f0f,
-    -2px 2 60px #0ff,;
+      box-shadow: 
+      0 0 20px #fff,
+      2px -2 30px #f0f,
+      -2px 2 30px #0ff,
+      2px -2 60px #f0f,
+      -2px 2 60px #0ff,;
     }
     50% {
       filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(120%);
-    box-shadow: 
-    0 0 22px #fff,
-    2px 0 33px #f0f,
-    -2px 0 33px #0ff,
-    2px 0 66px #f0f,
-    -2px 0 66px #0ff,;
+      box-shadow: 
+      0 0 22px #fff,
+      2px 0 33px #f0f,
+      -2px 0 33px #0ff,
+      2px 0 66px #f0f,
+      -2px 0 66px #0ff,;
     }
     80% {
       filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
-    box-shadow: 
-    0 0 5px #fff,
-    2px -2 8px #f0f,
-    -2px 2 8px #0ff,
-    2px -2 30px #f0f,
-    -2px 2 30px #0ff,;
+      box-shadow: 
+      0 0 5px #fff,
+      2px -2 8px #f0f,
+      -2px 2 8px #0ff,
+      2px -2 30px #f0f,
+      -2px 2 30px #0ff,;
     }
     100% {
-      filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
-    box-shadow: 
-    0 0 0px #fff,
-    0px 0 0px #f0f,
-    0px 0 0px #0ff,
-    0px 0 0px #f0f,
-    0px 0 0px #0ff,;
+      // filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+      // box-shadow: 
+      // 0 0 0px #fff,
+      // 0px 0 0px #f0f,
+      // 0px 0 0px #0ff,
+      // 0px 0 0px #f0f,
+      // 0px 0 0px #0ff,;
     }
 }
 
@@ -792,8 +792,12 @@ animation: triangleOpac 0.5s ease-in-out;
     width: 289px;
     height: 57px;
     left: 403px;
-    top: 149px;
+    top: 145px;
     animation: nameAnim2 20s ease-in-out infinite;  
+  }
+
+  .DiegoTavelliProjectOpen {
+    left: 673px;
   }
   
   .DiegoTavelli:hover {
@@ -806,6 +810,10 @@ animation: triangleOpac 0.5s ease-in-out;
     opacity: 0.7;
     filter: blur(3px);
     animation: nameAnim2 19.95s ease-in-out infinite;
+  }
+
+  .notDisplay {
+    display: none;
   }
 
   .FullStackDev {
