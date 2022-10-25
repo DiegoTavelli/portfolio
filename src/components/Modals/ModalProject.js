@@ -75,6 +75,7 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, se
       </div>
       <div
         className='divHoverPokemon'
+        onClick={mouseEnterPokemon}
         onMouseEnter={mouseEnterPokemon}
         onMouseLeave={mouseLeavePokemon}
       >
@@ -99,6 +100,7 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon, se
       }
       <div
         className='divHoverFlyMate'
+        onClick={mouseEnterFlyMate}
         onMouseEnter={mouseEnterFlyMate}
         onMouseLeave={mouseLeaveFlyMate}
       >
