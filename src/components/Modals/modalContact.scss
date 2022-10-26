@@ -168,52 +168,56 @@ transform: rotate(3deg);
 .contactLinkedIn {
   z-index: 80;
   position: absolute;
-  width: 312.53px;
-  height: 216.13px;
-  left: 690px;
-  top: 500px;
+  width: 425.13px;
+  height: 294px;
+  left: 686px;
+  top: 410px;
   animation: showContact .4s ease-in-out;
 }
 .contactGitHub {
   z-index: 80;
   position: absolute;
-  width: 312.53px;
-  height: 216.13px;
-  left: 690px;
-  top: 500px;
+  width: 425.13px;
+  height: 294px;
+  left: 686px;
+  top: 410px;
   animation: showContact .4s ease-in-out;
 }
 .contactWhatsApp {
   z-index: 80;
   position: absolute;
-  width: 312.53px;
-  height: 216.13px;
-  left: 690px;
-  top: 500px;
+  width: 425.13px;
+  height: 294px;
+  left: 686px;
+  top: 410px;
   animation: showContact .4s ease-in-out;
 }
 .contactMail {
   z-index: 80;
   position: absolute;
-  width: 312.53px;
-  height: 216.13px;
-  left: 690px;
-  top: 500px;
+  width: 425.13px;
+  height: 294px;
+  left: 686px;
+  top: 410px;
   animation: showContact .4s ease-in-out;
 }
 
 @keyframes showContact {
   0% {
+    opacity: 0.7;
     height: 10px;
     width: 10px;
     left: 800px;
     top: 780px;
+    filter:blur(2px);
   }
   100% {
+    opacity: 1;
+    width: 425.13px;
+    height: 294px;
+    left: 686px;
+    top: 410px;
+    filter:blur(0px);
     transform: rotate3d(1, 1, 1, 360deg);
-    width: 312.53px;
-    height: 216.13px;
-    left: 690px;
-    top: 500px;
   }
 }

@@ -8,7 +8,12 @@ import MovingTextTech from '../MovingTextTech/MovingTextTech'
 import TechGif from '../MovingTextTech/TechGif';
 import ScrollComponent from '../ScrollComponent/ScrollComponent'
 
+//bootstrap
+import Container from 'react-bootstrap/Container';
+import Card from 'react-bootstrap/Card';
+import Tilt from 'react-parallax-tilt';
 
+//imgs, gifs & vids
 import LogoSubtitle from '../../assets/figma/logo_sub3.png'
 import CardHome from '../../assets/figma/cardHome3d5.png'
 import ArrowPro from '../../assets/figma/cardProy3.png'
@@ -111,7 +116,9 @@ const Home = () => {
       styleInput === 'mandala' ?
         ' mand' :
         styleInput === 'treeColor' ?
-          ' tree' : null
+          ' tree' :
+          styleInput === 'GifRainbow' ?
+            ' rainB' : null
     return currentIndex === 0 ?
       styleInput + `${from}0` :
       currentIndex === 1 ?
@@ -191,7 +198,7 @@ const Home = () => {
           </div>
           <div className='firstContainer'>
             <MovingTextComp />
-            <img src={CardHome} className='cardHome' alt='' />
+
             <div className='monkeysDiv' >
               <img src={bikeMonkey} className='bikeMonkey2' alt='' />
               <img src={Monkey} className='Monkey' alt='' />
@@ -237,10 +244,8 @@ const Home = () => {
               )}
             </div>
             <img src={Platform} className='platform' alt='' />
-            <img src={GifRainbow} className='GifRainbow' alt='' />
-            <img src={Diego} className='Diego' alt='' />
-            <img src={Tavelli} className='Tavelli' alt='' />
-            <img src={TreeColor} className={styleBackVid('treeColor')} alt='' />
+            <img src={GifRainbow} className={styleBackVid('GifRainbow')} alt='' />
+
             {showLaptop && (
               <div className='laptopDialogContainer'>
                 <MovingTextTech />
@@ -261,11 +266,19 @@ const Home = () => {
             {/* CONTACT */}
             <>
               <div onClick={() => setContact(!contact)} className='divCircle' >
-                <img
-                  src={triangleLight}
-                  className={contact ? 'triangle triangleFx' : 'triangle'}
-                  alt=''
-                />
+                <div className='triangleContainer'>
+                  <Tilt
+                    scale={1.13}
+                    perspective={30}
+                  // tiltReverse
+                  >
+                    <img
+                      src={triangleLight}
+                      className={contact ? 'triangle triangleFx' : 'triangle'}
+                      alt=''
+                    />
+                  </Tilt>
+                </div>
                 <img
                   src={Contact}
                   className={!contact ? 'Contact' : 'Contact ContactPressed'}
@@ -288,6 +301,47 @@ const Home = () => {
                 <ModalContact contact={contact} />
               }
             </>
+            <div className='cardHomeContainer'>
+              {/* CARD HOME */}
+              <Tilt
+                tiltMaxAngleX={4}
+                tiltMaxAngleY={4}
+              >
+                <Tilt
+                  tiltMaxAngleX={6}
+                  tiltMaxAngleY={6}
+                >
+                  <Card.Img className='cardHome' src={CardHome} alt='' />
+                  {/* <img src={CardHome} className='cardHome' alt='' /> */}
+                </Tilt>
+                <Tilt
+                  glareEnable={true}
+                  tiltMaxAngleX={6}
+                  tiltMaxAngleY={2}
+                >
+                  <div className='DiegoContainer'>
+                    <img src={Diego} className='Diego' alt='' />
+                  </div>
+                </Tilt>
+                <Tilt
+                  glareEnable={true}
+                  tiltMaxAngleX={6}
+                  tiltMaxAngleY={2}
+                >
+                  <div className='TavelliContainer'>
+                    <img src={Tavelli} className='Tavelli' alt='' />
+                  </div>
+                </Tilt>
+                <Tilt
+                  tiltMaxAngleX={6}
+                  tiltMaxAngleY={2}
+                >
+                  <div className='TreeColorContainer'>
+                    <img src={TreeColor} className={styleBackVid('treeColor')} alt='' />
+                  </div>
+                </Tilt>
+              </Tilt>
+            </div>
             {/* PROJECT */}
             <>
               <div className='CardProContainer' >

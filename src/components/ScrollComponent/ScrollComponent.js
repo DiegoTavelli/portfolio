@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
 import './scrollComponent.scss'
 

@@ -41,6 +41,7 @@
   }
 }
 
+
 .homeContainer {
   position:absolute;
   // justify-content: center;
@@ -210,14 +211,22 @@
   }
 }
 
-.cardHome {
-  touch-action: none;
-  z-index: 30;
+.cardHomeContainer {
+  // background-color: red;
+  scroll-padding-right: 20px;
+  z-index: 20;
   position: absolute;
+  left: 847px;
+  top: 331px;  
+}
+
+
+.cardHome {
+  // touch-action: none;
+  z-index: 130;
+  position:relative;
   width: 560.91px;
   height: 385.34px;
-  left: 847.67px;
-  top: 330px;
   // filter: drop-shadow(33px 22px 2px rgba(10, 10, 10, 0.671));
   transform: rotate(2deg);
   animation: firstFlipCont 1.1s ease;
@@ -253,7 +262,7 @@
   // animation: firstFlipCont 3s ease;
 }
 .ArrowPro {
-  z-index: 20;
+  z-index: 60;
   position: absolute;
   width: 324px;
   height: 283px;
@@ -312,9 +321,10 @@
   cursor: pointer;
 }
 
+
   .backBlackCardPro {
     background-color: rgb(0, 0, 0);
-    z-index: 30;
+    z-index: 70;
     border-radius: 10%;
     position: absolute;
     width: 460px;
@@ -362,6 +372,7 @@
   }
 
   .CardProBig .CardPro {
+    z-index: 80;
     position: absolute;
     width: 487px;
     height: 338px;
@@ -402,6 +413,7 @@
   }
 
   .CardProBig2 .CardPro2 {
+    z-index: 80;
     position: absolute;
     width: 439px;
     height: 314px;
@@ -521,40 +533,78 @@
   z-index: -10;
   position: absolute;
   width: 359px;
-  height: 204px;
+  height: 208px;
   left: 720px;
   top: 364px;
-  filter: blur(12.5px);
   transform: rotate(-4deg);
-  animation: rainbowFx 24s infinite ease-in-out;
+  animation: rainbowFx 20s infinite ease-in-out;
+}
+
+.rainB0 {
+  filter: 
+  contrast(90%)
+  brightness(100%)
+  blur(10px)
+  ;
+}
+.rainB1 {
+  filter: 
+  sepia(50%)
+  hue-rotate(15deg)
+  blur(10px)
+  ;
+}
+.rainB2 {
+  filter:
+  hue-rotate(110deg)
+  sepia(40%)
+  blur(10px)
+  ;
+}
+.rainB3 {
+  filter:
+  hue-rotate(320deg)
+  blur(10px)
+  ;
+}
+.rainB4 {
+  filter: 
+  hue-rotate(240deg)
+  brightness(90%)
+  blur(10px)
+  ;
 }
 
 @keyframes rainbowFx {
   0% {
-    opacity: 0;
+    opacity: 0.1;
   }
   50% {
-    opacity: 0.28;
+    opacity: 0.30;
   }
   80% {
-    opacity: 0.08;
+    opacity: 0.20;
   }
   100% {
-    opacity: 0;
+    opacity: 0.1;
   }
 }
 
   .platform {
-    z-index: 0;
+    z-index: 60;
     position: absolute;
-    width: 435.5px;
+    width: 455.5px;
     height: 70.68px;
-    left: 594.53px;
+    left: 575px;
     top: 329.15px;
     transform: rotate(1deg);
     filter: drop-shadow(18px 10px 4px rgba(0, 0, 0, 0.25));
     animation: platformMove 24s ease-in-out infinite ;
   }
+
+  // .platform:hover {
+  //   z-index: 60;
+  // }
 
 @keyframes platformMove {
 
@@ -676,15 +726,21 @@
     cursor: pointer;
        }
 
+  .triangleContainer {
+    position: absolute;
+    z-index: 40;
+    top: 728px;
+    left:772px;
+  }
+
   .triangle {
-    border-radius: 50%;
+  position: relative;
+  border-radius: 50%;
   display: none;
-  z-index: 100;
-  position: absolute;
-  width: 61.77px;
-  height: 47.76px;
-  left: 779px;
-  top: 744px;
+  width: 64px;
+height: 64px;
+  // left: 779px;
+  // top: 744px;
   transform: rotate(-1.97deg);
   filter: drop-shadow(2px 5px 0.4px rgba(0, 0, 0, 0.705));
   // transition: all 10s ease-out;
@@ -791,26 +847,38 @@ animation: triangleOpac 0.5s ease-in-out;
   }
 }
 
+.DiegoContainer {
+  position: absolute;
+  bottom: 104px;
+  left: 110px;
+}
+
   .Diego {
-    z-index: 30;
-    position: absolute;
+    z-index: 130;
+    position: relative;
     width: 130.4px;
     height: 50.5px;
-    left: 958px;
-    top: 560px;
+    // left: 958px;
+    // top: 560px;
     transition: transform 0.4s ease-in-out;
     transform: rotate(-18deg);
     filter: brightness(10%) drop-shadow(37px 1px 10px rgba(0, 0, 0, 0.25));
     animation: cardHomeFx 4s ease-in-out infinite;
   }
  
-  .Tavelli {
-    z-index: 30;
+  .TavelliContainer {
     position: absolute;
+  bottom: 154px;
+    left: 259px;
+  }
+
+  .Tavelli {
+    z-index: 130;
+    position: relative;
     width: 148px;
     height: 54.64px;
-    left: 1106px;
-    top: 506px;
+    // left: 1106px;
+    // top: 506px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transform: rotate(-18.4deg);
     animation: cardHomeFx 4s ease-in-out infinite;
@@ -967,7 +1035,7 @@ animation: triangleOpac 0.5s ease-in-out;
   } 
 
   .Monkey {
-    z-index: 30;
+    z-index: 70;
     position: absolute;
     width: 82.5px;
     height: 87.72px;
@@ -988,7 +1056,7 @@ animation: triangleOpac 0.5s ease-in-out;
   }
 
   .monkeyBassButton {
-    z-index: 110;
+    z-index: 100;
     position: absolute;
     width: 82.5px;
     height: 87.72px;
@@ -1032,14 +1100,15 @@ top: 520px;
   }
 
   .laptop {
-    z-index: 0;
+    z-index: 70;
     position: absolute;
     width: 96px;
     height: 57px;
     left: 804.29px;
     top: 300.29px;
- 
   }
+
+  
 
   .bikeMonkey {
     z-index: 25;
@@ -1384,12 +1453,18 @@ top: 587px;
   top: 513.3px;
 }
 
-.treeColor {
-  z-index: 30;
+.TreeColorContainer {
   position: absolute;
+  bottom: 554px;
+  left: 184px;
+}
+
+.treeColor {
+  z-index: 130;
+  position: relative;
   width: 133px;
-  height: 160px;
-  left: 1032px;
+  // height: 160px;
+  // left: 1032px;
   top: 435px;
 transform: rotate(-17deg);
 filter: brightness(110%)

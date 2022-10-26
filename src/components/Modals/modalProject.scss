@@ -45,7 +45,7 @@
 }
 
 .logoLoadingProject {
-  z-index: 25;
+  z-index: 85;
   position: relative;
   border-radius: 50%;
   height: 100px;
@@ -68,7 +68,7 @@
 
 .backBlack {
 //  background-color: black;
- z-index: 40;
+ z-index: 70;
  border-radius: 20px;
  position: absolute;
  width: 457px;
@@ -121,7 +121,7 @@
 }
 
 .videoPokemon {
-  z-index: 50;
+  z-index: 90;
   border-radius: 40%;
   position: absolute;
   width: 444px;
@@ -141,7 +141,7 @@
 }
 
 .divHoverPokemon {
-  z-index: 50;
+  z-index: 100;
   border-radius: 10px;
   position: absolute;
   height: 178px;
@@ -150,7 +150,7 @@
   top: 546px;
 }
 .divHoverFlyMate {
-  z-index: 50;
+  z-index: 100;
   border-radius: 6px;
   position: absolute;
   height: 179px;
@@ -201,7 +201,7 @@ animation: glowHover 3s ease-in-out infinite;
 }
 
 .videoFlyMate {
-  z-index: 50;
+  z-index: 90;
   border-radius: 40%;
   position: absolute;
   width: 464px;
