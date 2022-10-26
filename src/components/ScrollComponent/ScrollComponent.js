@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import ReactScrollWheelHandler from "react-scroll-wheel-handler";
+import React, { useState } from 'react';
+import ReactScrollWheelHandler from 'react-scroll-wheel-handler';
 import './scrollComponent.scss'
 
 
 
-const ScrollComponent = () => {
+const ScrollComponent = ({ colorState, setColorState }) => {
 
   const colorHash = (
-    ["#4150dc21", "#df871a7e ", "#33B26D", " #bc3a7f99", "#1891b6a3"]
+    ['#4150dc21', '#df871a7e ', '#33B26D', ' #bc3a7f99', '#1891b6a3']
   )
-  const [colorState, setColorState] = useState({ currentIndex: 0 })
+  // const [colorState, setColorState] = useState({ currentIndex: 0 })
 
 
   const nextIndex = () => {
@@ -50,7 +50,7 @@ const ScrollComponent = () => {
         width: '100vw',
         height: '110vh',
         backgroundColor: colorHash[currentIndex],
-        transition: "background-color .3s ease-out",
+        transition: 'background-color .3s ease-out',
       }}
     />
 

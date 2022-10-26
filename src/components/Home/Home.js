@@ -44,7 +44,7 @@ import TechIcon from '../../assets/figma/gifTech.gif'
 import FireGif from '../../assets/figma/fireGif.gif'
 import ContactBase from '../../assets/figma/contactWorldBase2.png'
 import ScrollGif from '../../assets/figma/scrollGif.gif'
-import ScrollDialog from '../../assets/figma/scrollGifTheme.gif'
+import ScrollDialog from '../../assets/figma/scrollGifTheme2.gif'
 
 const Home = () => {
 
@@ -61,6 +61,10 @@ const Home = () => {
   const [showCardPokemon, setShowCardPokemon] = useState(false)
   const [showCardFlyMate, setShowCardFlyMate] = useState(false)
   const [leaveStream, setLeaveStream] = useState(false)
+
+  // state to ScrollComp to change video CSS
+  const [colorState, setColorState] = useState({ currentIndex: 0 })
+
 
   const refreshPage = () => {
     window.location.reload();
@@ -100,6 +104,23 @@ const Home = () => {
       ? styleInput : styleInput + ' notDisplay'
   }
 
+  const styleBackVid = (styleInput) => {
+    const { currentIndex } = colorState
+    let from = styleInput === 'backVid' ?
+      ' vid' : ' navC'
+    return currentIndex === 0 ?
+      styleInput + `${from}0` :
+      currentIndex === 1 ?
+        styleInput + `${from}1` :
+        currentIndex === 2 ?
+          styleInput + `${from}2` :
+          currentIndex === 3 ?
+            styleInput + `${from}3` :
+            currentIndex === 4 ?
+              styleInput + `${from}4` : null
+  }
+
+
   return (
     <div className='homeContainer' >
       <video
@@ -107,10 +128,10 @@ const Home = () => {
         autoPlay
         loop
         muted
-        className='backVid'
+        className={styleBackVid('backVid')}
       >
       </video>
-      <div className='navContainer' >
+      <div className={styleBackVid('navContainer')} >
         {showScroll ?
           <div className='ScrollCompContainer'>
             <img src={ScrollGif} className='ScrollGif' alt='' />
@@ -140,7 +161,7 @@ const Home = () => {
               alt=''
             />
           </div>
-          <ScrollComponent />
+          <ScrollComponent colorState={colorState} setColorState={setColorState} />
           <div className='fullStackDiv'>
             <img src={Full} className={styleFullStack('Full')} alt='' />
             <img src={Full} className={styleFullStack('Full full2')} alt='' />

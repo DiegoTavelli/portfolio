@@ -249,19 +249,32 @@ transform: rotate(-91deg);
 }
 .buttonPokemonWeb:hover {
   cursor: pointer;
+  animation: buttonsFx 0.2s ease-in-out;
   opacity: 1;
 }
 .buttonPokemonVideo:hover {
   cursor: pointer;
+  animation: buttonsFx 0.2s ease-in-out;
   opacity: 1;
 }
 .buttonFlyMateWeb:hover {
   cursor: pointer;
+  animation: buttonsFx 0.2s ease-in-out;
   opacity: 1;
 }
 .buttonFlyMateVideo:hover {
   cursor: pointer;
+  animation: buttonsFx 0.2s ease-in-out;
   opacity: 1;
+}
+
+@keyframes buttonsFx {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .divImages {
@@ -299,6 +312,7 @@ transform: rotate(-91deg);
   left: 296px;
   top: 210px;
   transform: rotate(0deg);
+  animation: detailsFx 0.3s ease-in-out;
 }
 
 .detailsFlyMate {
@@ -309,19 +323,28 @@ transform: rotate(-91deg);
   left: 296px;
   top: 210px;
   transform: rotate(0deg);
+  animation: detailsFx 0.3s ease-in-out;
+}
+
+@keyframes detailsFx {
+  0% {
+    opacity: 0.5;
+    height: 140px;
+    left: 360px;
+    top: 310px;
+  }
+  100% {
+    opacity: 1;
+    height: 280px;
+    left: 296px;
+    top: 210px;
+  }
 }
 
 @keyframes glowHover {
 
   0% {
-  //   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))brightness(70%);
-  // box-shadow: 
-  // 0 0 0px rgba(255, 255, 255, 0.003),
-  // 0px 0 0px #f0f,
-  // 0px 0 0px #0ff,
-  // 0px 0 0px #f0f,
-  // 0px 0 0px #0ff,;
-  //   // transform: skewX(100deg);
+ 
   }
   25% {
     filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25))brightness(80%);
@@ -351,12 +374,6 @@ transform: rotate(-91deg);
   -1px 1 8px #0ff,;
   }
   100% {
-  //   filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.25))brightness(70%);
-  // box-shadow: 
-  // 0 0 0px #fff,
-  // 0px 0 0px #f0f,
-  // 0px 0 0px #0ff,
-  // 0px 0 0px #f0f,
-  // 0px 0 0px #0ff,;
+ 
   }
 }
