@@ -1,31 +1,26 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
-import Home from './components/Home/Home'
-// import NavBar from './components/NavBar/NavBar'
+// import Home from './components/Home/Home'
 import './App.scss';
 import { StrictMode } from 'react';
-import { BrowserView, MobileView, TabletView } from 'react-device-detect';
+// import { BrowserView, MobileView, TabletView } from 'react-device-detect';
+import { Suspense } from "react";
+import { lazyWithPreload } from "react-lazy-with-preload";
 
+const Home = lazyWithPreload(() => import('./components/Home/Home'))
 
 const App = () => {
 
   return (
     <div className='App' >
-      <BrowserView>
+      <Suspense fallback={<div>hola</div>}>
         <BrowserRouter>
-          {/* <NavBar /> */}
           <StrictMode>
             <Routes>
               <Route path='/' element={<Home />} />
             </Routes>
           </StrictMode>
         </BrowserRouter>
-      </BrowserView>
-      <MobileView>
-        <div>movil</div>
-      </MobileView>
-      <TabletView>
-        <div>TabletView</div>
-      </TabletView>
+      </Suspense>
     </div>
   );
 }

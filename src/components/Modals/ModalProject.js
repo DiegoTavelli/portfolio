@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './modalProject.scss'
 import projectModal from '../../assets/figma/projectModal6.png'
-import VideoPokemon from '../../assets/videos/VideoPokemon.mp4'
-import VideoFlyMate from '../../assets/videos/VideoFlyMate.mp4'
+import VideoPokemon from '../../assets/videos/VideoPokemon2.mp4'
+import VideoFlyMate from '../../assets/videos/VideoFlyMate3.mp4'
 import pokemonLogo from '../../assets/videos/pokemon.png'
 import flymateLogo from '../../assets/videos/flymate.png'
 import logoLoading from '../../assets/figma/loading.gif'
@@ -12,6 +12,11 @@ import buttonFlyMateWeb from '../../assets/figma/buttonFlyMateWeb.png'
 import buttonFlyMateVideo from '../../assets/figma/buttonFlyMateVideo.png'
 import detailsPokemon from '../../assets/figma/gifDetailPokemon.gif'
 import detailsFlyMate from '../../assets/figma/gifDetailFlyMate.gif'
+import BackCorcho from '../../assets/figma/backCorcho.png'
+import WebLink from '../../assets/figma/webLink.png'
+import ApkLink from '../../assets/figma/apkLink.png'
+import VideoLink from '../../assets/figma/videoLink.png'
+
 
 const ModalProject = ({
   showCardPokemon,
@@ -20,6 +25,10 @@ const ModalProject = ({
   setShowCardFlyMate,
   leaveStream,
   setLeaveStream }) => {
+
+  const [showWeb, setShowWeb] = useState(false)
+  const [showApk, setShowApk] = useState(false)
+  const [showVideo, setShowVideo] = useState(false)
 
   const handleWebPokemon = () => {
     window.open('https://the-pokemon-app.vercel.app');
@@ -85,8 +94,33 @@ const ModalProject = ({
         onMouseEnter={mouseEnterPokemon}
         onMouseLeave={mouseLeavePokemon}
       >
-        <img src={buttonPokemonWeb} onClick={handleWebPokemon} className='buttonPokemonWeb' alt='' />
-        <img src={buttonPokemonVideo} onClick={handleVideoPokemon} className='buttonPokemonVideo' alt='' />
+        {
+          showWeb ?
+            <img src={WebLink} className='webLinkPokemon' alt='' />
+            : null
+        }
+        <img
+          src={buttonPokemonWeb}
+          onMouseEnter={() => setShowWeb(true)}
+          onMouseLeave={() => setShowWeb(false)}
+          onClick={handleWebPokemon}
+          className='buttonPokemonWeb'
+          alt=''
+        />
+        {
+          showVideo && showCardPokemon ?
+            <img src={VideoLink} className='videoLinkPokemon' alt='' />
+            : null
+        }
+        <img
+          src={buttonPokemonVideo}
+          onMouseEnter={() => setShowVideo(true)}
+          onMouseLeave={() => setShowVideo(false)}
+          onClick={handleVideoPokemon}
+          className='buttonPokemonVideo'
+          alt=''
+
+        />
       </div>
       {showCardPokemon ?
         <div>
@@ -110,8 +144,34 @@ const ModalProject = ({
         onMouseEnter={mouseEnterFlyMate}
         onMouseLeave={mouseLeaveFlyMate}
       >
-        <img src={buttonFlyMateWeb} onClick={handleWebFlyMate} className='buttonFlyMateWeb' alt='' />
-        <img src={buttonFlyMateVideo} onClick={handleVideoFlyMate} className='buttonFlyMateVideo' alt='' />
+        {
+          showApk ?
+            <img src={ApkLink} className='apkLink' alt='' />
+            : null
+        }
+        <img
+          src={buttonFlyMateWeb}
+          onMouseEnter={() => setShowApk(true)}
+          onMouseLeave={() => setShowApk(false)}
+          onClick={handleWebFlyMate}
+          className='buttonFlyMateWeb'
+          alt=''
+
+        />
+        {
+          showVideo && showCardFlyMate ?
+            <img src={VideoLink} className='videoLinkFlyMate' alt='' />
+            : null
+        }
+        <img
+          src={buttonFlyMateVideo}
+          onMouseEnter={() => setShowVideo(true)}
+          onMouseLeave={() => setShowVideo(false)}
+          onClick={handleVideoFlyMate}
+          className='buttonFlyMateVideo'
+          alt=''
+
+        />
       </div>
       {showCardFlyMate ?
         <div className='handleClickFlyMate' >
@@ -132,10 +192,12 @@ const ModalProject = ({
       {
         showCardPokemon ?
           <div>
+            <img src={BackCorcho} className='backCorcho' alt='' />
             <img src={detailsPokemon} className='detailsPokemon' alt='' />
           </div>
           : showCardFlyMate ?
             <div>
+              <img src={BackCorcho} className='backCorcho' alt='' />
               <img src={detailsFlyMate} className='detailsFlyMate' alt='' />
             </div>
             : null

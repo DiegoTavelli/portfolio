@@ -46,6 +46,7 @@ import ContactBase from '../../assets/figma/contactWorldBase2.png'
 import ScrollGif from '../../assets/figma/scrollGif.gif'
 import ScrollDialog from '../../assets/figma/scrollGifTheme2.gif'
 
+
 const Home = () => {
 
   const [project, setProject] = useState(false)
@@ -65,10 +66,9 @@ const Home = () => {
   // state to ScrollComp to change video CSS
   const [colorState, setColorState] = useState({ currentIndex: 0 })
 
-
-  const refreshPage = () => {
-    window.location.reload();
-  }
+  // const refreshPage = () => {
+  //   window.location.reload();
+  // }
 
   const onEnterBass = () => {
     setShowBassMonkey(true)
@@ -107,7 +107,11 @@ const Home = () => {
   const styleBackVid = (styleInput) => {
     const { currentIndex } = colorState
     let from = styleInput === 'backVid' ?
-      ' vid' : ' navC'
+      ' vid' :
+      styleInput === 'mandala' ?
+        ' mand' :
+        styleInput === 'treeColor' ?
+          ' tree' : null
     return currentIndex === 0 ?
       styleInput + `${from}0` :
       currentIndex === 1 ?
@@ -131,7 +135,7 @@ const Home = () => {
         className={styleBackVid('backVid')}
       >
       </video>
-      <div className={styleBackVid('navContainer')} >
+      <div className='navContainer' >
         {showScroll ?
           <div className='ScrollCompContainer'>
             <img src={ScrollGif} className='ScrollGif' alt='' />
@@ -143,20 +147,22 @@ const Home = () => {
           </div> : null
         }
         <nav>
-          <div onClick={() => refreshPage()} className='navBarButton'>
-            <img className={
-              showCardPokemon || showCardFlyMate
-                ? 'DiegoTavelli DiegoTavelliProjectOpen'
-                : 'DiegoTavelli'
-            }
+          <div className='navBarButton'>
+            <img
+              className={
+                showCardPokemon || showCardFlyMate
+                  ? 'DiegoTavelli DiegoTavelliProjectOpen'
+                  : 'DiegoTavelli'
+              }
               src={LogoSubtitle}
               alt='DiegoTavelli'
             />
-            <img className={
-              showCardPokemon || showCardFlyMate
-                ? 'DiegoTavelli DiegoTavelliShadow DiegoTavelliProjectOpen'
-                : 'DiegoTavelli DiegoTavelliShadow'
-            }
+            <img
+              className={
+                showCardPokemon || showCardFlyMate
+                  ? 'DiegoTavelli DiegoTavelliShadow DiegoTavelliProjectOpen'
+                  : 'DiegoTavelli DiegoTavelliShadow'
+              }
               src={LogoSubtitle}
               alt=''
             />
@@ -218,7 +224,7 @@ const Home = () => {
               >
               </div>
               <img src={ArrowPro} className='ArrowPro' alt='' />
-              <img src={Mandala} className='mandala' alt='' />
+              <img src={Mandala} className={styleBackVid('mandala')} alt='' />
               {showBassMonkey || showBikeMonkey || showLaptop ?
                 <img src={FireGif} className='FireGif' alt='' />
                 : null
@@ -234,11 +240,11 @@ const Home = () => {
             <img src={GifRainbow} className='GifRainbow' alt='' />
             <img src={Diego} className='Diego' alt='' />
             <img src={Tavelli} className='Tavelli' alt='' />
-            <img src={TreeColor} className='treeColor' alt='' />
+            <img src={TreeColor} className={styleBackVid('treeColor')} alt='' />
             {showLaptop && (
-              <div>
+              <div className='laptopDialogContainer'>
                 <MovingTextTech />
-                <TechGif />
+                <TechGif onLeaveLaptop={onLeaveLaptop} />
                 <img src={TechIcon} className='TechIcon' alt='' />
               </div>
             )

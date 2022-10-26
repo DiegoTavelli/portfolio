@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react'
 import DialogTech from '../../assets/figma/dialogTech2.png'
-import TechSkillsVideo from '../../assets/videos/techSkillsVideo2.mp4'
+import TechSkillsVideo from '../../assets/videos/techSkillsVideo3.mp4'
+// import CloseTech from '../../assets/figma/closeTech.png'
 import './techGif.scss'
 
 
-const TechGif = () => {
+const TechGif = ({ onLeaveLaptop }) => {
 
 
   return (
@@ -14,6 +15,7 @@ const TechGif = () => {
         className='DialogTech'
         alt=''
       />
+      {/* <img src={CloseTech} onClick={onLeaveLaptop} className='closeDialogTech' alt='' /> */}
       <video
         src={TechSkillsVideo}
         className='DialogTechVideo'

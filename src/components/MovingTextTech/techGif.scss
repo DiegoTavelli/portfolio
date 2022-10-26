@@ -1,6 +1,6 @@
 
 .DialogTech {
-  z-index: 50;
+  z-index: 20;
   position: absolute;
   width: 190px;
   height: 90px;
@@ -11,15 +11,31 @@ transform: rotate(0deg)skewX(5deg);
 animation: techFx .1s ease-in-out;
 }
 
+.closeDialogTech {
+  cursor: pointer;
+  z-index: 25;
+  // background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  left: 869px;
+  top: 233px;
+  transform: rotate3d(1, 1, 1, 45deg)rotate(-25deg);
+  animation: techFx .1s ease-in-out;
+}
+
 .DialogTechVideo {
   border-color: transparent;
   background-color: transparent;
-  z-index: 60;
+  z-index: 25;
   position: absolute;
-  width: 80px;
-  height: 43px;
-  left: 746px;
-  top: 228px;
+  border-radius: 50%;
+  width: 60px;
+  height: 37px;
+  left: 750px;
+  top: 230px;
+  transform: rotate(-0.5deg)skewX(7deg);
   animation: videoOpacity 1s ease-in-out;
 }
 

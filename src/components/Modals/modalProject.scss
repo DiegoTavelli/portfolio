@@ -78,6 +78,33 @@
  animation: backBlackFx .3s ease-in-out;
 }
 
+.backCorcho {
+  // z-index: 200;
+  // background-color: red;
+  border-radius: 10%;
+  position: absolute;
+  left: 302px;
+  top: 210px;
+  height: 280px;
+  width: 280px;
+  animation: corchoFx .3s ease-in-out;
+}
+
+@keyframes corchoFx {
+  0% {
+    opacity: 0.5;
+    height: 150px;
+    left: 360px;
+    top: 310px;
+  }
+  100% {
+    opacity: 1;
+    height: 280px;
+    left: 302px;
+    top: 210px;
+  }
+}
+
 @keyframes backBlackFx {
   0% {
     width: 280px;
@@ -179,7 +206,7 @@ animation: glowHover 3s ease-in-out infinite;
   position: absolute;
   width: 464px;
   height: 394px;
-  left: 0px;
+  left: -4px;
   top: -30px;
   animation: videoFx 1s ease-in-out;
 }
@@ -310,7 +337,7 @@ transform: rotate(-91deg);
   width: 290px;
   height: 280px;
   left: 296px;
-  top: 210px;
+  top: 209px;
   transform: rotate(0deg);
   animation: detailsFx 0.3s ease-in-out;
 }
@@ -318,10 +345,10 @@ transform: rotate(-91deg);
 .detailsFlyMate {
   z-index: 10;
   position: absolute;
-  width: 290px;
-  height: 280px;
-  left: 296px;
-  top: 210px;
+  width: 280px;
+  height: 270px;
+  left: 301px;
+  top: 213px;
   transform: rotate(0deg);
   animation: detailsFx 0.3s ease-in-out;
 }
@@ -340,6 +367,7 @@ transform: rotate(-91deg);
     top: 210px;
   }
 }
+
 
 @keyframes glowHover {
 
@@ -375,5 +403,102 @@ transform: rotate(-91deg);
   }
   100% {
  
+  }
+}
+
+.webLinkPokemon {
+  position: absolute;
+  width: 97px;
+  height: 65px;
+  left: 227px;
+  top: 43px;
+  animation: webLinkFx .3s ease-in-out;
+}
+
+.videoLinkPokemon {
+  position: absolute;
+  width: 97px;
+  height: 65px;
+  left: 0px;
+  top: 43px;
+  animation: videoLinkPokemonFx .3s ease-in-out;
+}
+
+.videoLinkFlyMate {
+  position: absolute;
+  width: 97px;
+  height: 65px;
+  left: 0px;
+  top: 40px;
+  animation: videoLinkFlyMateFx .3s ease-in-out;
+}
+
+.apkLink {
+  position: absolute;
+  width: 97px;
+  height: 65px;
+  left: 230px;
+  top: 40px;
+  animation: apkLinkFx .3s ease-in-out;
+}
+
+@keyframes webLinkFx {
+  0% {
+    width: 0;
+    height: 0;
+    left: 270px;
+    top: 133px;
+  }
+  100% {
+    width: 97px;
+    height: 65px;
+    left: 227px;
+    top: 43px;
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+@keyframes videoLinkPokemonFx {
+  0% {
+    width: 0;
+    height: 0;
+    left: 40px;
+    top: 123px;
+  }
+  100% {
+    width: 97px;
+    height: 65px;
+    left: 0px;
+    top: 43px;
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+@keyframes videoLinkFlyMateFx {
+  0% {
+    width: 0;
+    height: 0;
+    left: 45px;
+    top: 113px;
+  }
+  100% {
+    width: 97px;
+    height: 65px;
+    left: 0px;
+    top: 40px;
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+@keyframes apkLinkFx {
+  0% {
+    width: 0;
+    height: 0;
+    left: 270px;
+    top: 110px;
+  }
+  100% {
+    width: 97px;
+    height: 65px;
+    left: 230px;
+    top: 40px;
+    transform: rotate3d(0, 1, 0, 360deg);
   }
 }

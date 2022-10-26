@@ -16,7 +16,7 @@
 }
 .vid1 {
   animation: try 2s ease-in-out;
-  filter:saturate(200%) blur(100px)invert(60%)
+  filter:saturate(200%) blur(14px)invert(60%)
 }
 .vid2 {
   animation: try 2s ease-in-out;
@@ -25,10 +25,10 @@
 .vid3 {
   
   animation: try 2s ease-in-out;
-  filter:blur(60px)  
+  filter:blur(20px)
 }
 .vid4 {
-  animation: try 2s ease-in-out;
+  animation: try 1s ease-in-out;
   filter:invert(60%)
 }
 
@@ -82,7 +82,7 @@
   z-index: 0;
   height: 60px;
   top: 170px;
-  left: 840px;
+  left: 860px;
   animation: scrollGifFx 11s ease-in-out;
 }
 .ScrollGif2 {
@@ -91,7 +91,7 @@
   z-index: 0;
   height: 60px;
   top: 171px;
-  left: 841px;
+  left: 861px;
   animation: scrollGifFx 11s ease-in-out;
   filter: 
   drop-shadow(2px 2px 1px rgb(49, 140, 186))
@@ -211,6 +211,7 @@
 }
 
 .cardHome {
+  touch-action: none;
   z-index: 30;
   position: absolute;
   width: 560.91px;
@@ -799,8 +800,8 @@ animation: triangleOpac 0.5s ease-in-out;
     top: 560px;
     transition: transform 0.4s ease-in-out;
     transform: rotate(-18deg);
-    filter: drop-shadow(37px 1px 10px rgba(0, 0, 0, 0.25));
-    // animation: cardHomeFx 4s ease-in-out infinite;
+    filter: brightness(10%) drop-shadow(37px 1px 10px rgba(0, 0, 0, 0.25));
+    animation: cardHomeFx 4s ease-in-out infinite;
   }
  
   .Tavelli {
@@ -812,7 +813,7 @@ animation: triangleOpac 0.5s ease-in-out;
     top: 506px;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     transform: rotate(-18.4deg);
-    // animation: cardHomeFx 4s ease-in-out infinite;
+    animation: cardHomeFx 4s ease-in-out infinite;
   }
 
   .DiegoTavelli {
@@ -821,7 +822,7 @@ animation: triangleOpac 0.5s ease-in-out;
     height: 57px;
     left: 403px;
     top: 145px;
-    animation: nameAnim2 20s ease-in-out infinite;  
+    animation: nameAnim2 20s ease-in-out infinite;
   }
 
   .DiegoTavelliProjectOpen {
@@ -1092,7 +1093,7 @@ top: 520px;
   left: 841px;
   top: 374px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
-  filter: drop-shadow(-4px 0px 0px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(2px 2px 0px rgba(0, 0, 0, 0.25));
   animation: LoveIconAnim 2s ease-in-out infinite;
 }
 
@@ -1278,13 +1279,23 @@ top: 520px;
   left: 744px;
   top: 505px;
   border-radius: 50%;
-  // z-index: 15;
-  // position: absolute;
-  // width: 65px;
-  // height: 65px;
-  // left: 754px;
-  // top: 517px;
-  // border-radius: 50%;
+}
+
+.mand0 {
+  filter: contrast(90%)brightness(100%);
+}
+
+.mand1 {
+  filter: sepia(60%)hue-rotate(15deg)
+}
+.mand2 {
+  filter:hue-rotate(110deg)sepia(30%)
+}
+.mand3 {
+  filter:hue-rotate(320deg)
+}
+.mand4 {
+  filter:hue-rotate(240deg)
 }
 
 .ArrowLoading {
@@ -1376,23 +1387,45 @@ top: 587px;
 .treeColor {
   z-index: 30;
   position: absolute;
-  width: 131.31px;
-  height: 152.04px;
+  width: 133px;
+  height: 160px;
   left: 1032px;
-  top: 443px;
+  top: 435px;
 transform: rotate(-17deg);
 filter: brightness(110%)
 }
 
-// .sliderTech {
-//   z-index: 100;
-//   position: absolute;
-//   width: 153px;
-//   height: 70px;
-//   left: 755px;
-//   top: 245px;
-//   transform: rotate(0.8deg);
-// }
+.tree0 {
+  filter: contrast(90%)brightness(100%);
+}
+
+.tree1 {
+  filter: sepia(30%)hue-rotate(15deg)
+}
+.tree2 {
+  filter:hue-rotate(110deg)sepia(60%)
+}
+.tree3 {
+  filter:hue-rotate(320deg)
+}
+.tree4 {
+  filter:hue-rotate(240deg)
+}
+
+.laptopDialogContainer {
+  animation: dialogLaptopFade .2s ease-in-out;
+}
+
+@keyframes dialogLaptopFade {
+  0% {
+    opacity: 0;
+    max-width: 0px;
+  }
+  100% {
+    opacity: 1;
+    width: 190px;
+  }
+}
 
 .dialogTechButton {
   // background-color: red;
@@ -1402,6 +1435,7 @@ filter: brightness(110%)
   height: 57px;
   left: 804.29px;
   top: 300.29px;
+  cursor: pointer;
 }
 
 .grass {

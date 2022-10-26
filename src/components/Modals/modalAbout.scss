@@ -140,4 +140,27 @@ display: none;
   }
 }
 
+.aboutCv {
+  position: absolute;
+  width: 239px;
+  height: 152px;
+  left: 1245px;
+  top: 280px;
+  animation: showCv .3s ease-in-out;
+}
 
+@keyframes showCv {
+  0% {
+    height: 10px;
+    width: 10px;
+    left: 1415px;
+    top: 440px;
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 360deg);
+    width: 239px;
+    height: 152px;
+    left: 1245px;
+    top: 280px;
+  }
+}
