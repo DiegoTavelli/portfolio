@@ -1108,10 +1108,13 @@ top: 520px;
     top: 300.29px;
   }
 
-  
+  .bikeTiltCont {
+    z-index: 70;
+    position: absolute;
+  }
 
   .bikeMonkey {
-    z-index: 25;
+    z-index: 41;
     position: absolute;
     height: 104.83px;
     width: 104.83px;
@@ -1123,7 +1126,7 @@ top: 520px;
 
   .bikeMonkey2 {
     // display: none;
-    z-index: 30;
+    z-index: 40;
     position: absolute;
     width: 104.83px;
     height: 104.83px;
@@ -1133,7 +1136,7 @@ top: 520px;
   }
   
   .monkeyBikeButton {
-    background-color: transparent;
+    // background-color: red;
     z-index: 90;
     position: absolute;
     height: 104.83px;

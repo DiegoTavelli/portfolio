@@ -9,7 +9,6 @@ import TechGif from '../MovingTextTech/TechGif';
 import ScrollComponent from '../ScrollComponent/ScrollComponent'
 
 //bootstrap
-import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Tilt from 'react-parallax-tilt';
 
@@ -200,7 +199,6 @@ const Home = () => {
             <MovingTextComp />
 
             <div className='monkeysDiv' >
-              <img src={bikeMonkey} className='bikeMonkey2' alt='' />
               <img src={Monkey} className='Monkey' alt='' />
               {showBassMonkey &&
                 <div>
@@ -217,6 +215,11 @@ const Home = () => {
               </div>
             </div>
             <div className='containerMonkeyBike' >
+              <div className='bikeTiltCont'>
+
+                <img src={bikeMonkey} className='bikeMonkey2' alt='' />
+
+              </div>
               <img src={bikeMonkey} className='bikeMonkey' alt='' />
               {showBikeMonkey &&
                 <div>
@@ -229,6 +232,10 @@ const Home = () => {
                 onMouseEnter={() => onEnterBike()}
                 onMouseLeave={() => onLeaveBike()}
               >
+                <Tilt
+                  tiltMaxAngleX={1}
+                  tiltMaxAngleY={1}
+                ></Tilt>
               </div>
               <img src={ArrowPro} className='ArrowPro' alt='' />
               <img src={Mandala} className={styleBackVid('mandala')} alt='' />
@@ -382,7 +389,7 @@ const Home = () => {
                     : null
                   }
                   {
-                    !showCardPokemon || !showCardFlyMate ?
+                    !showCardPokemon && !showCardFlyMate ?
                       <img
                         src={Projects}
                         className={project ? 'Projects ProjectsOpen' : 'Projects'}

@@ -4,7 +4,7 @@ import './modalAbout.scss'
 import CvButton from '../../assets/figma/cvButton.png'
 import Arrow from '../../assets/figma/arrow.png'
 import AboutCv from '../../assets/figma/AboutCv.png'
-
+import Tilt from 'react-parallax-tilt';
 
 const ModalAbout = ({ about }) => {
 
