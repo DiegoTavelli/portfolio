@@ -2,24 +2,6 @@ import React, { useState } from 'react';
 import './modalProject.scss'
 import '../Home/home.scss'
 
-import projectModalBack from '../../assets/figma/projectModal7.png'
-import projectModal from '../../assets/figma/projectModal8.png'
-import VideoPokemon from '../../assets/videos/VideoPokemon2.mp4'
-import VideoFlyMate from '../../assets/videos/VideoFlyMate3.mp4'
-import pokemonLogo from '../../assets/videos/pokemon.png'
-import flymateLogo from '../../assets/videos/flymate.png'
-import logoLoading from '../../assets/figma/loading.gif'
-import buttonPokemonWeb from '../../assets/figma/buttonPokemonWeb.png'
-import buttonPokemonVideo from '../../assets/figma/buttonPokemonVideo.png'
-import buttonFlyMateWeb from '../../assets/figma/buttonFlyMateWeb.png'
-import buttonFlyMateVideo from '../../assets/figma/buttonFlyMateVideo.png'
-import detailsPokemon from '../../assets/figma/gifDetailPokemon.gif'
-import detailsFlyMate from '../../assets/figma/gifDetailFlyMate.gif'
-import BackCorcho from '../../assets/figma/backCorcho.png'
-import WebLink from '../../assets/figma/webLink.png'
-import ApkLink from '../../assets/figma/apkLink.png'
-import VideoLink from '../../assets/figma/videoLink.png'
-
 
 const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
   setShowCardFlyMate, leaveStream, setLeaveStream, project, setProject, allData,
@@ -122,13 +104,13 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
 
         <div className='modalProjectContainer'>
           <div className='projectModalBackContainer'>
-            <img src={projectModalBack} alt='' className='projectModalBack' />
+            <img src={allData.projectModalBack} alt='' className='projectModalBack' />
           </div>
-          <img src={projectModal} alt='' className='projectModal' />
+          <img src={allData.projectModal} alt='' className='projectModal' />
           <div className='handleClickPokemon' ></div>
           <div className='divImages'>
-            <img src={flymateLogo} alt='' className='flyMateLogo' />
-            <img src={pokemonLogo} alt='' className='pokemonLogo' />
+            <img src={allData.flymateLogo} alt='' className='flyMateLogo' />
+            <img src={allData.pokemonLogo} alt='' className='pokemonLogo' />
           </div>
           <div className='divMiddleHover'>
             <div
@@ -150,11 +132,11 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
           >
             {
               showWeb ?
-                <img src={WebLink} className='webLinkPokemon' alt='' />
+                <img src={allData.WebLink} className='webLinkPokemon' alt='' />
                 : null
             }
             <img
-              src={buttonPokemonWeb}
+              src={allData.buttonPokemonWeb}
               onMouseEnter={() => setShowWeb(true)}
               onMouseLeave={() => setShowWeb(false)}
               onClick={handleWebPokemon}
@@ -163,11 +145,11 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
             />
             {
               showVideo && showCardPokemon ?
-                <img src={VideoLink} className='videoLinkPokemon' alt='' />
+                <img src={allData.VideoLink} className='videoLinkPokemon' alt='' />
                 : null
             }
             <img
-              src={buttonPokemonVideo}
+              src={allData.buttonPokemonVideo}
               onMouseEnter={() => setShowVideo(true)}
               onMouseLeave={() => setShowVideo(false)}
               onClick={handleVideoPokemon}
@@ -178,10 +160,10 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
           {showCardPokemon ?
             <div>
               <div className='backBlack'>
-                <img src={logoLoading} className='logoLoadingProject' alt='' />
+                <img src={allData.logoLoading} className='logoLoadingProject' alt='' />
                 <video
                   className='videoPokemon'
-                  src={VideoPokemon}
+                  src={allData.VideoPokemon}
                   autoPlay
                   loop
                   muted
@@ -199,11 +181,11 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
           >
             {
               showApk ?
-                <img src={ApkLink} className='apkLink' alt='' />
+                <img src={allData.ApkLink} className='apkLink' alt='' />
                 : null
             }
             <img
-              src={buttonFlyMateWeb}
+              src={allData.buttonFlyMateWeb}
               onMouseEnter={() => setShowApk(true)}
               onMouseLeave={() => setShowApk(false)}
               onClick={handleWebFlyMate}
@@ -212,11 +194,11 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
             />
             {
               showVideo && showCardFlyMate ?
-                <img src={VideoLink} className='videoLinkFlyMate' alt='' />
+                <img src={allData.VideoLink} className='videoLinkFlyMate' alt='' />
                 : null
             }
             <img
-              src={buttonFlyMateVideo}
+              src={allData.buttonFlyMateVideo}
               onMouseEnter={() => setShowVideo(true)}
               onMouseLeave={() => setShowVideo(false)}
               onClick={handleVideoFlyMate}
@@ -227,10 +209,10 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
           {showCardFlyMate ?
             <div className='handleClickFlyMate' >
               <div className='backBlack'>
-                <img src={logoLoading} className='logoLoadingProject' alt='' />
+                <img src={allData.logoLoading} className='logoLoadingProject' alt='' />
                 <video
                   className='videoFlyMate'
-                  src={VideoFlyMate}
+                  src={allData.VideoFlyMate}
                   autoPlay
                   loop
                   muted
@@ -243,13 +225,13 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
           {
             showCardPokemon ?
               <div>
-                <img onm src={BackCorcho} className='backCorcho' alt='' />
-                <img src={detailsPokemon} className='detailsPokemon' alt='' />
+                <img onm src={allData.BackCorcho} className='backCorcho' alt='' />
+                <img src={allData.detailsPokemon} className='detailsPokemon' alt='' />
               </div>
               : showCardFlyMate ?
                 <div>
-                  <img src={BackCorcho} className='backCorcho' alt='' />
-                  <img src={detailsFlyMate} className='detailsFlyMate' alt='' />
+                  <img src={allData.BackCorcho} className='backCorcho' alt='' />
+                  <img src={allData.detailsFlyMate} className='detailsFlyMate' alt='' />
                 </div>
                 : null
           }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect } from 'react';
 import './home.scss'
 import MovingTextComp from '../MovingText/MovingText';
 import ModalProject from '../Modals/ModalProject'
@@ -8,55 +8,11 @@ import CardHome from '../CardHome/CardHome'
 import ScrollComponent from '../ScrollComponent/ScrollComponent'
 import LaptopComp from '../LaptopComp/LaptopComp'
 import FullStackComp from '../FullStackComp/FullStackComp'
-//modal project
-import Tilt from 'react-parallax-tilt';
+// import { assetsToStore } from './assetsToStore'
 
-//imgs, gifs & vids
-import LogoSubtitle from '../../assets/figma/logo_sub3.png'
-import ArrowPro from '../../assets/figma/cardProy3.png'
-import CardPro from '../../assets/figma/cardp2p3.png'
-import CardPro2 from '../../assets/figma/cardp2p5.png'
-import Platform from '../../assets/figma/platform2.png'
-import GifRainbow from '../../assets/figma/gifRainbow.gif'
-import AboutWorlds from '../../assets/figma/aboutWorlds3.png'
-import ContactWorld from '../../assets/figma/contactWorld2.png'
-import backVid from '../../assets/videos/MiVideoFinal.mp4'
-import Contact from '../../assets/figma/Contact2.png'
-import Projects from '../../assets/figma/Projects2.png'
-import TechSrc from '../../assets/figma/TechSkillsText.png'
-import About from '../../assets/figma/about2.png'
-import Me from '../../assets/figma/me2.png'
-import Full from '../../assets/figma/full.png'
-import Stack from '../../assets/figma/stack.png'
-import Dev from '../../assets/figma/dev.png'
-import Arrow from '../../assets/figma/arrow.png'
-import Monkey from '../../assets/figma/monkey.png'
-import bikeMonkey from '../../assets/figma/bikeMonkey2.png'
-import triangleLight from '../../assets/figma/crystal2.gif'
-import Mandala from '../../assets/figma/palmGif.gif'
-import monkeyGrass from '../../assets/figma/monkeyGrass2.png'
-import GifMe from '../../assets/figma/gifMe.gif'
-import dialogBassMonkey from '../../assets/figma/dialogBassMonkey3.png'
-import GifBike from '../../assets/figma/gifBike.gif'
-import LoveIcon from '../../assets/figma/loveIcon2.png'
-import FireGif from '../../assets/figma/fireGif.gif'
-import ContactBase from '../../assets/figma/contactWorldBase2.png'
-import ScrollGif from '../../assets/figma/scrollGif.gif'
-import ScrollDialog from '../../assets/figma/scrollGifTheme2.gif'
 
-const assetsToStore = {
-  LogoSubtitle, ArrowPro, CardPro, CardPro2, Platform, GifRainbow,
-  AboutWorlds, ContactWorld, backVid, Contact, Projects, TechSrc,
-  About, Me, Full, Stack, Dev, Arrow, Monkey, bikeMonkey, triangleLight,
-  Mandala, monkeyGrass, GifMe, dialogBassMonkey, GifBike, LoveIcon,
-  FireGif, ContactBase, ScrollGif, ScrollDialog
-}
+const Home = ({ assetsToStore }) => {
 
-const Home = () => {
-
-  // const ModalContact = React.lazy(() => import('../Modals/ModalContact'))
-
-  // const [loadCompleted, setLoadCompleted] = useState(false)
   const [project, setProject] = useState(false)
   const [about, setAbout] = useState(false)
   const [contact, setContact] = useState(false)
@@ -159,7 +115,7 @@ const Home = () => {
   return fetched && (
     <div className='homeContainer' >
       <video
-        src={backVid}
+        src={allData.backVid}
         autoPlay
         loop
         muted
@@ -259,6 +215,7 @@ const Home = () => {
             <img src={allData.Platform} className='platform' alt='' />
             <img src={allData.GifRainbow} className={styleBackVid('GifRainbow')} alt='' />
             <LaptopComp
+              allData={allData}
               showLaptop={showLaptop}
               onLeaveLaptop={onLeaveLaptop}
               project={project}

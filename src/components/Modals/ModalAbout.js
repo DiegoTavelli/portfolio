@@ -2,11 +2,6 @@ import React, { useState } from "react";
 import './modalAbout.scss'
 import '../Home/home.scss'
 
-import aboutModal from '../../assets/figma/aboutModal4.png'
-import CvButton from '../../assets/figma/cvButton.png'
-import Arrow from '../../assets/figma/arrow.png'
-import AboutCv from '../../assets/figma/AboutCv.png'
-
 
 const ModalAbout = ({ about, allData, setAbout }) => {
 
@@ -34,10 +29,10 @@ const ModalAbout = ({ about, allData, setAbout }) => {
     </div>
     {about &&
       <div className='modalAboutContainer'>
-        <img src={aboutModal} alt='' className={about ? 'aboutModalIn' : 'aboutModalOut'} />
+        <img src={allData.aboutModal} alt='' className={about ? 'aboutModalIn' : 'aboutModalOut'} />
         {
           showPdf ?
-            <img src={AboutCv} className='aboutCv' alt='' />
+            <img src={allData.AboutCv} className='aboutCv' alt='' />
             : null
         }
         <div className='buttonCvHover'>
@@ -45,12 +40,12 @@ const ModalAbout = ({ about, allData, setAbout }) => {
             onClick={linKCv}
             onMouseEnter={() => setShowPdf(true)}
             onMouseLeave={() => setShowPdf(false)}
-            src={CvButton}
+            src={allData.CvButton}
             className='CvButton'
             alt=''
           />
           <div className='arrowContainer'>
-            <img src={Arrow} className='ArrowAbout' alt='' />
+            <img src={allData.Arrow} className='ArrowAbout' alt='' />
           </div>
         </div>
       </div>
