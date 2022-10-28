@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import './home.scss'
 import MovingTextComp from '../MovingText/MovingText';
 import ModalProject from '../Modals/ModalProject'
 import ModalAbout from '../Modals/ModalAbout'
-import ModalContact from '../Modals/ModalContact'
+// import ModalContact from '../Modals/ModalContact'
 import CardHome from '../CardHome/CardHome'
 import ScrollComponent from '../ScrollComponent/ScrollComponent'
 import LaptopComp from '../LaptopComp/LaptopComp'
@@ -54,6 +54,8 @@ const assetsToStore = {
 
 const Home = () => {
 
+  const ModalContact = React.lazy(() => import('../Modals/ModalContact'))
+
   // const [loadCompleted, setLoadCompleted] = useState(false)
   const [project, setProject] = useState(false)
   const [about, setAbout] = useState(false)
@@ -72,6 +74,7 @@ const Home = () => {
   // state to ScrollComp to change video CSS
   const [colorState, setColorState] = useState({ currentIndex: 0 })
 
+  // allData stored on LocalStore
   const [allData, setAllData] = useState([])
   const [fetched, setFetched] = useState(false)
 
@@ -315,7 +318,9 @@ const Home = () => {
                 />
               </div>
               {contact &&
-                <ModalContact contact={contact} />
+                <Suspense>
+                  <ModalContact contact={contact} />
+                </Suspense>
               }
             </>
             <CardHome styleBackVid={styleBackVid} />
