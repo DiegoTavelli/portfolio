@@ -3,7 +3,7 @@ import './home.scss'
 import MovingTextComp from '../MovingText/MovingText';
 import ModalProject from '../Modals/ModalProject'
 import ModalAbout from '../Modals/ModalAbout'
-// import ModalContact from '../Modals/ModalContact'
+import ModalContact from '../Modals/ModalContact'
 import CardHome from '../CardHome/CardHome'
 import ScrollComponent from '../ScrollComponent/ScrollComponent'
 import LaptopComp from '../LaptopComp/LaptopComp'
@@ -54,7 +54,7 @@ const assetsToStore = {
 
 const Home = () => {
 
-  const ModalContact = React.lazy(() => import('../Modals/ModalContact'))
+  // const ModalContact = React.lazy(() => import('../Modals/ModalContact'))
 
   // const [loadCompleted, setLoadCompleted] = useState(false)
   const [project, setProject] = useState(false)
@@ -155,8 +155,6 @@ const Home = () => {
             currentIndex === 4 ?
               styleInput + `${from}4` : null
   }
-
-
 
   return fetched && (
     <div className='homeContainer' >
@@ -318,9 +316,7 @@ const Home = () => {
                 />
               </div>
               {contact &&
-                <Suspense>
-                  <ModalContact contact={contact} />
-                </Suspense>
+                <ModalContact contact={contact} />
               }
             </>
             <CardHome styleBackVid={styleBackVid} />
