@@ -11,6 +11,7 @@ import Arrow from '../../assets/figma/arrow.png'
 
 const LaptopComp = ({ showLaptop, onLeaveLaptop, project, onEnterLaptop }) => {
 
+
   return (
     <>
       {showLaptop && (
@@ -23,10 +24,7 @@ const LaptopComp = ({ showLaptop, onLeaveLaptop, project, onEnterLaptop }) => {
       }
       {
         showLaptop && !project && (
-          <div
-          // onMouseEnter={() => setHoverTech(true)}
-          // onMouseLeave={() => setHoverTech(false)}
-          >
+          <div>
             <div className='TechCardBackContainer'>
               <img src={TechCardBack} className={!project ? 'TechCardBack FxBack' : 'TechCardBack'} alt='' />
             </div>

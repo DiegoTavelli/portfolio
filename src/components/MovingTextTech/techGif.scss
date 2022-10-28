@@ -22,6 +22,7 @@ animation: techFx .1s ease-in-out;
   left: 869px;
   top: 233px;
   transform: rotate3d(1, 1, 1, 45deg)rotate(-25deg);
+  filter:hue-rotate(-20deg);
   animation: techFx .1s ease-in-out;
 }
 

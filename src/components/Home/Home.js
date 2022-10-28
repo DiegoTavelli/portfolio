@@ -7,7 +7,7 @@ import ModalContact from '../Modals/ModalContact'
 import CardHome from '../CardHome/CardHome'
 import ScrollComponent from '../ScrollComponent/ScrollComponent'
 import LaptopComp from '../LaptopComp/LaptopComp'
-
+import FullStackComp from '../FullStackComp/FullStackComp'
 //modal project
 import Tilt from 'react-parallax-tilt';
 
@@ -199,30 +199,15 @@ const Home = () => {
             />
           </div>
           <ScrollComponent colorState={colorState} setColorState={setColorState} />
-          <div className='fullStackDiv'>
-            <img src={allData.Full} className={styleFullStack('Full')} alt='' />
-            <img src={allData.Full} className={styleFullStack('Full full2')} alt='' />
-            <img src={allData.Stack} className={styleFullStack('Stack')} alt='' />
-            <img src={allData.Stack} className={styleFullStack('Stack stack2')} alt='' />
-            <div className='devContainer'>
-              <img src={allData.Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
-            </div>
-            {!project ?
-              <img src={allData.Arrow} className='arrow1' alt='' />
-              : null
-            }
-            {!contact ?
-              <img src={allData.Arrow} className='arrow2' alt='' />
-              : null
-            }
-            {!about ?
-              <img src={allData.Arrow} className='arrow3' alt='' />
-              : null
-            }
-          </div>
+          <FullStackComp
+            allData={allData}
+            styleFullStack={styleFullStack}
+            contact={contact}
+            project={project}
+            about={about}
+          />
           <div className='firstContainer'>
             <MovingTextComp />
-
             <div className='monkeysDiv' >
               <img src={allData.Monkey} className='Monkey' alt='' />
               {showBassMonkey &&
@@ -282,124 +267,32 @@ const Home = () => {
           </div>
           <div className='midContainer' >
             {/* CONTACT */}
-            <>
-              <div onClick={() => setContact(!contact)} className='divCircle' >
-                <div className='triangleContainer'>
-                  <Tilt
-                    scale={1.13}
-                    perspective={30}
-                  // tiltReverse
-                  >
-                    <img
-                      src={allData.triangleLight}
-                      className={contact ? 'triangle triangleFx' : 'triangle'}
-                      alt=''
-                    />
-                  </Tilt>
-                </div>
-                <img
-                  src={allData.Contact}
-                  className={!contact ? 'Contact' : 'Contact ContactPressed'}
-                  alt=''
-                />
-                <img
-                  src={allData.ContactWorld}
-                  className={
-                    contact ? 'contactWorld rotatingContact contactWorldFx'
-                      : 'contactWorld rotatingContact'}
-                  alt=''
-                />
-                <img
-                  src={allData.ContactBase}
-                  className={contact ? 'ContactBase' : 'ContactBaseNoShow'}
-                  alt=''
-                />
-              </div>
-              {contact &&
-                <ModalContact contact={contact} />
-              }
-            </>
+            <ModalContact
+              contact={contact}
+              setContact={setContact}
+              allData={allData}
+            />
             <CardHome styleBackVid={styleBackVid} />
             {/* PROJECT */}
-            <>
-              <div className='CardProContainer' >
-                <div onClick={() => setProject(!project)} >
-                  <div
-                    className={
-                      showCardPokemon || showCardFlyMate
-                        ? 'CardProBig' : leaveStream
-                          ? 'CardProBigLeave' : ''}
-                  >
-                    <div>
-                      {showCardPokemon || showCardFlyMate
-                        ? <div className='backBlackCardPro'></div>
-                        : null
-                      }
-                      <img src={allData.CardPro} className='CardPro' alt='' />
-                    </div>
-                  </div>
-                  {!showCardPokemon && !showCardFlyMate ?
-                    <div>
-                      <div className='contCardPro2Light'>
-                      </div>
-                      <div
-                        className={
-                          showCardPokemon || showCardFlyMate
-                            ? 'CardProBig2' : leaveStream
-                              ? 'CardProBig2Leave' : ''}
-                      >
-                        <img
-                          src={allData.CardPro2}
-                          className={
-                            !showCardPokemon || !showCardFlyMate
-                              ? 'CardPro2' : 'CardPro2 CardProBig2'}
-                          alt=''
-                        />
-                      </div>
-                    </div>
-                    : null
-                  }
-                  {
-                    !showCardPokemon && !showCardFlyMate ?
-                      <img
-                        src={selectType(allData.Projects, allData.TechSrc)}
-                        className={project ? 'Projects ProjectsOpen' : showLaptop ? 'TechSrc' : 'Projects'}
-                        alt=''
-                      /> : null
-                  }
-                </div>
-              </div>
-              {
-                project &&
-                < ModalProject
-                  setLeaveStream={setLeaveStream}
-                  showCardPokemon={showCardPokemon}
-                  setShowCardPokemon={setShowCardPokemon}
-                  showCardFlyMate={showCardFlyMate}
-                  setShowCardFlyMate={setShowCardFlyMate}
-                />
-              }
-            </>
+            <ModalProject
+              showCardPokemon={showCardPokemon}
+              showCardFlyMate={showCardFlyMate}
+              setShowCardPokemon={setShowCardPokemon}
+              setShowCardFlyMate={setShowCardFlyMate}
+              leaveStream={leaveStream}
+              setLeaveStream={setLeaveStream}
+              project={project}
+              setProject={setProject}
+              allData={allData}
+              selectType={selectType}
+              showLaptop={showLaptop}
+            />
             {/* ABOUT */}
-            <>
-              <div
-                onClick={() => setAbout(!about)}
-                className='aboutContainer' >
-                <div>
-                  <img
-                    src={allData.AboutWorlds}
-                    className={!about ? 'aboutWorlds rotating' : 'aboutWorlds rotating'}
-                    alt=''
-                  />
-                  <img src={allData.monkeyGrass} className='monkeyGrass' alt='' />
-                  <img src={allData.About} className='about' alt='' />
-                  <img src={allData.Me} className='me' alt='' />
-                </div>
-              </div>
-              {about &&
-                <ModalAbout about={about} />
-              }
-            </>
+            <ModalAbout
+              about={about}
+              setAbout={setAbout}
+              allData={allData}
+            />
           </div>
         </nav>
       </div>

@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './modalProject.scss'
+import '../Home/home.scss'
+
 import projectModalBack from '../../assets/figma/projectModal7.png'
 import projectModal from '../../assets/figma/projectModal8.png'
 import VideoPokemon from '../../assets/videos/VideoPokemon2.mp4'
@@ -19,12 +21,10 @@ import ApkLink from '../../assets/figma/apkLink.png'
 import VideoLink from '../../assets/figma/videoLink.png'
 
 
-const ModalProject = ({
-  showCardPokemon,
-  showCardFlyMate,
-  setShowCardPokemon,
-  setShowCardFlyMate,
-  setLeaveStream }) => {
+const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
+  setShowCardFlyMate, leaveStream, setLeaveStream, project, setProject, allData,
+  selectType, showLaptop
+}) => {
 
   const [showWeb, setShowWeb] = useState(false)
   const [showApk, setShowApk] = useState(false)
@@ -69,140 +69,193 @@ const ModalProject = ({
   })()
 
   return (
-    <div className='modalProjectContainer'>
-      <div className='projectModalBackContainer'>
-        <img src={projectModalBack} alt='' className='projectModalBack' />
-      </div>
-      <img src={projectModal} alt='' className='projectModal' />
-      <div className='handleClickPokemon' ></div>
-      <div className='divImages'>
-        <img src={flymateLogo} alt='' className='flyMateLogo' />
-        <img src={pokemonLogo} alt='' className='pokemonLogo' />
-      </div>
-      <div className='divMiddleHover'>
-        <div
-          className='divTop'
-          onMouseEnter={mouseEnterPokemon}
-          onMouseLeave={mouseLeavePokemon}
-        ></div>
-        <div
-          className='divBottom'
-          onMouseEnter={mouseEnterFlyMate}
-          onMouseLeave={mouseLeaveFlyMate}
-        ></div>
-      </div>
-      <div
-        className='divHoverPokemon'
-        onClick={mouseEnterPokemon}
-        onMouseEnter={mouseEnterPokemon}
-        onMouseLeave={mouseLeavePokemon}
-      >
-        {
-          showWeb ?
-            <img src={WebLink} className='webLinkPokemon' alt='' />
-            : null
-        }
-        <img
-          src={buttonPokemonWeb}
-          onMouseEnter={() => setShowWeb(true)}
-          onMouseLeave={() => setShowWeb(false)}
-          onClick={handleWebPokemon}
-          className='buttonPokemonWeb'
-          alt=''
-        />
-        {
-          showVideo && showCardPokemon ?
-            <img src={VideoLink} className='videoLinkPokemon' alt='' />
-            : null
-        }
-        <img
-          src={buttonPokemonVideo}
-          onMouseEnter={() => setShowVideo(true)}
-          onMouseLeave={() => setShowVideo(false)}
-          onClick={handleVideoPokemon}
-          className='buttonPokemonVideo'
-          alt=''
-        />
-      </div>
-      {showCardPokemon ?
-        <div>
-          <div className='backBlack'>
-            <img src={logoLoading} className='logoLoadingProject' alt='' />
-            <video
-              className='videoPokemon'
-              src={VideoPokemon}
-              autoPlay
-              loop
-              muted
-              type='video/mp4'
-            >
-            </video>
-          </div>
-        </div> : null
-      }
-      <div
-        className='divHoverFlyMate'
-        onClick={mouseEnterFlyMate}
-        onMouseEnter={mouseEnterFlyMate}
-        onMouseLeave={mouseLeaveFlyMate}
-      >
-        {
-          showApk ?
-            <img src={ApkLink} className='apkLink' alt='' />
-            : null
-        }
-        <img
-          src={buttonFlyMateWeb}
-          onMouseEnter={() => setShowApk(true)}
-          onMouseLeave={() => setShowApk(false)}
-          onClick={handleWebFlyMate}
-          className='buttonFlyMateWeb'
-          alt=''
-        />
-        {
-          showVideo && showCardFlyMate ?
-            <img src={VideoLink} className='videoLinkFlyMate' alt='' />
-            : null
-        }
-        <img
-          src={buttonFlyMateVideo}
-          onMouseEnter={() => setShowVideo(true)}
-          onMouseLeave={() => setShowVideo(false)}
-          onClick={handleVideoFlyMate}
-          className='buttonFlyMateVideo'
-          alt=''
-        />
-      </div>
-      {showCardFlyMate ?
-        <div className='handleClickFlyMate' >
-          <div className='backBlack'>
-            <img src={logoLoading} className='logoLoadingProject' alt='' />
-            <video
-              className='videoFlyMate'
-              src={VideoFlyMate}
-              autoPlay
-              loop
-              muted
-              type='video/mp4'
-            >
-            </video>
-          </div>
-        </div> : null
-      }
-      {
-        showCardPokemon ?
-          <div>
-            <img onm src={BackCorcho} className='backCorcho' alt='' />
-            <img src={detailsPokemon} className='detailsPokemon' alt='' />
-          </div>
-          : showCardFlyMate ?
+    <>
+      <div className='CardProContainer' >
+        <div onClick={() => setProject(!project)} >
+          <div
+            className={
+              showCardPokemon || showCardFlyMate
+                ? 'CardProBig' : leaveStream
+                  ? 'CardProBigLeave' : ''}
+          >
             <div>
-              <img src={BackCorcho} className='backCorcho' alt='' />
-              <img src={detailsFlyMate} className='detailsFlyMate' alt='' />
+              {showCardPokemon || showCardFlyMate
+                ? <div className='backBlackCardPro'></div>
+                : null
+              }
+              <img src={allData.CardPro} className='CardPro' alt='' />
+            </div>
+          </div>
+          {!showCardPokemon && !showCardFlyMate ?
+            <div>
+              <div className='contCardPro2Light'>
+              </div>
+              <div
+                className={
+                  showCardPokemon || showCardFlyMate
+                    ? 'CardProBig2' : leaveStream
+                      ? 'CardProBig2Leave' : ''}
+              >
+                <img
+                  src={allData.CardPro2}
+                  className={
+                    !showCardPokemon || !showCardFlyMate
+                      ? 'CardPro2' : 'CardPro2 CardProBig2'}
+                  alt=''
+                />
+              </div>
             </div>
             : null
+          }
+          {
+            !showCardPokemon && !showCardFlyMate ?
+              <img
+                src={selectType(allData.Projects, allData.TechSrc)}
+                className={project ? 'Projects ProjectsOpen' : showLaptop ? 'TechSrc' : 'Projects'}
+                alt=''
+              /> : null
+          }
+        </div>
+      </div>
+      {
+        project &&
+
+        <div className='modalProjectContainer'>
+          <div className='projectModalBackContainer'>
+            <img src={projectModalBack} alt='' className='projectModalBack' />
+          </div>
+          <img src={projectModal} alt='' className='projectModal' />
+          <div className='handleClickPokemon' ></div>
+          <div className='divImages'>
+            <img src={flymateLogo} alt='' className='flyMateLogo' />
+            <img src={pokemonLogo} alt='' className='pokemonLogo' />
+          </div>
+          <div className='divMiddleHover'>
+            <div
+              className='divTop'
+              onMouseEnter={mouseEnterPokemon}
+              onMouseLeave={mouseLeavePokemon}
+            ></div>
+            <div
+              className='divBottom'
+              onMouseEnter={mouseEnterFlyMate}
+              onMouseLeave={mouseLeaveFlyMate}
+            ></div>
+          </div>
+          <div
+            className='divHoverPokemon'
+            onClick={mouseEnterPokemon}
+            onMouseEnter={mouseEnterPokemon}
+            onMouseLeave={mouseLeavePokemon}
+          >
+            {
+              showWeb ?
+                <img src={WebLink} className='webLinkPokemon' alt='' />
+                : null
+            }
+            <img
+              src={buttonPokemonWeb}
+              onMouseEnter={() => setShowWeb(true)}
+              onMouseLeave={() => setShowWeb(false)}
+              onClick={handleWebPokemon}
+              className='buttonPokemonWeb'
+              alt=''
+            />
+            {
+              showVideo && showCardPokemon ?
+                <img src={VideoLink} className='videoLinkPokemon' alt='' />
+                : null
+            }
+            <img
+              src={buttonPokemonVideo}
+              onMouseEnter={() => setShowVideo(true)}
+              onMouseLeave={() => setShowVideo(false)}
+              onClick={handleVideoPokemon}
+              className='buttonPokemonVideo'
+              alt=''
+            />
+          </div>
+          {showCardPokemon ?
+            <div>
+              <div className='backBlack'>
+                <img src={logoLoading} className='logoLoadingProject' alt='' />
+                <video
+                  className='videoPokemon'
+                  src={VideoPokemon}
+                  autoPlay
+                  loop
+                  muted
+                  type='video/mp4'
+                >
+                </video>
+              </div>
+            </div> : null
+          }
+          <div
+            className='divHoverFlyMate'
+            onClick={mouseEnterFlyMate}
+            onMouseEnter={mouseEnterFlyMate}
+            onMouseLeave={mouseLeaveFlyMate}
+          >
+            {
+              showApk ?
+                <img src={ApkLink} className='apkLink' alt='' />
+                : null
+            }
+            <img
+              src={buttonFlyMateWeb}
+              onMouseEnter={() => setShowApk(true)}
+              onMouseLeave={() => setShowApk(false)}
+              onClick={handleWebFlyMate}
+              className='buttonFlyMateWeb'
+              alt=''
+            />
+            {
+              showVideo && showCardFlyMate ?
+                <img src={VideoLink} className='videoLinkFlyMate' alt='' />
+                : null
+            }
+            <img
+              src={buttonFlyMateVideo}
+              onMouseEnter={() => setShowVideo(true)}
+              onMouseLeave={() => setShowVideo(false)}
+              onClick={handleVideoFlyMate}
+              className='buttonFlyMateVideo'
+              alt=''
+            />
+          </div>
+          {showCardFlyMate ?
+            <div className='handleClickFlyMate' >
+              <div className='backBlack'>
+                <img src={logoLoading} className='logoLoadingProject' alt='' />
+                <video
+                  className='videoFlyMate'
+                  src={VideoFlyMate}
+                  autoPlay
+                  loop
+                  muted
+                  type='video/mp4'
+                >
+                </video>
+              </div>
+            </div> : null
+          }
+          {
+            showCardPokemon ?
+              <div>
+                <img onm src={BackCorcho} className='backCorcho' alt='' />
+                <img src={detailsPokemon} className='detailsPokemon' alt='' />
+              </div>
+              : showCardFlyMate ?
+                <div>
+                  <img src={BackCorcho} className='backCorcho' alt='' />
+                  <img src={detailsFlyMate} className='detailsFlyMate' alt='' />
+                </div>
+                : null
+          }
+        </div>
       }
-    </div>
+    </>
   )
 }
 
