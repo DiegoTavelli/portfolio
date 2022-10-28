@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './modalProject.scss'
-import projectModal from '../../assets/figma/projectModal6.png'
+import projectModalBack from '../../assets/figma/projectModal7.png'
+import projectModal from '../../assets/figma/projectModal8.png'
 import VideoPokemon from '../../assets/videos/VideoPokemon2.mp4'
 import VideoFlyMate from '../../assets/videos/VideoFlyMate3.mp4'
 import pokemonLogo from '../../assets/videos/pokemon.png'
@@ -23,7 +24,6 @@ const ModalProject = ({
   showCardFlyMate,
   setShowCardPokemon,
   setShowCardFlyMate,
-  leaveStream,
   setLeaveStream }) => {
 
   const [showWeb, setShowWeb] = useState(false)
@@ -62,7 +62,7 @@ const ModalProject = ({
     setLeaveStream(true)
   }
 
-  (function clearLeave() {
+  (function () {
     setTimeout(() => {
       setLeaveStream(false)
     }, 1000)
@@ -70,6 +70,9 @@ const ModalProject = ({
 
   return (
     <div className='modalProjectContainer'>
+      <div className='projectModalBackContainer'>
+        <img src={projectModalBack} alt='' className='projectModalBack' />
+      </div>
       <img src={projectModal} alt='' className='projectModal' />
       <div className='handleClickPokemon' ></div>
       <div className='divImages'>
@@ -119,7 +122,6 @@ const ModalProject = ({
           onClick={handleVideoPokemon}
           className='buttonPokemonVideo'
           alt=''
-
         />
       </div>
       {showCardPokemon ?
@@ -156,7 +158,6 @@ const ModalProject = ({
           onClick={handleWebFlyMate}
           className='buttonFlyMateWeb'
           alt=''
-
         />
         {
           showVideo && showCardFlyMate ?
@@ -170,7 +171,6 @@ const ModalProject = ({
           onClick={handleVideoFlyMate}
           className='buttonFlyMateVideo'
           alt=''
-
         />
       </div>
       {showCardFlyMate ?
@@ -192,7 +192,7 @@ const ModalProject = ({
       {
         showCardPokemon ?
           <div>
-            <img src={BackCorcho} className='backCorcho' alt='' />
+            <img onm src={BackCorcho} className='backCorcho' alt='' />
             <img src={detailsPokemon} className='detailsPokemon' alt='' />
           </div>
           : showCardFlyMate ?

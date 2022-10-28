@@ -506,7 +506,18 @@
   }
   .ProjectsOpen {
     animation: ProjectTextFx 300ms ease-in-out;
-    left:450px
+    left:438px
+  }
+
+  .TechSrc {
+    z-index: 100;
+    position: absolute;
+    width: 123px;
+    height: 54px;
+    left: 438px;
+    top: 655px;
+    margin-top: -190px;
+    animation: ProjectTextFx 300ms ease-in-out;
   }
   
   @keyframes ProjectTextFx {
@@ -516,13 +527,14 @@
     }
     50% {
       transform: rotate3d(-10,0,0, 100deg);
-      left:475px;
+      left:455px;
     }
     100% {
-      left:450px;
+      left:438px;
       transform: rotate3d(0,0,0, 20deg);
     }
   }
+  
 
 .GifRainbow {
   border-bottom-left-radius: 50%;
@@ -593,9 +605,9 @@
   .platform {
     z-index: 60;
     position: absolute;
-    width: 455.5px;
+    width: 450px;
     height: 70.68px;
-    left: 575px;
+    left: 585px;
     top: 329.15px;
     transform: rotate(1deg);
     filter: drop-shadow(18px 10px 4px rgba(0, 0, 0, 0.25));
@@ -1088,24 +1100,45 @@ animation: triangleOpac 0.5s ease-in-out;
     height: 36.9px;
     top: 196px;
     left: 1070px;
-transform: rotate(-10.57deg);
+    transform: rotate(-10.57deg);
 }
 
   .circleSkills {
     position: absolute;
-width: 93px;
-height: 93px;
-left: 790px;
-top: 520px;
+    width: 93px;
+    height: 93px;
+    left: 790px;
+    top: 520px;
   }
 
   .laptop {
-    z-index: 70;
+    z-index: 61;
     position: absolute;
     width: 96px;
     height: 57px;
     left: 804.29px;
     top: 300.29px;
+  }
+
+  .laptopArrow {
+    position: absolute;
+    width: 35px;
+    height: 16.99px;
+    left: 817px;
+    top: 234px;
+    transform: rotate(90deg);
+  }
+
+  .lightLaptop {
+    // background-color: red;
+    z-index: 60;
+    position: absolute;
+    width: 47px;
+    height: 35px;
+    left: 813px;
+    top: 310px;
+    transform: rotate(-9deg);
+    animation: aboutWorldsFx 12s ease-in-out infinite;
   }
 
   .bikeTiltCont {
@@ -1437,7 +1470,7 @@ top: 587px;
 
 .GifMe {
   border-radius: 50%;
-  z-index: 15;
+  z-index: 35;
   position: absolute;
   width: 75.5px;
   height: 73px;
@@ -1454,6 +1487,107 @@ top: 587px;
   height: 74px;
   left: 749px;
   top: 513.3px;
+}
+
+.TechCardBackContainer {
+  position: absolute;
+  z-index: 90;
+  animation: techFxBack 2s ease-in-out infinite;
+}
+
+.TechCardsContainer1 {
+  position: absolute;
+  z-index: 100;
+  animation: tech1Fx 15s ease-in-out infinite;
+}
+
+.TechCardsContainer2 {
+  position: absolute;
+  z-index: 90;
+  animation: tech2Fx 15s ease-in-out infinite;
+}
+
+.TechCardBack {
+  z-index: 80;
+  position: absolute;
+  width: 398px;
+  height: 460px;
+  left: 301px;
+  top: 502px;
+}
+
+.FxBack {
+  animation: TechCardAnim 0.4s ease-in-out;
+}
+
+.TechCard1 {
+  z-index: 90;
+  position: absolute;
+  width: 378px;
+  height: 437px;
+  left: 308px;
+  top: 510px;
+}
+
+.TechCard2 {
+  z-index: 90;
+  position: absolute;
+  width: 378px;
+  height: 435px;
+  left: 308px;
+  top: 512.3px;
+}
+
+.Fx1 {
+  animation: TechCardAnim .4s ease-in-out;
+}
+.Fx2 {
+  animation: TechCardAnim .4s ease-in-out;
+}
+
+@keyframes techFxBack {
+ 0% {
+  filter: hue-rotate(360deg)
+ }
+ 100% {
+
+ }
+}
+
+@keyframes tech1Fx {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes tech2Fx {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    filter: hue-rotate(0deg);
+    opacity: 0;
+    
+  }
+  100% {
+    filter: hue-rotate(-360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes TechCardAnim {
+  0% {
+    height: 2px;
+    width: 30px;
+    left: 773px;
+    top: 550px;
+    transform: rotate(-25deg);
+  }
 }
 
 .TreeColorContainer {

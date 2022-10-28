@@ -10,7 +10,25 @@
   height: 460px;
   left: 305px;
   top: 506px; 
-  animation: appear .5s ease-in-out;
+  animation: appear .4s ease-in-out;
+}
+
+.projectModalBackContainer {
+  animation: hueBack 2s ease-in-out infinite;
+}
+
+.projectModalBack {
+  position: absolute;
+  width: 395px;
+  height: 460px;
+  left: 305px;
+  top: 506px; 
+  animation: appear .4s ease-in-out;
+}
+
+@keyframes hueBack {
+  0% {filter:hue-rotate(360deg)}
+  100% {}
 }
 
 @keyframes appear {
@@ -84,7 +102,7 @@
   border-radius: 10%;
   position: absolute;
   left: 302px;
-  top: 210px;
+  top: 225px;
   height: 280px;
   width: 280px;
   animation: corchoFx .3s ease-in-out;
@@ -101,7 +119,7 @@
     opacity: 1;
     height: 280px;
     left: 302px;
-    top: 210px;
+    top: 225px;
   }
 }
 
@@ -337,9 +355,9 @@ transform: rotate(-91deg);
   width: 290px;
   height: 280px;
   left: 296px;
-  top: 209px;
+  top: 224px;
   transform: rotate(0deg);
-  animation: detailsFx 0.3s ease-in-out;
+  animation: detailsFxPokemon 0.3s ease-in-out;
 }
 
 .detailsFlyMate {
@@ -348,12 +366,12 @@ transform: rotate(-91deg);
   width: 280px;
   height: 270px;
   left: 301px;
-  top: 213px;
+  top: 229px;
   transform: rotate(0deg);
-  animation: detailsFx 0.3s ease-in-out;
+  animation: detailsFxFlyMate 0.3s ease-in-out;
 }
 
-@keyframes detailsFx {
+@keyframes detailsFxPokemon {
   0% {
     opacity: 0.5;
     height: 140px;
@@ -363,11 +381,25 @@ transform: rotate(-91deg);
   100% {
     opacity: 1;
     height: 280px;
-    left: 296px;
-    top: 210px;
+  left: 296px;
+  top: 224px;
   }
 }
 
+@keyframes detailsFxFlyMate {
+  0% {
+    opacity: 0.5;
+    height: 140px;
+    left: 360px;
+    top: 310px;
+  }
+  100% {
+    opacity: 1;
+    height: 270px;
+    left: 301px;
+    top: 229px;
+  }
+}
 
 @keyframes glowHover {
 
