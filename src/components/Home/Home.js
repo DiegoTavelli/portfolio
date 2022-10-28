@@ -79,17 +79,16 @@ const Home = () => {
     if (allData.length < 2) {
       localStorage.setItem('HOME_ASSETS', JSON.stringify(assetsToStore));
       setFetched(true)
-      console.log('ho')
+      // console.log('ho')
     }
   }
 
   useEffect(() => {
     setToLocalStorage()
-
     const items = JSON.parse(localStorage.getItem('HOME_ASSETS'));
     setAllData(items)
-    console.log('dd', allData.LogoSubtitle)
-
+    if (document.readyState === 'complete') {
+    }
   }, [])
 
 
@@ -155,7 +154,8 @@ const Home = () => {
   }
 
 
-  return (
+
+  return fetched && (
     <div className='homeContainer' >
       <video
         src={backVid}
@@ -319,46 +319,6 @@ const Home = () => {
               }
             </>
             <CardHome styleBackVid={styleBackVid} />
-            {/* CARD HOME */}
-            {/* <div className='cardHomeContainer'>
-              <Tilt
-                tiltMaxAngleX={4}
-                tiltMaxAngleY={4}
-              >
-                <Tilt
-                  tiltMaxAngleX={6}
-                  tiltMaxAngleY={6}
-                >
-                  <Card.Img className='cardHome' src={CardHome} alt='' />
-                </Tilt>
-                <Tilt
-                  glareEnable={true}
-                  tiltMaxAngleX={6}
-                  tiltMaxAngleY={2}
-                >
-                  <div className='DiegoContainer'>
-                    <img src={Diego} className='Diego' alt='' />
-                  </div>
-                </Tilt>
-                <Tilt
-                  glareEnable={true}
-                  tiltMaxAngleX={6}
-                  tiltMaxAngleY={2}
-                >
-                  <div className='TavelliContainer'>
-                    <img src={Tavelli} className='Tavelli' alt='' />
-                  </div>
-                </Tilt>
-                <Tilt
-                  tiltMaxAngleX={6}
-                  tiltMaxAngleY={2}
-                >
-                  <div className='TreeColorContainer'>
-                    <img src={TreeColor} className={styleBackVid('treeColor')} alt='' />
-                  </div>
-                </Tilt>
-              </Tilt>
-            </div> */}
             {/* PROJECT */}
             <>
               <div className='CardProContainer' >
