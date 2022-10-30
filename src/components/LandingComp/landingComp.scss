@@ -4,8 +4,6 @@
   left: 40px;
 }
 
-
-
 .hoverLanding {
   cursor: pointer;
   z-index: 10;
@@ -55,7 +53,7 @@
 
 
 .puzzleFx {
-  animation: puzz 3s ease-in-out;
+  animation: puzz 2s ease-in-out;
 }
 
 @keyframes puzz {
@@ -64,7 +62,7 @@
   }
   100% {
     opacity: 0;
-    top: 510px;
+    top: 500px;
     transform: rotate3d(10, 0, 0, 2rad);
     }
 }

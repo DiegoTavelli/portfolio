@@ -27,29 +27,27 @@ const ModalAbout = ({ about, allData, setAbout }) => {
         <img src={allData.Me} className='me' alt='' />
       </div>
     </div>
-    {about &&
-      <div className='modalAboutContainer'>
-        <img src={allData.aboutModal} alt='' className={about ? 'aboutModalIn' : 'aboutModalOut'} />
-        {
-          showPdf ?
-            <img src={allData.AboutCv} className='aboutCv' alt='' />
-            : null
-        }
-        <div className='buttonCvHover'>
-          <img
-            onClick={linKCv}
-            onMouseEnter={() => setShowPdf(true)}
-            onMouseLeave={() => setShowPdf(false)}
-            src={allData.CvButton}
-            className='CvButton'
-            alt=''
-          />
-          <div className='arrowContainer'>
-            <img src={allData.Arrow} className='ArrowAbout' alt='' />
-          </div>
+    <div className='modalAboutContainer' style={{ visibility: about ? 'visible' : 'hidden' }} >
+      <img src={allData.aboutModal} alt='' className={about ? 'aboutModalIn' : 'aboutModalOut'} />
+      {
+        showPdf ?
+          <img src={allData.AboutCv} className='aboutCv' alt='' />
+          : null
+      }
+      <div className='buttonCvHover'>
+        <img
+          onClick={linKCv}
+          onMouseEnter={() => setShowPdf(true)}
+          onMouseLeave={() => setShowPdf(false)}
+          src={allData.CvButton}
+          className='CvButton'
+          alt=''
+        />
+        <div className='arrowContainer'>
+          <img src={allData.Arrow} className='ArrowAbout' alt='' />
         </div>
       </div>
-    }
+    </div>
   </>
 
 

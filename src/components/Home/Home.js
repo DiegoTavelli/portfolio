@@ -132,7 +132,7 @@ const Home = ({ allData, fetched }) => {
           about={about}
         />
         {
-          !showHome ? <LandingComp setShowHome={setShowHome} ScrollController={ScrollController} /> :
+          !showHome ? <LandingComp showHome={showHome} setShowHome={setShowHome} ScrollController={ScrollController} /> :
             <nav className='navContNav'>
               {
                 showScroll ?

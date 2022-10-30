@@ -58,68 +58,65 @@ const ModalContact = ({ contact, setContact, allData }) => {
         alt=''
       />
     </div>
-    {contact &&
-
-      <div className='modalContactContainer'>
-        {
-          showLinkedIn ?
-            <img src={allData.ContactLinkedIn} className='contactLinkedIn' alt='' />
-            : null
-        }
-        <img
-          onMouseEnter={() => setShowLinkedIn(true)}
-          onMouseLeave={() => setShowLinkedIn(false)}
-          onClick={linkLinkedIn}
-          src={allData.buttonLinkedIn}
-          alt=''
-          className='buttonLinkedIn'
-        />
-        {
-          showGitHub ?
-            <img src={allData.ContactGitHub} className='contactGitHub' alt='' />
-            : null
-        }
-        <img
-          onMouseEnter={() => setShowGitHub(true)}
-          onMouseLeave={() => setShowGitHub(false)}
-          onClick={linkGitHub}
-          src={allData.buttonGitHub}
-          alt=''
-          className='buttonGitHub'
-        />
-        {
-          showWhatsApp ?
-            <img src={allData.ContactWhatsApp} className='contactWhatsApp' alt='' />
-            : null
-        }
-        <img
-          onMouseEnter={() => setShowWhatsApp(true)}
-          onMouseLeave={() => setShowWhatsApp(false)}
-          onClick={linkWhatsApp}
-          src={allData.buttonWhatsApp}
-          alt=''
-          className='buttonWhatsApp'
-        />
-        {
-          showMail ?
-            <img src={allData.ContactMail} className='contactMail' alt='' />
-            : null
-        }
-        <img
-          onMouseEnter={() => setShowMail(true)}
-          onMouseLeave={() => setShowMail(false)}
-          onClick={linkMail}
-          src={allData.buttonMail}
-          alt=''
-          className='buttonMail'
-        />
-        <img
-          src={allData.ContactModal}
-          className={contact ? 'modalContact modalContactFx' : 'modalContact modalContactNoFx'}
-          alt=''
-        />
-      </div>
-    }
+    <div className='modalContactContainer' style={{ visibility: contact ? 'visible' : 'hidden' }}>
+      {
+        showLinkedIn ?
+          <img src={allData.ContactLinkedIn} className='contactLinkedIn' alt='' />
+          : null
+      }
+      <img
+        onMouseEnter={() => setShowLinkedIn(true)}
+        onMouseLeave={() => setShowLinkedIn(false)}
+        onClick={linkLinkedIn}
+        src={allData.buttonLinkedIn}
+        alt=''
+        className='buttonLinkedIn'
+      />
+      {
+        showGitHub ?
+          <img src={allData.ContactGitHub} className='contactGitHub' alt='' />
+          : null
+      }
+      <img
+        onMouseEnter={() => setShowGitHub(true)}
+        onMouseLeave={() => setShowGitHub(false)}
+        onClick={linkGitHub}
+        src={allData.buttonGitHub}
+        alt=''
+        className='buttonGitHub'
+      />
+      {
+        showWhatsApp ?
+          <img src={allData.ContactWhatsApp} className='contactWhatsApp' alt='' />
+          : null
+      }
+      <img
+        onMouseEnter={() => setShowWhatsApp(true)}
+        onMouseLeave={() => setShowWhatsApp(false)}
+        onClick={linkWhatsApp}
+        src={allData.buttonWhatsApp}
+        alt=''
+        className='buttonWhatsApp'
+      />
+      {
+        showMail ?
+          <img src={allData.ContactMail} className='contactMail' alt='' />
+          : null
+      }
+      <img
+        onMouseEnter={() => setShowMail(true)}
+        onMouseLeave={() => setShowMail(false)}
+        onClick={linkMail}
+        src={allData.buttonMail}
+        alt=''
+        className='buttonMail'
+      />
+      <img
+        src={allData.ContactModal}
+        className={contact ? 'modalContact modalContactFx' : 'modalContact modalContactNoFx'}
+        alt=''
+      />
+    </div>
   </>
 }
 
