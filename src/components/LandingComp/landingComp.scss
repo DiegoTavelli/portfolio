@@ -1,0 +1,79 @@
+.landingContainer {
+  position: absolute;
+  // animation: showLanding 1s ease-in-out;
+  top: 0px;
+}
+
+@keyframes showLanding {
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+.hoverLanding {
+  cursor: pointer;
+  z-index: 10;
+  background-color: transparent;
+  position: absolute;
+  width: 832px;
+  height: 826px;
+  left: 509px;
+  top: 60px;
+}
+
+.contBackLanding {
+  position: absolute;
+  z-index: -10;
+  animation: showLanding 3s ease-in-out;
+}
+
+.BackLanding {
+  cursor: pointer;
+  z-index: -10;
+  position: absolute;
+  width: 832px;
+  height: 826px;
+  left: 509px;
+  top: 60px;
+}
+
+.gifFx {
+    animation: animGif 2.1s ease-in-out;
+  }
+
+@keyframes animBack {
+  0% {
+    filter:hue-rotate(0deg)
+  }
+  25% {
+    filter:hue-rotate(16deg)
+  }
+  50% {
+    filter:hue-rotate(0deg)
+  }
+  75% {
+      filter:hue-rotate(-36deg)
+  }
+  100% {
+    filter:hue-rotate(0deg)
+  }
+}
+
+@keyframes animGif {
+  0% {
+opacity: 1;
+      filter:hue-rotate(0deg)
+  }
+  50% {
+    opacity: 0.5;
+    filter:hue-rotate(32deg)
+  
+  }
+  100% {
+    opacity: 0;
+    filter:hue-rotate(0deg)
+  }
+}

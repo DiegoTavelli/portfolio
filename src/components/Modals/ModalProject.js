@@ -3,9 +3,9 @@ import './modalProject.scss'
 import '../Home/home.scss'
 
 
-const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
-  setShowCardFlyMate, leaveStream, setLeaveStream, project, setProject, allData,
-  selectType, showLaptop
+const ModalProject = ({
+  showCardPokemon, showCardFlyMate, setShowCardPokemon, setShowCardFlyMate,
+  leaveStream, setLeaveStream, project, setProject, allData, selectType, showLaptop
 }) => {
 
   const [showWeb, setShowWeb] = useState(false)
@@ -24,6 +24,7 @@ const ModalProject = ({ showCardPokemon, showCardFlyMate, setShowCardPokemon,
   const handleVideoFlyMate = () => {
     window.open('https://www.youtube.com/watch?v=7dpE5Cr_vEc');
   }
+
   // Enter  
   const mouseEnterPokemon = () => {
     setShowCardPokemon(true)

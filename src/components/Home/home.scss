@@ -41,12 +41,8 @@
   }
 }
 
-
 .homeContainer {
   position:absolute;
-  // justify-content: center;
-  // align-items: center;
-  // align-content: center;
 }
 
 .navContainer {
@@ -56,9 +52,14 @@
   justify-content: center;
 }
 
+.navContNav {
+  animation: navContAnim 2s ease-in-out;
+}
 
-// .ScrollCompContainer {
-// }
+@keyframes navContAnim {
+  0% {opacity: 0}
+  100% {opacity: 1;}
+}
 
 .scrollDialogContainer {
     animation: scrollShow 8s ease-in-out;
@@ -69,13 +70,11 @@
     left: 100px;
   }
   50% {
-        
   }
   100% {
     top: -100px;
   }
 }
-
 
 .ScrollGif {
   opacity: 0;
@@ -318,6 +317,7 @@
   animation: flipCard 1s ease;
 }
 .CardProContainer:hover {
+  z-index: 80;
   cursor: pointer;
 }
 
@@ -336,7 +336,7 @@
   }
 
   .CardPro {
-    z-index: 50;
+    z-index: 60;
     position: absolute;
     width: 304px;
     height: 210px;
@@ -1696,7 +1696,7 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 
 @media only screen and (max-width: 1800px) {
   .homeContainer {
-      right: 103vw;
+      right: 100vw;
     }
     .backVid{
       width: 120%;
@@ -1724,9 +1724,9 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
 }
 
-@media only screen and (max-width: 1560px) {
+@media only screen and (max-width: 1640px) {
   .homeContainer {
-      right: 110vw;
+      right: 106vw;
     }
     .backVid{
       width: 120%;
@@ -1739,52 +1739,17 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
 }
 
-@media only screen and (max-width: 1428px) {
+@media only screen and (max-width: 1560px) {
   .homeContainer {
-    right: 115vw;
+      right: 108vw;
+    }
+    .backVid{
+      width: 120%;
   }
-  .backVid{
-  width: 125%;
- color: #ead837c2;
- color: #bc3a7f99;
-  }
-}
-
-@media only screen and (max-width: 1402px) {
-  .homeContainer {
-    right: 116vw;
-    
-  }
-  .backVid{
-  width: 125%;
-  }
-}
-
-@media only screen and (max-width: 1340px) {
-  .homeContainer {
-    right: 120vw;
-  }
- 
-  .backVid{
-  width: 125%;
-  }
-}
-
-@media only screen and (max-width: 1319px) {
-  .homeContainer {
-    right: 121.5vw;
-  }
-  .backVid{
-  width: 130%;
-  }
-}
-
-@media only screen and (max-width: 1285px) {
-  .homeContainer {
-    right: 122vw;
-  }
-  .backVid{
-  width: 130%;
+  .ScrollCompContainer {
+    // display: none;
+    align-items: center;
+    justify-content: center;
   }
   .Dev {
     height: 54px;
@@ -1795,7 +1760,57 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
 }
 
-@media only screen and (max-width: 1240px) {
+@media only screen and (max-width: 1458px) {
+  .homeContainer {
+    right: 111vw;
+  }
+  .backVid{
+  width: 125%;
+ color: #ead837c2;
+ color: #bc3a7f99;
+  }
+}
+
+@media only screen and (max-width: 1402px) {
+  .homeContainer {
+    right: 115vw;
+    
+  }
+  .backVid{
+  width: 125%;
+  }
+}
+
+@media only screen and (max-width: 1357px) {
+  .homeContainer {
+    right: 118vw;
+  }
+ 
+  .backVid{
+  width: 125%;
+  }
+}
+
+@media only screen and (max-width: 1319px) {
+  .homeContainer {
+    right: 120vw;
+  }
+  .backVid{
+  width: 130%;
+  }
+}
+
+@media only screen and (max-width: 1295px) {
+  .homeContainer {
+    right: 121vw;
+  }
+  .backVid{
+  width: 130%;
+  }
+  
+}
+
+@media only screen and (max-width: 1258px) {
   .homeContainer {
     right: 123vw;
   }
@@ -1804,9 +1819,18 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
  }
 
-@media only screen and (max-width: 1225px) {
+@media only screen and (max-width: 1232px) {
   .homeContainer {
-    right: 127vw;
+    right: 124vw;
+  }
+  .backVid{
+  width: 130%;
+  }
+ }
+
+ @media only screen and (max-width: 1232px) {
+  .homeContainer {
+    right: 124vw;
   }
   .backVid{
   width: 130%;

@@ -79,6 +79,12 @@ import DialogTech from '../../assets/figma/dialogTech2.png'
 import TechSkillsVideo from '../../assets/videos/techSkillsVideo3.mp4'
 import CloseTech from '../../assets/figma/closeTech.png'
 
+// CARD HOME
+import CardHomeImage from '../../assets/figma/cardHome3d5.png'
+import Diego from '../../assets/figma/Diego3.png'
+import Tavelli from '../../assets/figma/Tavelli3.png'
+import TreeColor from '../../assets/figma/tree2.png'
+
 
 export const assetsToStore = {
   LogoSubtitle, ArrowPro, CardPro, CardPro2, Platform, GifRainbow,
@@ -90,6 +96,6 @@ export const assetsToStore = {
   buttonPokemonVideo, buttonFlyMateWeb, buttonFlyMateVideo, detailsPokemon, detailsFlyMate, BackCorcho,
   WebLink, ApkLink, VideoLink, aboutModal, CvButton, AboutCv, ContactModal, buttonLinkedIn,
   buttonGitHub, buttonWhatsApp, buttonMail, ContactGitHub, ContactLinkedIn, ContactMail, ContactWhatsApp,
-  TechCardBack, TechCard1, TechCard2, TechIcon, Laptop, DialogTech, TechSkillsVideo, CloseTech
-
+  TechCardBack, TechCard1, TechCard2, TechIcon, Laptop, DialogTech, TechSkillsVideo, CloseTech, CardHomeImage,
+  Diego, Tavelli, TreeColor
 }
