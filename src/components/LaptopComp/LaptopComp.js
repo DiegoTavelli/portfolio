@@ -18,13 +18,13 @@ const LaptopComp = ({ showLaptop, onLeaveLaptop, project, onEnterLaptop, allData
         {showLaptop && !project && (
           <div style={{ visibility: showLaptop && !project ? 'visible' : 'hidden' }}>
             <div className='TechCardBackContainer' >
-              <img src={allData.TechCardBack} className={!project ? 'TechCardBack FxBack' : 'TechCardBack'} alt='' />
+              <img src={allData.TechCardBack} className={!project ? 'TechCardBack FxBack' : 'notDisplay'} alt='' />
             </div>
             <div className={'TechCardsContainer1'}>
-              <img src={allData.TechCard1} className={!project ? 'TechCard1 Fx1' : 'TechCard1'} alt='' />
+              <img src={allData.TechCard1} className={!project ? 'TechCard1 Fx1' : 'notDisplay'} alt='' />
             </div>
             <div className={'TechCardsContainer2'}>
-              <img src={allData.TechCard2} className={!project ? 'TechCard2 Fx2' : 'TechCard2'} alt='' />
+              <img src={allData.TechCard2} className={!project ? 'TechCard2 Fx2' : 'notDisplay'} alt='' />
             </div>
           </div>
         )
