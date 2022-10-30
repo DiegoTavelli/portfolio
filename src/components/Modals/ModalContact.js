@@ -61,7 +61,7 @@ const ModalContact = ({ contact, setContact, allData }) => {
     <div className='modalContactContainer' style={{ visibility: contact ? 'visible' : 'hidden' }}>
       {
         showLinkedIn ?
-          <img src={allData.ContactLinkedIn} className='contactLinkedIn' alt='' />
+          <img src={allData.ContactLinkedIn} className='contactLinkedIn' alt='' style={{ visibility: showLinkedIn ? 'visible' : 'hidden' }} />
           : null
       }
       <img

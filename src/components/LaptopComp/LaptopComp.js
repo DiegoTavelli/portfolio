@@ -8,27 +8,22 @@ const LaptopComp = ({ showLaptop, onLeaveLaptop, project, onEnterLaptop, allData
 
   return (
     <>
-      {showLaptop && (
-        <div className='laptopDialogContainer'>
-          <MovingTextTech />
-          <TechGif onLeaveLaptop={onLeaveLaptop} allData={allData} />
-          <img src={allData.TechIcon} className='TechIcon' alt='' />
-        </div>
-      )
-      }
+      <div className='laptopDialogContainer' style={{ visibility: showLaptop ? 'visible' : 'hidden' }}>
+        <MovingTextTech />
+        <TechGif onLeaveLaptop={onLeaveLaptop} allData={allData} />
+        <img src={allData.TechIcon} className='TechIcon' alt='' />
+      </div>
       {
         showLaptop && !project && (
-          <div>
-            <div className='TechCardBackContainer'>
+          <div style={{ visibility: showLaptop && !project ? 'visible' : 'hidden' }}>
+            <div className='TechCardBackContainer' >
               <img src={allData.TechCardBack} className={!project ? 'TechCardBack FxBack' : 'TechCardBack'} alt='' />
             </div>
             <div className={'TechCardsContainer1'}>
               <img src={allData.TechCard1} className={!project ? 'TechCard1 Fx1' : 'TechCard1'} alt='' />
             </div>
             <div className={'TechCardsContainer2'}>
-
               <img src={allData.TechCard2} className={!project ? 'TechCard2 Fx2' : 'TechCard2'} alt='' />
-
             </div>
           </div>
         )

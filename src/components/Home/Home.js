@@ -155,7 +155,7 @@ const Home = ({ allData, fetched }) => {
                 <div className='monkeysDiv' >
                   <img src={allData.Monkey} className='Monkey' alt='' />
                   {showBassMonkey &&
-                    <div>
+                    <div style={{ visibility: showBassMonkey ? 'visible' : 'hidden' }}>
                       <div className='dialogBassMonkeyDiv'>
                         <img src={allData.dialogBassMonkey} className='dialogBassMonkey' alt='' />
                       </div>
