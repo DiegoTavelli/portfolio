@@ -44,11 +44,12 @@
 .BackLanding2 {
   position: absolute;
   z-index: -10;
-  height: 620px;
+  height: 630px;
   width: 1250px;
   top: 318px;
   left: 120px;
   transform: rotate(1deg);
+  filter:blur(1px)
 }
 
 

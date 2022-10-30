@@ -43,7 +43,7 @@ const ModalAbout = ({ about, allData, setAbout }) => {
           className='CvButton'
           alt=''
         />
-        <div className='arrowContainer'>
+        <div className={about ? 'arrowContainer' : ''} >
           <img src={allData.Arrow} className='ArrowAbout' alt='' />
         </div>
       </div>

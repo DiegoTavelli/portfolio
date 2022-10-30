@@ -6,18 +6,20 @@ const MovingTextTech = ({ showLaptop }) => {
 
   return (
     <div className={showLaptop ? 'movingTextTech movingTextTechFx' : 'movingTextNoDisplay'} >
-      <MovingText
-        className='MovingText'
-        type='typewriter'
-        dataText={[
-          'JavaScript',
-          'HTML       ',
-          'CSS         ',
-          'React       ',
-          'Redux       ',
-          'Sequelize',
-          'MongoDB   '
-        ]} />
+      {showLaptop &&
+        <MovingText
+          className='MovingText'
+          type='typewriter'
+          dataText={[
+            'JavaScript',
+            'HTML       ',
+            'CSS         ',
+            'React       ',
+            'Redux       ',
+            'Sequelize',
+            'MongoDB   '
+          ]} />
+      }
     </div>
   )
 }

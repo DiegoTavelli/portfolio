@@ -152,7 +152,7 @@ const Home = ({ allData }) => {
                   <img src={allData.Monkey} className='Monkey' alt='' />
                   {showBassMonkey &&
                     <div style={{ visibility: showBassMonkey ? 'visible' : 'hidden' }}>
-                      <div className='dialogBassMonkeyDiv'>
+                      <div className='dialogBassMonkeyDiv' style={{ visibility: showBassMonkey ? 'visible' : 'hidden' }}>
                         <img src={allData.dialogBassMonkey} className='dialogBassMonkey' alt='' />
                       </div>
                     </div>
