@@ -8,12 +8,13 @@ import BackLanding2 from '../../assets/figma/backLanding2.png'
 const LandingComp = ({ showHome, setShowHome, ScrollController }) => {
 
   const [activeStyle, setActiveStyle] = useState(false)
+
   const goHome = () => {
     setActiveStyle(true)
     setTimeout(() => {
       setShowHome(true);
       ScrollController();
-    }, 2000)
+    }, 1900)
   }
 
   return (

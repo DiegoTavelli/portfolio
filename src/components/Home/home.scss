@@ -53,7 +53,7 @@
 }
 
 .navContNav {
-  animation: navContAnim 1s ease-in-out;
+  animation: navContAnim 1.5s ease-in-out;
 }
 
 @keyframes navContAnim {
@@ -261,7 +261,7 @@
   // animation: firstFlipCont 3s ease;
 }
 .ArrowPro {
-  z-index: 60;
+  z-index: 70;
   position: absolute;
   width: 324px;
   height: 283px;
@@ -603,7 +603,7 @@
 }
 
   .platform {
-    z-index: 61;
+    z-index: 51;
     position: absolute;
     width: 450px;
     height: 70.68px;
@@ -1031,7 +1031,7 @@ animation: triangleOpac 0.5s ease-in-out;
     left: 337px;
     top: 378px;
     transform: rotate(-4.96deg);
-    animation: arrowsFx 1s ease-in-out infinite;
+    animation: arrowsFx 3.5s ease-in-out ;
   } 
   .arrow2 {
     position: absolute;
@@ -1040,7 +1040,7 @@ animation: triangleOpac 0.5s ease-in-out;
     left: 890px;
     top: 923.69px;
     transform: rotate(-129.96deg);
-    animation: arrowsFx 1s ease-in-out infinite;
+    animation: arrowsFx 3.5s ease-in-out ;
   } 
   .arrow3 {
     position: absolute;
@@ -1049,8 +1049,13 @@ animation: triangleOpac 0.5s ease-in-out;
     left: 1180px;
     top: 179.59px;
     transform: rotate(140deg);
-    animation: arrowsFx 1s ease-in-out infinite;
+    animation: arrowsFx 3.5s ease-in-out ;
   } 
+
+  @keyframes arrowsFx {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
 
   .Monkey {
     z-index: 70;

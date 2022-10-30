@@ -38,22 +38,23 @@ const ScrollComponent = ({ colorState, setColorState }) => {
 
   const { currentIndex } = colorState;
   return (
-    <ReactScrollWheelHandler
-      upHandler={prevIndex}
-      downHandler={nextIndex}
-      style={{
-        display: 'flex',
-        position: 'fixed',
-        left: '0px',
-        zIndex: 0,
-        opacity: .25,
-        width: '100vw',
-        height: '110vh',
-        backgroundColor: colorHash[currentIndex],
-        transition: 'background-color .3s ease-out',
-      }}
-    />
-
+    <div>
+      <ReactScrollWheelHandler
+        upHandler={prevIndex}
+        downHandler={nextIndex}
+        style={{
+          display: 'flex',
+          position: 'fixed',
+          left: '0px',
+          zIndex: 0,
+          opacity: .25,
+          width: '100vw',
+          height: '110vh',
+          backgroundColor: colorHash[currentIndex],
+          transition: 'background-color .3s ease-out',
+        }}
+      />
+    </div>
   );
 
 }

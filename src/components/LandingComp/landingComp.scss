@@ -52,14 +52,24 @@
   filter:blur(1px)
 }
 
-
-.puzzleFx {
-  animation: puzz 2s ease-in-out;
+.notDisplayBack {
+  display: none;
 }
 
-@keyframes puzz {
+
+.puzzleFx {
+  animation: puzzle 2s ease-in-out;
+}
+
+@keyframes puzzle {
   0% {
     transform: rotate3d(0, 0, 0, rad);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0;
   }
   100% {
     opacity: 0;
@@ -69,7 +79,7 @@
 }
 
 .gifFx {
-    animation: animGif 2.1s ease-in-out;
+    animation: animGif 2s ease-in-out;
   }
 
 @keyframes animBack {
@@ -96,7 +106,7 @@ opacity: 1;
       filter:hue-rotate(0deg)
   }
   50% {
-    opacity: 0.5;
+    opacity: 1;
     filter:hue-rotate(32deg)
   
   }
