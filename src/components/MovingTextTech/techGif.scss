@@ -8,7 +8,10 @@ left: 737px;
 top: 210px;
 filter: drop-shadow(-7px -1px 1px rgba(0, 0, 0, 0.25));
 transform: rotate(0deg)skewX(5deg);
-animation: techFx .1s ease-in-out;
+}
+
+.DialogTechFx {
+  animation: techFx .1s ease-in-out;
 }
 
 .closeDialogTech {
@@ -23,6 +26,9 @@ animation: techFx .1s ease-in-out;
   top: 233px;
   transform: rotate3d(1, 1, 1, 45deg)rotate(-25deg);
   filter:hue-rotate(-20deg);
+}
+
+.closeDialogTechFx {
   animation: techFx .1s ease-in-out;
 }
 
@@ -37,6 +43,9 @@ animation: techFx .1s ease-in-out;
   left: 750px;
   top: 230px;
   transform: rotate(-0.5deg)skewX(7deg);
+}
+
+.DialogTechVideoFx {
   animation: videoOpacity 1s ease-in-out;
 }
 

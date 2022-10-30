@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './home.scss'
 
 import LandingComp from '../LandingComp/LandingComp'
@@ -12,7 +12,7 @@ import LaptopComp from '../LaptopComp/LaptopComp'
 import FullStackComp from '../FullStackComp/FullStackComp'
 
 
-const Home = ({ allData, fetched }) => {
+const Home = ({ allData }) => {
 
   const [showHome, setShowHome] = useState(false)
   const [project, setProject] = useState(false)
@@ -131,6 +131,7 @@ const Home = ({ allData, fetched }) => {
           project={project}
           about={about}
         />
+        <ScrollComponent colorState={colorState} setColorState={setColorState} />
         {
           !showHome ? <LandingComp showHome={showHome} setShowHome={setShowHome} ScrollController={ScrollController} /> :
             <nav className='navContNav'>
@@ -145,11 +146,6 @@ const Home = ({ allData, fetched }) => {
                     </div>
                   </div> : null
               }
-              <div className='navBarButton'>
-
-              </div>
-              <ScrollComponent colorState={colorState} setColorState={setColorState} />
-
               <div className='firstContainer'>
                 <MovingTextComp />
                 <div className='monkeysDiv' >
@@ -170,9 +166,7 @@ const Home = ({ allData, fetched }) => {
                 </div>
                 <div className='containerMonkeyBike' >
                   <div className='bikeTiltCont'>
-
                     <img src={allData.bikeMonkey} className='bikeMonkey2' alt='' />
-
                   </div>
                   <img src={allData.bikeMonkey} className='bikeMonkey' alt='' />
                   {showBikeMonkey &&
