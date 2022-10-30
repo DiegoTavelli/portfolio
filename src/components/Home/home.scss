@@ -53,7 +53,7 @@
 }
 
 .navContNav {
-  animation: navContAnim 2s ease-in-out;
+  animation: navContAnim 1s ease-in-out;
 }
 
 @keyframes navContAnim {
@@ -982,6 +982,12 @@ animation: triangleOpac 0.5s ease-in-out;
 
   .DevMovedBack {
     animation: movedDevBack 0.3s ease-in-out;
+  }
+
+  .DevLanding {
+    left: 1018px;
+    top: 719px;
+    transform: rotate(-12deg);
   }
 
   @keyframes movedDev {

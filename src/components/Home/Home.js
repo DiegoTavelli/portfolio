@@ -123,6 +123,14 @@ const Home = ({ allData, fetched }) => {
           src={allData.LogoSubtitle}
           alt=''
         />
+        <FullStackComp
+          showHome={showHome}
+          allData={allData}
+          styleFullStack={styleFullStack}
+          contact={contact}
+          project={project}
+          about={about}
+        />
         {
           !showHome ? <LandingComp setShowHome={setShowHome} ScrollController={ScrollController} /> :
             <nav className='navContNav'>
@@ -141,13 +149,7 @@ const Home = ({ allData, fetched }) => {
 
               </div>
               <ScrollComponent colorState={colorState} setColorState={setColorState} />
-              <FullStackComp
-                allData={allData}
-                styleFullStack={styleFullStack}
-                contact={contact}
-                project={project}
-                about={about}
-              />
+
               <div className='firstContainer'>
                 <MovingTextComp />
                 <div className='monkeysDiv' >

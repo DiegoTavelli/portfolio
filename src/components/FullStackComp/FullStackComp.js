@@ -3,7 +3,7 @@ import '../Home/home.scss'
 
 
 
-const FullStackComp = ({ allData, styleFullStack, contact, project, about }) => {
+const FullStackComp = ({ showHome, allData, styleFullStack, contact, project, about }) => {
 
   return (
     <div className='fullStackDiv'>
@@ -11,18 +11,20 @@ const FullStackComp = ({ allData, styleFullStack, contact, project, about }) => 
       <img src={allData.Full} className={styleFullStack('Full full2')} alt='' />
       <img src={allData.Stack} className={styleFullStack('Stack')} alt='' />
       <img src={allData.Stack} className={styleFullStack('Stack stack2')} alt='' />
-      <div className='devContainer'>
-        <img src={allData.Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
-      </div>
-      {!project ?
+      {showHome &&
+        <div className='devContainer'>
+          <img src={allData.Dev} className={contact ? 'Dev DevMoved' : 'Dev DevMovedBack'} alt='' />
+        </div>
+      }
+      {!project && showHome ?
         <img src={allData.Arrow} className='arrow1' alt='' />
         : null
       }
-      {!contact ?
+      {!contact && showHome ?
         <img src={allData.Arrow} className='arrow2' alt='' />
         : null
       }
-      {!about ?
+      {!about && showHome ?
         <img src={allData.Arrow} className='arrow3' alt='' />
         : null
       }
