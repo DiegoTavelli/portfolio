@@ -61,7 +61,7 @@ const ModalContact = ({ contact, setContact, allData }) => {
     <div className='modalContactContainer' style={{ visibility: contact ? 'visible' : 'hidden' }}>
       {
         showLinkedIn ?
-          <img src={allData.ContactLinkedIn} className='contactLinkedIn' alt='' />
+          <img src={allData.ContactLinkedIn} className={showLinkedIn ? 'contactLinkedIn' : ''} alt='' />
           : null
       }
       <img
@@ -74,7 +74,7 @@ const ModalContact = ({ contact, setContact, allData }) => {
       />
       {
         showGitHub ?
-          <img src={allData.ContactGitHub} className='contactGitHub' alt='' />
+          <img src={allData.ContactGitHub} className={showGitHub ? 'contactGitHub' : ''} alt='' />
           : null
       }
       <img
@@ -87,7 +87,7 @@ const ModalContact = ({ contact, setContact, allData }) => {
       />
       {
         showWhatsApp ?
-          <img src={allData.ContactWhatsApp} className='contactWhatsApp' alt='' />
+          <img src={allData.ContactWhatsApp} className={showWhatsApp ? 'contactWhatsApp' : ''} alt='' />
           : null
       }
       <img
@@ -100,7 +100,7 @@ const ModalContact = ({ contact, setContact, allData }) => {
       />
       {
         showMail ?
-          <img src={allData.ContactMail} className='contactMail' alt='' />
+          <img src={allData.ContactMail} className={showMail ? 'contactMail' : ''} alt='' />
           : null
       }
       <img
