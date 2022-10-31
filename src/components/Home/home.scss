@@ -43,6 +43,7 @@
 
 .homeContainer {
   position:absolute;
+  height: auto;
 }
 
 .navContainer {
@@ -50,10 +51,12 @@
   position: absolute;
   align-items: center;
   justify-content: center;
+  height: auto;
 }
 
 .navContNav {
   animation: navContAnim 1.5s ease-in-out;
+  height: auto;
 }
 
 @keyframes navContAnim {
@@ -1777,10 +1780,19 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 
 @media only screen and (max-width: 1458px) {
   .homeContainer {
+    top: 2vh;
     right: 111vw;
+    zoom: 0.93;
+    height: auto;
+  }
+  .navContainer {
+    zoom: 0.93;
+    height: auto;
   }
   .backVid{
-  width: 125%;
+    height: auto;
+    zoom: 0.93;
+    width: 125%;
  color: #ead837c2;
  color: #bc3a7f99;
   }
@@ -1799,9 +1811,14 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 @media only screen and (max-width: 1357px) {
   .homeContainer {
     right: 118vw;
+    zoom: 0.95;
   }
- 
+  .navContainer {
+    zoom: 0.95;
+  }
+  
   .backVid{
+    zoom: 0.95;
   width: 125%;
   }
 }
@@ -1837,19 +1854,33 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 @media only screen and (max-width: 1232px) {
   .homeContainer {
     right: 124vw;
+    zoom: 0.97;
+  }
+  .navContainer {
+    zoom: 0.97;
   }
   .backVid{
-  width: 130%;
+    zoom: 0.97;
+    width: 130%;
   }
  }
 
  @media only screen and (max-width: 1232px) {
+    
   .homeContainer {
-    right: 124vw;
+    height: 100vh;
+    zoom: 0.88;
+    right: 131vw;
+  }
+  .navContainer {
+    height: 100vh;
+    zoom: 0.88;
   }
   .backVid{
-  width: 130%;
-  }
+    height: 100vh;
+    zoom: 0.88;
+    width: 130%;
+    }
  }
 
 

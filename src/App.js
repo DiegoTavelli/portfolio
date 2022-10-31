@@ -11,12 +11,13 @@ const App = () => {
 
   return (
     <>
-      <CustomView condition={window.innerWidth > 1232} >
+      <Desktop />
+      {/* <CustomView condition={window.innerWidth > 1232} >
         <Desktop />
       </CustomView>
       <CustomView condition={window.innerWidth < 1232} >
         <Mobile />
-      </CustomView>
+      </CustomView> */}
     </>
   );
 }

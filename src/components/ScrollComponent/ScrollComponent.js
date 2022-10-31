@@ -48,8 +48,8 @@ const ScrollComponent = ({ colorState, setColorState }) => {
           left: '0px',
           zIndex: 0,
           opacity: .25,
-          width: '100vw',
-          height: '110vh',
+          width: '100%',
+          height: '110%',
           backgroundColor: colorHash[currentIndex],
           transition: 'background-color .3s ease-out',
         }}
