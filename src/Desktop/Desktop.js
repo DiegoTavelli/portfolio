@@ -13,13 +13,13 @@ const Desktop = () => {
 
   const setToLocalStorage = () => {
     if (allData.length < 2) {
-      localStorage.setItem('HOME_ASSETS', JSON.stringify(assetsToStore));
+      localStorage.setItem('DESKTOP_ASSETS', JSON.stringify(assetsToStore));
     }
   }
 
   useEffect(() => {
     setToLocalStorage()
-    const items = JSON.parse(localStorage.getItem('HOME_ASSETS'));
+    const items = JSON.parse(localStorage.getItem('DESKTOP_ASSETS'));
     setAllData(items)
     if (allData) setFetched(true)
   }, [])
