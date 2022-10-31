@@ -1759,18 +1759,26 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 
 @media only screen and (max-width: 1560px) {
   .homeContainer {
+    top: -2vh;
       right: 108vw;
+      zoom: 0.93;
     }
     .backVid{
       width: 120%;
-  }
-  .ScrollCompContainer {
-    // display: none;
-    align-items: center;
-    justify-content: center;
+      zoom: 0.93;
+    }
+    .navContainer {
+      zoom: 0.93;
+      height: auto;
+    }
+    .ScrollCompContainer {
+      zoom: 0.93;
+      align-items: center;
+      justify-content: center;
+      height: 300px;
   }
   .Dev {
-    height: 54px;
+      height: 54px;
     width: 100px;
     left:614px;
     top: 190px;
@@ -1780,7 +1788,7 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 
 @media only screen and (max-width: 1458px) {
   .homeContainer {
-    top: 2vh;
+    top: -2vh;
     right: 111vw;
     zoom: 0.93;
     height: auto;
@@ -1811,14 +1819,14 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
 @media only screen and (max-width: 1357px) {
   .homeContainer {
     right: 118vw;
-    zoom: 0.95;
+    zoom: 0.9;
   }
   .navContainer {
-    zoom: 0.95;
+    zoom: 0.9;
   }
   
   .backVid{
-    zoom: 0.95;
+    zoom: 0.9;
   width: 125%;
   }
 }
@@ -1851,19 +1859,6 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   }
  }
 
-@media only screen and (max-width: 1232px) {
-  .homeContainer {
-    right: 124vw;
-    zoom: 0.97;
-  }
-  .navContainer {
-    zoom: 0.97;
-  }
-  .backVid{
-    zoom: 0.97;
-    width: 130%;
-  }
- }
 
  @media only screen and (max-width: 1232px) {
     
