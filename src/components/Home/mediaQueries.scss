@@ -2,6 +2,9 @@
 .homeContainer {
   top: 10vh;
 }
+.backVid{
+  width: 120%;
+}
 }
 
 @media only screen and (max-width: 2700px) {
@@ -9,10 +12,10 @@
   .homeContainer {
     top: 2vh;
     zoom: 1.2;
-    left: -4vw;
+    left: 0vw;
   }
   .backVid{
-    width: 120%;
+    width: 80%;
   }
 }
 
@@ -21,7 +24,7 @@
   .homeContainer {
     // display: none;
     zoom: 1.2;
-    left: -5vw;
+    left: 0vw;
     
   }
   .backVid{
@@ -39,7 +42,7 @@
   .homeContainer {
     // display: none;
     zoom: 1.2;
-    left: -5vw
+    left: 0vw;
   }
   .backVid{
     width: 120%;
@@ -51,7 +54,7 @@
   .homeContainer {
     // display: none;
     zoom: 1;
-    left: -5vh;
+    left: 0vw;
   }
   .backVid{
     width: 120%;
@@ -63,7 +66,7 @@
   .homeContainer {
     // display: none;
     zoom: 1;
-    left: -6vw
+    left: 0vw;
   }
   .backVid{
     width: 120%;
@@ -73,7 +76,7 @@
 @media only screen and (max-width: 1800px) {
  
   .homeContainer {
-   left: -12vw;
+    left: 0vw;
   }
   .backVid{
     // right: 0vw;
@@ -90,7 +93,7 @@
 
 @media only screen and (max-width: 1740px) {
   .homeContainer {
-      left: -13vw;
+    left: 0vw;
     }
     .backVid{
       // left: 0px;
@@ -107,7 +110,7 @@
 
 @media only screen and (max-width: 1640px) {
   .homeContainer {
-    left: -16vw;
+    left: 0vw;
     }
     .backVid{
       width: 120%;
@@ -123,7 +126,7 @@
 @media only screen and (max-width: 1560px) {
   .homeContainer {
     top: 0vh;
-    left: -14vw;
+    left: 0vw;
       zoom: 0.95;
     }
     .backVid{
@@ -149,7 +152,7 @@
 @media only screen and (max-width: 1458px) {
   .homeContainer {
     top: 0vh;
-    left: -16vw;
+    left: 0vw;
     zoom: 0.93;
     height: auto;
   }
@@ -166,7 +169,7 @@
 
 @media only screen and (max-width: 1402px) {
   .homeContainer {
-    left: -18vw;
+    left: 0vw;
     
   }
   .backVid{
@@ -191,7 +194,7 @@
 
 @media only screen and (max-width: 1319px) {
   .homeContainer {
-    left: -18vw;
+    left: 0vw;
   }
   .backVid{
   width: 130%;
@@ -200,7 +203,7 @@
 
 @media only screen and (max-width: 1295px) {
   .homeContainer {
-    left: -19vw;
+    left: 0vw;
   }
   .backVid{
   width: 130%;
@@ -209,7 +212,7 @@
 
 @media only screen and (max-width: 1258px) {
   .homeContainer {
-    left: -20vw;
+    left: 0vw;
   }
   .backVid{
   width: 130%;
@@ -221,7 +224,7 @@
   .homeContainer {
     height: 100vh;
     zoom: 0.8;
-    left: -22vw;
+    left: 0vw;
   }
   .navContainer {
     height: 100vh;
@@ -239,7 +242,7 @@
   .homeContainer {
     height: 100vh;
     zoom: 0.84;
-    left: -25vw;
+    left: 0vw;
   }
   .navContainer {
     height: 100vh;
