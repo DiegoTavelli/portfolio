@@ -86,7 +86,7 @@ import Tavelli from '../../assets/figma/Tavelli3.png'
 import TreeColor from '../../assets/figma/tree2.png'
 
 
-export const assetsToStore = {
+export const assetsDesktop = {
   LogoSubtitle, ArrowPro, CardPro, CardPro2, Platform, GifRainbow,
   AboutWorlds, ContactWorld, backVid, Contact, Projects, TechSrc,
   About, Me, Full, Stack, Dev, Arrow, Monkey, bikeMonkey, triangleLight,
@@ -98,4 +98,8 @@ export const assetsToStore = {
   buttonGitHub, buttonWhatsApp, buttonMail, ContactGitHub, ContactLinkedIn, ContactMail, ContactWhatsApp,
   TechCardBack, TechCard1, TechCard2, TechIcon, Laptop, DialogTech, TechSkillsVideo, CloseTech, CardHomeImage,
   Diego, Tavelli, TreeColor
+}
+
+export const assetsMobile = {
+  LogoSubtitle, Diego, Tavelli, Full, Stack, Dev
 }

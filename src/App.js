@@ -6,18 +6,16 @@ import { CustomView } from 'react-device-detect';
 
 
 
-
 const App = () => {
 
   return (
     <>
-      <Desktop />
-      {/* <CustomView condition={window.innerWidth > 1232} >
+      <CustomView condition={window.innerWidth > 1024} >
         <Desktop />
       </CustomView>
-      <CustomView condition={window.innerWidth < 1232} >
+      <CustomView condition={window.innerWidth < 1024} >
         <Mobile />
-      </CustomView> */}
+      </CustomView>
     </>
   );
 }

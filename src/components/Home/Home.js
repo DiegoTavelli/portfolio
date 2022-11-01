@@ -132,109 +132,115 @@ const Home = ({ allData }) => {
           about={about}
         />
         <ScrollComponent colorState={colorState} setColorState={setColorState} />
-        {
-          !showHome ? <LandingComp showHome={showHome} setShowHome={setShowHome} ScrollController={ScrollController} /> :
-            <nav className='navContNav'>
-              {
-                showScroll ?
-                  <div className='ScrollCompContainer'>
-                    <img src={allData.ScrollGif} className='ScrollGif' alt='' />
-                    <img src={allData.ScrollGif} className='ScrollGif2' alt='' />
-                    <div className='scrollDialogContainer'>
-                      <img src={allData.ScrollDialog} className='ScrollDialog' alt='' />
-                      <img src={allData.ScrollDialog} className='ScrollDialog2' alt='' />
-                    </div>
-                  </div> : null
-              }
-              <div className='firstContainer'>
-                <MovingTextComp />
-                <div className='monkeysDiv' >
-                  <img src={allData.Monkey} className='Monkey' alt='' />
-                  {showBassMonkey &&
-                    <div style={{ visibility: showBassMonkey ? 'visible' : 'hidden' }}>
-                      <div className='dialogBassMonkeyDiv' style={{ visibility: showBassMonkey ? 'visible' : 'hidden' }}>
-                        <img src={allData.dialogBassMonkey} className='dialogBassMonkey' alt='' />
-                      </div>
-                    </div>
-                  }
-                  <div
-                    className='monkeyBassButton'
-                    onMouseEnter={() => onEnterBass()}
-                    onMouseLeave={() => onLeaveBass()}
-                  >
+        <div>
+          <LandingComp
+            showHome={showHome}
+            setShowHome={setShowHome}
+            ScrollController={ScrollController}
+            style={{ visibility: !showHome ? 'visible' : 'hidden' }}
+          />
+          <nav className='navContNav' style={{ visibility: showHome ? 'visible' : 'hidden' }}>
+            {
+              showScroll ?
+                <div className='ScrollCompContainer'>
+                  <img src={allData.ScrollGif} className='ScrollGif' alt='' />
+                  <img src={allData.ScrollGif} className='ScrollGif2' alt='' />
+                  <div className='scrollDialogContainer'>
+                    <img src={allData.ScrollDialog} className='ScrollDialog' alt='' />
+                    <img src={allData.ScrollDialog} className='ScrollDialog2' alt='' />
                   </div>
+                </div> : null
+            }
+            <div className='firstContainer'>
+              <MovingTextComp />
+              <div className='monkeysDiv' >
+                <img src={allData.Monkey} className='Monkey' alt='' />
+                {showBassMonkey &&
+                  <div style={{ visibility: showBassMonkey ? 'visible' : 'hidden' }}>
+                    <div className='dialogBassMonkeyDiv' style={{ visibility: showBassMonkey ? 'visible' : 'hidden' }}>
+                      <img src={allData.dialogBassMonkey} className='dialogBassMonkey' alt='' />
+                    </div>
+                  </div>
+                }
+                <div
+                  className='monkeyBassButton'
+                  onMouseEnter={() => onEnterBass()}
+                  onMouseLeave={() => onLeaveBass()}
+                >
                 </div>
-                <div className='containerMonkeyBike' >
-                  <div className='bikeTiltCont'>
-                    <img src={allData.bikeMonkey} className='bikeMonkey2' alt='' />
-                  </div>
-                  <img src={allData.bikeMonkey} className='bikeMonkey' alt='' />
-                  {showBikeMonkey &&
-                    <div>
-                      <img src={allData.GifBike} className='GifBike' alt='' />
-                      <img src={allData.LoveIcon} className='LoveIcon' alt='' />
-                    </div>
-                  }
-                  <div
-                    className='monkeyBikeButton'
-                    onMouseEnter={() => onEnterBike()}
-                    onMouseLeave={() => onLeaveBike()}
-                  >
-                  </div>
-                  <img src={allData.ArrowPro} className='ArrowPro' alt='' />
-                  <img src={allData.Mandala} className={styleBackVid('mandala')} alt='' />
-                  {showBassMonkey || showBikeMonkey || showLaptop ?
-                    <img src={allData.FireGif} className='FireGif' alt='' />
-                    : null
-                  }
-                  {showGifMe && (
-                    <div>
-                      <div className='divGifMe' ></div>
-                      <img src={allData.GifMe} className='GifMe' alt='' />
-                    </div>
-                  )}
+              </div>
+              <div className='containerMonkeyBike' >
+                <div className='bikeTiltCont'>
+                  <img src={allData.bikeMonkey} className='bikeMonkey2' alt='' />
                 </div>
-                <img src={allData.Platform} className='platform' alt='' />
-                <img src={allData.GifRainbow} className={styleBackVid('GifRainbow')} alt='' />
-                <LaptopComp
-                  allData={allData}
-                  showLaptop={showLaptop}
-                  onLeaveLaptop={onLeaveLaptop}
-                  project={project}
-                  onEnterLaptop={onEnterLaptop}
-                />
+                <img src={allData.bikeMonkey} className='bikeMonkey' alt='' />
+                {showBikeMonkey &&
+                  <div>
+                    <img src={allData.GifBike} className='GifBike' alt='' />
+                    <img src={allData.LoveIcon} className='LoveIcon' alt='' />
+                  </div>
+                }
+                <div
+                  className='monkeyBikeButton'
+                  onMouseEnter={() => onEnterBike()}
+                  onMouseLeave={() => onLeaveBike()}
+                >
+                </div>
+                <img src={allData.ArrowPro} className='ArrowPro' alt='' />
+                <img src={allData.Mandala} className={styleBackVid('mandala')} alt='' />
+                {showBassMonkey || showBikeMonkey || showLaptop ?
+                  <img src={allData.FireGif} className='FireGif' alt='' />
+                  : null
+                }
+                {showGifMe && (
+                  <div>
+                    <div className='divGifMe' ></div>
+                    <img src={allData.GifMe} className='GifMe' alt='' />
+                  </div>
+                )}
               </div>
-              <div className='midContainer' >
-                {/* CONTACT */}
-                <ModalContact
-                  contact={contact}
-                  setContact={setContact}
-                  allData={allData}
-                />
-                <CardHome styleBackVid={styleBackVid} allData={allData} />
-                {/* PROJECT */}
-                <ModalProject
-                  showCardPokemon={showCardPokemon}
-                  showCardFlyMate={showCardFlyMate}
-                  setShowCardPokemon={setShowCardPokemon}
-                  setShowCardFlyMate={setShowCardFlyMate}
-                  leaveStream={leaveStream}
-                  setLeaveStream={setLeaveStream}
-                  project={project}
-                  setProject={setProject}
-                  allData={allData}
-                  selectType={selectType}
-                  showLaptop={showLaptop}
-                />
-                {/* ABOUT */}
-                <ModalAbout
-                  about={about}
-                  setAbout={setAbout}
-                  allData={allData}
-                />
-              </div>
-            </nav>
-        }
+              <img src={allData.Platform} className='platform' alt='' />
+              <img src={allData.GifRainbow} className={styleBackVid('GifRainbow')} alt='' />
+              <LaptopComp
+                allData={allData}
+                showLaptop={showLaptop}
+                onLeaveLaptop={onLeaveLaptop}
+                project={project}
+                onEnterLaptop={onEnterLaptop}
+              />
+            </div>
+            <div className='midContainer' >
+              {/* CONTACT */}
+              <ModalContact
+                contact={contact}
+                setContact={setContact}
+                allData={allData}
+              />
+              <CardHome styleBackVid={styleBackVid} allData={allData} />
+              {/* PROJECT */}
+              <ModalProject
+                showCardPokemon={showCardPokemon}
+                showCardFlyMate={showCardFlyMate}
+                setShowCardPokemon={setShowCardPokemon}
+                setShowCardFlyMate={setShowCardFlyMate}
+                leaveStream={leaveStream}
+                setLeaveStream={setLeaveStream}
+                project={project}
+                setProject={setProject}
+                allData={allData}
+                selectType={selectType}
+                showLaptop={showLaptop}
+              />
+              {/* ABOUT */}
+              <ModalAbout
+                about={about}
+                setAbout={setAbout}
+                allData={allData}
+              />
+            </div>
+          </nav>
+        </div>
+
       </div>
     </div>
   )

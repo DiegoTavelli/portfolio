@@ -1842,7 +1842,6 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   .backVid{
   width: 130%;
   }
-  
 }
 
 @media only screen and (max-width: 1258px) {
@@ -1852,15 +1851,14 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
   .backVid{
   width: 130%;
   }
- }
+}
 
-
- @media only screen and (max-width: 1232px) {
+ @media only screen and (max-width: 1132px) {
     
   .homeContainer {
     height: 100vh;
     zoom: 0.88;
-    right: 131vw;
+    right: 130vw;
   }
   .navContainer {
     height: 100vh;
@@ -1871,7 +1869,23 @@ filter: drop-shadow(6px 4px 4px rgba(0, 0, 0, 0));
     zoom: 0.88;
     width: 130%;
     }
- }
+}
 
-
+ @media only screen and (max-width: 1055px) {
+    
+  .homeContainer {
+    height: 100vh;
+    zoom: 0.88;
+    right: 138vw;
+  }
+  .navContainer {
+    height: 100vh;
+    zoom: 0.88;
+  }
+  .backVid{
+    height: 100vh;
+    zoom: 0.88;
+    width: 130%;
+    }
+}
 

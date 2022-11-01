@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Routes, BrowserRouter } from 'react-router-dom'
 
-import { assetsToStore } from '../components/assetsToStore/assetsToStore'
+import { assetsDesktop } from '../components/assetsToStore/assetsToStore'
 import Home from '../components/Home/Home'
 
 
@@ -13,7 +13,7 @@ const Desktop = () => {
 
   const setToLocalStorage = () => {
     if (allData.length < 2) {
-      localStorage.setItem('DESKTOP_ASSETS', JSON.stringify(assetsToStore));
+      localStorage.setItem('DESKTOP_ASSETS', JSON.stringify(assetsDesktop));
     }
   }
 
