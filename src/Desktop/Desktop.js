@@ -11,18 +11,18 @@ const Desktop = () => {
   const [allData, setAllData] = useState([])
   const [fetched, setFetched] = useState(false)
 
-  const setToLocalStorage = () => {
-    if (allData.length < 2) {
-      localStorage.setItem('DESKTOP_ASSETS', JSON.stringify(assetsDesktop));
-    }
-  }
-
   useEffect(() => {
     setToLocalStorage()
     const items = JSON.parse(localStorage.getItem('DESKTOP_ASSETS'));
     setAllData(items)
     if (allData) setFetched(true)
   }, [])
+
+  const setToLocalStorage = () => {
+    if (allData.length < 2) {
+      localStorage.setItem('DESKTOP_ASSETS', JSON.stringify(assetsDesktop));
+    }
+  }
 
   return (
     <div className='App' >

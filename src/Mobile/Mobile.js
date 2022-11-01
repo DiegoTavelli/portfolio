@@ -6,16 +6,9 @@ import { assetsMobile } from 'components/assetsToStore/assetsToStore'
 
 const Mobile = () => {
 
-
   // allData stored on LocalStore
   const [allData, setAllData] = useState([])
   const [fetched, setFetched] = useState(false)
-
-  const setToLocalStorage = () => {
-    if (allData.length < 2) {
-      localStorage.setItem('MOBILE_ASSETS', JSON.stringify(assetsMobile));
-    }
-  }
 
   useEffect(() => {
     setToLocalStorage()
@@ -23,6 +16,12 @@ const Mobile = () => {
     setAllData(items)
     if (allData) setFetched(true)
   }, [])
+
+  const setToLocalStorage = () => {
+    if (allData.length < 2) {
+      localStorage.setItem('MOBILE_ASSETS', JSON.stringify(assetsMobile));
+    }
+  }
 
   return (
     <div className='App' >

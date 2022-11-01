@@ -1,0 +1,673 @@
+@keyframes try {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes navContAnim {
+  0% {opacity: 0}
+  100% {opacity: 1;}
+}
+
+@keyframes scrollShow {
+  0% {
+    left: 100px;
+  }
+  50% {
+  }
+  100% {
+    top: -100px;
+  }
+}
+
+@keyframes scrollGifFx {
+  0% {opacity: 0;}
+35% {opacity: 0.6;}
+50% {opacity: 1;}
+70% {opacity: 0.1;}
+100% {opacity: 0;}
+}
+
+@keyframes scrollFx {
+  0% {
+    top: -70px;
+  }
+  50% {
+    top: 70px;
+  }
+  100% {
+    top: -70px;
+  }
+} 
+
+@keyframes scrollFx2 {
+  0% {
+    filter: 
+  invert(25%)
+  blur(30px)
+  drop-shadow(4px 4px 10px rgb(167, 44, 189))
+  ;
+    top: -70px;
+  }
+  50% {
+    filter: 
+  invert(25%)
+  blur(30px)
+  drop-shadow(0px 0px 0px rgb(22, 160, 187))
+  ;
+    top: 70px;
+  }
+  100% {
+    filter: 
+  invert(25%)
+  blur(30px)
+  drop-shadow(4px 4px 10px rgb(167, 44, 189))
+  ;
+    top: -100px;
+  }
+} 
+
+@keyframes firstFlipCont {
+  0% {
+    opacity: 0;
+  transition: transform 0.4s ease-in-out;
+  transform: rotate3d(10, 0, 1, 3.142rad);
+  transition-timing-function: ease;
+  filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
+}
+100% {
+  opacity: 1;
+  transition: transform 0.4s ease-in-out;
+  transform: rotate3d(0, 0, 0, 0rad);
+  transition-timing-function: ease;
+}
+}
+
+@keyframes flipCont {
+ 0% {
+  opacity: 0;
+  transition: transform 0.4s ease-in-out;
+  transform: rotate3d(0, 10, 1, 3.142rad);
+  transition-timing-function: ease;
+  filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
+}
+100% {
+  opacity: 1;
+  transition: transform 0.4s ease-in-out;
+  transform: rotate3d(0, 0, 0, 0rad);
+  transition-timing-function: ease;
+}
+}
+
+@keyframes cardHomeFx {
+  0% {
+    filter: drop-shadow(33px 22px 1px rgba(0, 0, 0, 0.25))brightness(97%)contrast(100%);
+  }
+  25% {
+    filter: drop-shadow(33px 22px 2px rgba(0, 0, 0, 0.25))brightness(98%)contrast(100%);
+  }
+  50% {
+    filter: drop-shadow(33px 22px 2.5px rgba(0, 0, 0, 0.25))brightness(100%)contrast(90%);
+  }
+  75% {
+    filter: drop-shadow(33px 22px 2px rgba(0, 0, 0, 0.25))brightness(98%)contrast(100%);
+  }
+  100% {
+    filter: drop-shadow(33px 22px 1px rgba(0, 0, 0, 0.25))brightness(97%)contrast(100%);
+
+  }
+}
+
+@keyframes arrowFx {
+  0% {
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+  }
+  50% {
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(100%);
+  }
+  80% {
+    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
+  }
+  100% {
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+
+  }
+}
+
+@keyframes CardProFx {
+
+  0% {
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+    // transform: skewX(100deg);
+  }
+  25% {
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
+  }
+  50% {
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(90%);
+  }
+  80% {
+    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
+  }
+  100% {
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+    // transform: skewX(0deg);
+  }
+}
+
+@keyframes CardProMove {
+  0% {
+    width: 296px;
+    height: 198px;
+    left: 424px;
+    top: 279px;
+  }
+  100% {
+    width: 487px;
+    height: 338px;
+    left: 580px;
+    top: 186px;
+  }
+}
+
+@keyframes CardProMoveBack {
+  0% {
+    width: 270px;
+    height: 184px;
+    left: 435px;
+    top: 289px;
+  }
+  100% {
+    width: 450px;
+    height: 300px;
+    left: 592px;
+    top: 210px;
+  }
+}
+
+@keyframes flipCard {
+  0% {
+    transition: transform 0.4s ease-in-out;
+    transform: rotate3d(0, 0, 0, 0rad);
+    transition-timing-function: ease;
+  }
+  50% {
+    transition: transform 0.4s ease-in-out;
+    transform:  scale(1.2);
+    transition-timing-function: ease;
+    filter: drop-shadow(0px 50px 40px rgba(0, 0, 0, 0.873));
+  }
+  100% {
+    transition: transform 0.4s ease-in-out;
+    transform: rotate3d(0, 0, 0, 0rad);
+    transition-timing-function: ease;
+  }
+}
+@keyframes flipCardRev {
+  0% {
+    transition: transform 0.4s ease;
+    transform: rotate3d(0, 0, 0, 0rad);
+    transition-timing-function: ease;
+  }
+  25% {
+    transition: transform 0.4s ease;
+    transform: rotate3d(20, 0, 0, 3.142rad);
+    transition-timing-function: ease;
+    // filter: drop-shadow(300px 300px 60px rgba(0, 0, 0, 0.873));
+  }
+  50% {
+  // transition: transform 0.4s ease-in-out;
+  transform: rotate3d(0, 0, 0, 0rad);
+  transition-timing-function: ease;
+  }
+  75% {
+    transition: transform 0.4s ease;
+    transform: rotate3d(20, 0, 0, 3.142rad);
+    transition-timing-function: ease;
+   
+  }
+  100% {
+    transition: transform 0.4s ease;
+    transform: rotate3d(0, 0, 0, 3.142rad);
+    transition-timing-function: ease;
+  }
+}
+
+@keyframes ProjectTextFx {
+  0% {
+    left: 510px;
+    transform: rotate3d(0,0,0, 200deg);
+  }
+  50% {
+    transform: rotate3d(-10,0,0, 100deg);
+    left:455px;
+  }
+  100% {
+    left:438px;
+    transform: rotate3d(0,0,0, 20deg);
+  }
+}
+
+@keyframes rainbowFx {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.30;
+  }
+  80% {
+    opacity: 0.20;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes platformMove {
+
+  0% {
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+    // transform: skewX(100deg);
+  }
+  50% {
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(400%);
+  }
+  80% {
+    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
+  }
+  100% {
+    filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+    // transform: skewX(0deg);
+  }
+}
+
+@keyframes aboutWorldsFx {
+  0% {
+    // filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))brightness(70%);
+    // box-shadow: 
+    // 0 0 0px rgba(255, 255, 255, 0.003),
+    // 0px 0 0px #f0f,
+    // 0px 0 0px #0ff,
+    // 0px 0 0px #f0f,
+    // 0px 0 0px #0ff,;
+    //   // transform: skewX(100deg);
+  }
+  25% {
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
+    box-shadow: 
+    0 0 20px #fff,
+    2px -2 30px #f0f,
+    -2px 2 30px #0ff,
+    2px -2 60px #f0f,
+    -2px 2 60px #0ff,;
+  }
+  50% {
+    filter: drop-shadow(10px 10px 4px rgba(0, 0, 0, 0.25))brightness(120%);
+    box-shadow: 
+    0 0 22px #fff,
+    2px 0 33px #f0f,
+    -2px 0 33px #0ff,
+    2px 0 66px #f0f,
+    -2px 0 66px #0ff,;
+  }
+  80% {
+    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.25))brightness(80%);
+    box-shadow: 
+    0 0 5px #fff,
+    2px -2 8px #f0f,
+    -2px 2 8px #0ff,
+    2px -2 30px #f0f,
+    -2px 2 30px #0ff,;
+  }
+  100% {
+    // filter: drop-shadow(0px 10px 4px rgba(0, 0, 0, 0.25))brightness(70%);
+    // box-shadow: 
+    // 0 0 0px #fff,
+    // 0px 0 0px #f0f,
+    // 0px 0 0px #0ff,
+    // 0px 0 0px #f0f,
+    // 0px 0 0px #0ff,;
+  }
+}
+
+@keyframes triangleOpac {
+  0% {
+    // height: 380px;
+    // width: 700px;
+    opacity: 0;
+    transform: rotate(5deg);
+  }
+  50% {
+    opacity: 0.1;
+    
+    
+  }
+  100% {
+    opacity: 1;
+    
+  }
+}
+
+@keyframes appearBase {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textContactFx {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes movedDev {
+  0% {
+    left: 1200px;
+    top: 555px;
+    transform: rotate(-19deg);
+  }
+  100% {
+    left: 1389px;
+    top: 585px;
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes movedDevBack {
+  0% {
+    opacity: 0;
+    left: 1389px;
+    top: 585px;
+    transform: rotate(8deg);
+  }
+  50% {
+    opacity: 0.1;
+  }
+  75% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+    left: 1200px;
+    top: 555px;
+    transform: rotate(-19deg);
+  }
+}
+
+@keyframes arrowsFx {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes dialogBass {
+  0% {
+      opacity: 0;
+    }
+  100% {
+  opacity: 1;
+  }
+}
+
+@keyframes LoveIconAnim {
+  0% {
+    transform: 
+    rotateY(0deg)
+    rotateX(0deg);
+  }
+  10% {
+    transform: 
+    rotateY(-20deg)
+    rotateX(1deg);
+  }
+  20% {
+    transform: 
+    rotateY(-30deg)
+    rotateX(2deg);
+  }
+  25% {
+    transform: 
+    rotateY(-40deg)
+    rotateX(1deg);
+  }
+  35% {
+    transform: 
+    rotateY(-30deg)
+    rotateX(2deg);
+  }
+  45% {
+    transform: 
+    rotateY(-20deg)
+    rotateX(1deg);
+  }
+  50% {
+    transform: 
+    rotateY(0deg)
+    rotateX(0deg);
+  }
+  55% {
+    transform: 
+    rotateY(10deg)
+    rotateX(1deg);
+  }
+  65% {
+    transform: 
+    rotateY(20deg)
+    rotateX(2deg);
+  }
+  75% {
+    transform: 
+    rotateY(30deg)
+    rotateX(1deg);
+  }
+  85% {
+    transform: 
+    rotateY(20deg)
+    rotateX(2deg);
+  }
+  95% {
+    transform: 
+    rotateY(10deg)
+    rotateX(1deg);
+  }
+  100% {
+    transform: 
+    rotateY(0deg)
+    rotateX(0deg);
+  }
+}
+
+@keyframes nameAnim {
+  0% {transform: rotateY(0deg);}
+	20% {transform: rotateY(-25deg);}
+	40% {transform: rotateY(0deg);}
+	60% {transform: rotateY(25deg);}
+	80% {transform: rotateY(0deg);}
+	100% {transform: rotateY(0deg);}
+}
+
+@keyframes nameAnim2 {
+  0% {transform: rotateY(0deg);}
+	20% {transform: rotateY(25deg);}
+	40% {transform: rotateY(0deg);}
+	60% {transform: rotateY(-25deg);}
+	80% {transform: rotateY(0deg);}
+	100% {transform: rotateY(0deg);}
+}
+
+ 
+//rotate Monkey
+  @-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(65.04deg);
+      -o-transform: rotate(65.04deg);
+      transform: rotate(65.04deg);
+    }
+    to {
+      -webkit-transform: rotate(425.04deg);
+      -o-transform: rotate(425.04deg);
+      transform: rotate(425.04deg);
+    }
+  }
+  @keyframes rotating {
+    0% {
+      -ms-transform: rotate(65.04deg);
+      -moz-transform: rotate(65.04deg);
+      -webkit-transform: rotate(65.04deg);
+      -o-transform: rotate(65.04deg);
+      transform: rotate(65.04deg);
+    }
+    100% {
+      -ms-transform: rotate(425.04deg);
+      -moz-transform: rotate(425.04deg);
+      -webkit-transform: rotate(425.04deg);
+      -o-transform: rotate(425.04deg);
+      transform: rotate(425.04deg);
+    }
+  }
+
+  @keyframes monkeySpin {
+    0% {
+      transform: rotate(0deg)
+    }
+    100% {
+      transform: rotate(3600deg)
+    }
+  }
+
+  @keyframes monkeySpinDialog {
+    0% {
+      opacity: 0;
+      transform: 
+      rotate(0deg)
+      skewX(-40deg)
+      skewY(10deg);
+    }
+    50% {
+      opacity: 0.3;
+      transform: 
+      rotate(0deg)
+      skewX(-40deg)
+      skewY(-2deg);
+    }
+    65% {
+      opacity: 0.8;
+      transform: 
+      rotate(0deg)
+      skewX(-40deg)
+      skewY(-2deg);
+    }
+    75% {
+      opacity: 0.9;
+      transform: 
+      rotate(0deg)
+      skewX(-10deg)
+      skewY(-1deg);
+    }
+    100% {
+      opacity: 1;
+      }
+  }
+
+  @keyframes fireAppear {
+    0% {
+      border-bottom-left-radius: 20%;
+      border-top-left-radius: 20%;
+      border-bottom-right-radius: 39%;
+      border-top-right-radius: 20%;
+      opacity: 0;
+    }
+    100% {
+      border-bottom-left-radius: 20%;
+      border-top-left-radius: 20%;
+      border-bottom-right-radius: 39%;
+      border-top-right-radius: 20%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes techFxBack {
+    0% {
+     filter: hue-rotate(360deg)
+    }
+    100% {
+   
+    }
+   }
+   
+   @keyframes tech1Fx {
+     0% {
+       opacity: 0;
+     }
+     50% {
+       opacity: 1;
+     }
+     100% {
+       opacity: 0;
+     }
+   }
+   @keyframes tech2Fx {
+     0% {
+       opacity: 1;
+     }
+     50% {
+       filter: hue-rotate(0deg);
+       opacity: 0;
+       
+     }
+     100% {
+       filter: hue-rotate(-360deg);
+       opacity: 1;
+     }
+   }
+   
+   @keyframes TechCardAnim {
+     0% {
+       height: 2px;
+       width: 30px;
+       left: 773px;
+       top: 550px;
+       transform: rotate(-25deg);
+     }
+   }
+
+   @keyframes dialogLaptopFade {
+    0% {
+      opacity: 0;
+      max-width: 0px;
+    }
+    100% {
+      opacity: 1;
+      width: 190px;
+    }
+  }
+
+  @-webkit-keyframes mandala {
+    from {
+      transform:skewY(10deg);
+      transition: transform 0.7s ease-in-out;
+    }
+    to {
+      transform:skewY(0deg);
+      transition: transform 0.7s ease-in-out; 
+    }
+  }
+  
+  @keyframes mandala {
+    from {
+      transform:skewY(10deg);
+      transition: transform 0.7s ease-in-out;
+    }
+    to {
+      transform:skewY(0deg);
+      transition: transform 0.7s ease-in-out; 
+    }
+  }

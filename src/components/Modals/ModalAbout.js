@@ -8,8 +8,8 @@ const ModalAbout = ({ about, allData, setAbout }) => {
   const [showPdf, setShowPdf] = useState(false)
 
   const linKCv = () => {
-    // setShowPdf(true)
-    window.open('https://drive.google.com/file/d/1OCPm5BnMWHRuXxAqNIyGDx7sLTlXRd4W/view?usp=sharing');
+
+    window.open('https://drive.google.com/file/d/12eu9WpDDqqDFiY5Fa_NCzZZwS40bn05i/view?usp=sharing');
   }
 
   return <>
