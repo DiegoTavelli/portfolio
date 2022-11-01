@@ -1,9 +1,28 @@
+@media only screen and (min-width: 2700px) {
+.homeContainer {
+  top: 10vh;
+}
+}
+
+@media only screen and (max-width: 2700px) {
+ 
+  .homeContainer {
+    top: 2vh;
+    zoom: 1.2;
+    left: -4vw;
+  }
+  .backVid{
+    width: 120%;
+  }
+}
+
 @media only screen and (max-width: 2600px) {
  
   .homeContainer {
     // display: none;
     zoom: 1.2;
-    left: 0vw;
+    left: -5vw;
+    
   }
   .backVid{
     width: 120%;
@@ -19,8 +38,8 @@
  
   .homeContainer {
     // display: none;
-    zoom: 1.1;
-    left: -3vw
+    zoom: 1.2;
+    left: -5vw
   }
   .backVid{
     width: 120%;
@@ -32,7 +51,7 @@
   .homeContainer {
     // display: none;
     zoom: 1;
-    right: 100vw;
+    left: -5vh;
   }
   .backVid{
     width: 120%;
@@ -57,7 +76,9 @@
    left: -12vw;
   }
   .backVid{
-    width: 120%;
+    // right: 0vw;
+    // top: 10vh;
+    width: 140%;
   }
   .ScrollCompContainer {
     // display: none;
@@ -102,19 +123,19 @@
 @media only screen and (max-width: 1560px) {
   .homeContainer {
     top: 0vh;
-    left: -13vw;
-      zoom: 0.93;
+    left: -14vw;
+      zoom: 0.95;
     }
     .backVid{
       width: 120%;
-      zoom: 0.93;
+      zoom: 0.95;
     }
     .navContainer {
-      zoom: 0.93;
+      zoom: 0.95;
       height: auto;
     }
     .ScrollCompContainer {
-      zoom: 0.93;
+      zoom: 0.95;
     }
   .Dev {
       height: 54px;
@@ -217,16 +238,16 @@
     
   .homeContainer {
     height: 100vh;
-    zoom: 0.88;
-    right: 138vw;
+    zoom: 0.84;
+    left: -25vw;
   }
   .navContainer {
     height: 100vh;
-    zoom: 0.88;
+    zoom: 0.84;
   }
   .backVid{
     height: 100vh;
-    zoom: 0.88;
+    zoom: 0.84;
     width: 130%;
     }
 }

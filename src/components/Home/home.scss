@@ -3,11 +3,11 @@
 
 
 .backVid {
-  position:fixed;
+  position: fixed;
   // z-index: -10;
   object-fit: cover;
   height: 100%;
-  width: 100%;
+  width: 120%;
   mask: url('../../assets/figma/logoPrincipal3.png'); 
   backdrop-filter: blur(60px);
   mask-size: auto;
